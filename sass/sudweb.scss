@@ -9,6 +9,12 @@
   font-size: $sizeValue + rem;
 }
 
+
+@mixin box-shadow($params) {
+   -webkit-box-shadow: $params;
+   -moz-box-shadow: $params;
+   box-shadow: $params;
+}
 /*********************  COMMON *************/
 
 html {
@@ -46,7 +52,7 @@ p {
 
 /*********************  PAGES *************/
 
-#header {
+header {
 	img{
 		display: inline;
 	}
@@ -58,7 +64,7 @@ p {
 	}
 }
 
-section h2 {
+section h2, aside h2 {
 	margin-top: 16px;
 }
 
@@ -76,14 +82,6 @@ ol.conferences, ol.ateliers{
 	.description-conference {
 		border-bottom: 1px solid #3F3F3F;
 		overflow: hidden;
-		/*sous-titre{
-			color: #6F6F6F;
-			font-style: italic;
-	    	font-weight: 300;
-	    	line-height: 1.4;
-	    	margin-bottom: 0.5em;
-	    	margin-top: 0.2em;
-		}*/
 		.orateur {
 			color: #F8B319;
 		}
@@ -106,7 +104,7 @@ ol.conferences, ol.ateliers{
 		margin: 1em 0;
 		img {
 			float: left;
-			margin: 0 30px 20px 0;
+			margin: 0 40px 20px 0;
 		}
 	}
 
@@ -115,8 +113,11 @@ ol.conferences, ol.ateliers{
 	}
 }
 
-.partenaires {
+.informations {
+	background: none repeat scroll 0 0 #F8F8F8;
+}
 
+.partenaires {
 	ul, li {
 		list-style-type: none;
 		text-align: center;
@@ -124,4 +125,12 @@ ol.conferences, ol.ateliers{
 	img {
 		display: inline;
 	}
+}
+
+footer {
+	background-color: #402F33;
+	@include box-shadow(0px 2px 5px #000 inset);
+    color: #FFFFFF;
+    padding-bottom: 0;
+    padding-top: 2em;
 }
