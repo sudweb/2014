@@ -5014,35 +5014,49 @@ ol.conferences h3, ol.ateliers h3 {
 ol.conferences .description-conference, ol.ateliers .description-conference {
   border-bottom: 1px solid #3f3f3f;
   overflow: hidden;
-}
-/* line 79, ../sass/sudweb.scss */
-ol.conferences .description-conference .sous-titre, ol.ateliers .description-conference .sous-titre {
-  color: #6F6F6F;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.4;
-  margin-bottom: 0.5em;
-  margin-top: 0.2em;
+  	/*sous-titre{
+  		color: #6F6F6F;
+  		font-style: italic;
+      	font-weight: 300;
+      	line-height: 1.4;
+      	margin-bottom: 0.5em;
+      	margin-top: 0.2em;
+  	}*/
 }
 /* line 87, ../sass/sudweb.scss */
 ol.conferences .description-conference .orateur, ol.ateliers .description-conference .orateur {
   color: #F8B319;
 }
-/* line 92, ../sass/sudweb.scss */
+/* line 93, ../sass/sudweb.scss */
 ol.conferences li:last-child .description-conference, ol.ateliers li:last-child .description-conference {
   border: none;
 }
 
-/* line 98, ../sass/sudweb.scss */
+/* line 99, ../sass/sudweb.scss */
 .divertissement h3 {
   color: #6F6F6F;
 }
 
-/* line 104, ../sass/sudweb.scss */
+/* line 105, ../sass/sudweb.scss */
 .lieu figure {
   margin: 1em 0;
 }
-/* line 108, ../sass/sudweb.scss */
+/* line 107, ../sass/sudweb.scss */
+.lieu figure img {
+  float: left;
+  margin: 0 30px 20px 0;
+}
+/* line 113, ../sass/sudweb.scss */
 .lieu ul {
   margin-left: 16px;
+}
+
+/* line 120, ../sass/sudweb.scss */
+.partenaires ul, .partenaires li {
+  list-style-type: none;
+  text-align: center;
+}
+/* line 124, ../sass/sudweb.scss */
+.partenaires img {
+  display: inline;
 }

@@ -76,18 +76,19 @@ ol.conferences, ol.ateliers{
 	.description-conference {
 		border-bottom: 1px solid #3F3F3F;
 		overflow: hidden;
-		.sous-titre{
+		/*sous-titre{
 			color: #6F6F6F;
 			font-style: italic;
 	    	font-weight: 300;
 	    	line-height: 1.4;
 	    	margin-bottom: 0.5em;
 	    	margin-top: 0.2em;
-		}
+		}*/
 		.orateur {
 			color: #F8B319;
 		}
 	}
+
 	li:last-child {
 		.description-conference{
 			border: none;
@@ -103,6 +104,10 @@ ol.conferences, ol.ateliers{
 .lieu {
 	figure {
 		margin: 1em 0;
+		img {
+			float: left;
+			margin: 0 30px 20px 0;
+		}
 	}
 
 	ul{
@@ -110,3 +115,13 @@ ol.conferences, ol.ateliers{
 	}
 }
 
+.partenaires {
+
+	ul, li {
+		list-style-type: none;
+		text-align: center;
+	}
+	img {
+		display: inline;
+	}
+}
