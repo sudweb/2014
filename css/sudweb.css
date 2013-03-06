@@ -5010,13 +5010,3 @@ ol.conferences {
 ol.conferences .description-conference {
   overflow: hidden;
 }
-/* line 76, ../sass/sudweb.scss */
-ol.conferences .description-conference img {
-  float: left;
-  margin: 6px 12px 6px 0;
-  position: static;
-}
-/* line 81, ../sass/sudweb.scss */
-ol.conferences .description-conference .subheader {
-  margin-top: 8px;
-}
