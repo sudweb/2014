@@ -4968,8 +4968,8 @@ h2 {
 
 /* line 39, ../sass/sudweb.scss */
 h3 {
-  font-size: 19px;
-  font-size: 1.9rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 /* line 43, ../sass/sudweb.scss */
@@ -4997,7 +4997,7 @@ section h2 {
 }
 
 /* line 65, ../sass/sudweb.scss */
-.introduction .columns, .elaboratoire .columns {
+.introduction .columns, .elaboratoire .columns, .lieu .columns {
   background: none repeat scroll 0 0 #e0e0e0;
 }
 
@@ -5031,4 +5031,14 @@ ol.conferences .description-conference .orateur, ol.ateliers .description-confer
 /* line 92, ../sass/sudweb.scss */
 ol.conferences li:last-child .description-conference, ol.ateliers li:last-child .description-conference {
   border: none;
+}
+
+/* line 98, ../sass/sudweb.scss */
+.divertissement h3 {
+  color: #6F6F6F;
+}
+
+/* line 103, ../sass/sudweb.scss */
+.lieu figure {
+  margin: 1em 0;
 }

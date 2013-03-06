@@ -37,7 +37,7 @@ h2 {
 }
 
 h3 {
-	@include font-size(1.9);
+	@include font-size(1.8);
 }
 
 p {
@@ -62,7 +62,7 @@ section h2 {
 	margin-top: 16px;
 }
 
-.introduction .columns, .elaboratoire .columns{
+.introduction .columns, .elaboratoire .columns, .lieu .columns{
 	background: none repeat scroll 0 0 #e0e0e0;
 }
 
@@ -95,6 +95,12 @@ ol.conferences, ol.ateliers{
 	} 
 }
 
+.divertissement h3 {
+	color: #6F6F6F;
+}
 
 
+.lieu figure {
+	margin: 1em 0;
+}
 
