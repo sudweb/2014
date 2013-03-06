@@ -4991,22 +4991,44 @@ p {
   text-align: center;
 }
 
-/* line 63, ../sass/sudweb.scss */
+/* line 61, ../sass/sudweb.scss */
 section h2 {
   margin-top: 16px;
 }
 
-/* line 67, ../sass/sudweb.scss */
-.introduction .columns {
-  background: none repeat scroll 0 0 #f4f4f4;
+/* line 65, ../sass/sudweb.scss */
+.introduction .columns, .elaboratoire .columns {
+  background: none repeat scroll 0 0 #e0e0e0;
 }
 
-/* line 71, ../sass/sudweb.scss */
-ol.conferences {
+/* line 69, ../sass/sudweb.scss */
+ol.conferences, ol.ateliers {
   list-style-type: none;
-  margin-left: 0;
+  margin: 0;
 }
-/* line 74, ../sass/sudweb.scss */
-ol.conferences .description-conference {
+/* line 72, ../sass/sudweb.scss */
+ol.conferences h3, ol.ateliers h3 {
+  margin-top: 18px;
+}
+/* line 76, ../sass/sudweb.scss */
+ol.conferences .description-conference, ol.ateliers .description-conference {
+  border-bottom: 1px solid #3f3f3f;
   overflow: hidden;
+}
+/* line 79, ../sass/sudweb.scss */
+ol.conferences .description-conference .sous-titre, ol.ateliers .description-conference .sous-titre {
+  color: #6F6F6F;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+  margin-top: 0.2em;
+}
+/* line 87, ../sass/sudweb.scss */
+ol.conferences .description-conference .orateur, ol.ateliers .description-conference .orateur {
+  color: #F8B319;
+}
+/* line 92, ../sass/sudweb.scss */
+ol.conferences li:last-child .description-conference, ol.ateliers li:last-child .description-conference {
+  border: none;
 }

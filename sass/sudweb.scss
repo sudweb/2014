@@ -58,22 +58,41 @@ p {
 	}
 }
 
-
-
 section h2 {
 	margin-top: 16px;
 }
 
-.introduction .columns{
-	background: none repeat scroll 0 0 #F4F4F4;
+.introduction .columns, .elaboratoire .columns{
+	background: none repeat scroll 0 0 #e0e0e0;
 }
 
-ol.conferences {
+ol.conferences, ol.ateliers{
 	list-style-type: none;
-	margin-left: 0;
-	.description-conference {
-		overflow: hidden;
+	margin: 0;
+	h3 {
+		margin-top: 18px;
 	}
+	
+	.description-conference {
+		border-bottom: 1px solid #3F3F3F;
+		overflow: hidden;
+		.sous-titre{
+			color: #6F6F6F;
+			font-style: italic;
+	    	font-weight: 300;
+	    	line-height: 1.4;
+	    	margin-bottom: 0.5em;
+	    	margin-top: 0.2em;
+		}
+		.orateur {
+			color: #F8B319;
+		}
+	}
+	li:last-child {
+		.description-conference{
+			border: none;
+		}
+	} 
 }
 
 
