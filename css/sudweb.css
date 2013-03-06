@@ -5038,7 +5038,11 @@ ol.conferences li:last-child .description-conference, ol.ateliers li:last-child 
   color: #6F6F6F;
 }
 
-/* line 103, ../sass/sudweb.scss */
+/* line 104, ../sass/sudweb.scss */
 .lieu figure {
   margin: 1em 0;
+}
+/* line 108, ../sass/sudweb.scss */
+.lieu ul {
+  margin-left: 16px;
 }

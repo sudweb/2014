@@ -100,7 +100,13 @@ ol.conferences, ol.ateliers{
 }
 
 
-.lieu figure {
-	margin: 1em 0;
+.lieu {
+	figure {
+		margin: 1em 0;
+	}
+
+	ul{
+		margin-left: 16px;
+	}
 }
 
