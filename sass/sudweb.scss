@@ -15,6 +15,7 @@
    -moz-box-shadow: $params;
    box-shadow: $params;
 }
+
 /*********************  COMMON *************/
 
 html {
@@ -34,12 +35,11 @@ h1, h2, h3, p, ul, ol, li {
 
 
 h1 {
-	@include font-size(2.7);
+	@include font-size(2.2);
 }
 
-
 h2 {
-	@include font-size(2.2);
+	@include font-size(2);
 }
 
 h3 {
@@ -50,19 +50,50 @@ p {
 	line-height: 24px;
 }
 
-/*********************  PAGES *************/
-
 header {
 	img{
 		display: inline;
 	}
 	figure {
-		margin-bottom:20px;
 		div {
 			text-align: center;
 		}
+		.enplace {
+			margin-bottom: 20px;
+		}
 	}
 }
+
+.go-to-nav {
+	display: block;
+	height: 24px;
+    line-height: 24px;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+
+}
+
+.top-bar-section {
+	@include box-shadow(0px 2px 5px #000 inset);
+}
+
+
+nav {
+	 margin-top: 25px;
+}
+
+footer {
+	background-color: #402F33;
+	@include box-shadow(0px 2px 5px #000 inset);
+    color: #FFFFFF;
+    padding-bottom: 0;
+    padding-top: 2em;
+}
+
+
+/*********************  PAGES *************/
+
 
 section h2, aside h2 {
 	margin-top: 16px;
@@ -79,12 +110,12 @@ ol.conferences, ol.ateliers{
 		margin-top: 18px;
 	}
 	
+	.orateur {
+		color: #F8B319;
+	}
 	.description-conference {
 		border-bottom: 1px solid #3F3F3F;
 		overflow: hidden;
-		.orateur {
-			color: #F8B319;
-		}
 	}
 
 	li:last-child {
@@ -127,10 +158,68 @@ ol.conferences, ol.ateliers{
 	}
 }
 
-footer {
-	background-color: #402F33;
-	@include box-shadow(0px 2px 5px #000 inset);
-    color: #FFFFFF;
-    padding-bottom: 0;
-    padding-top: 2em;
+.pageProgramme .section-container li:first-child {
+	padding: 20px 0;
+}
+
+.pageProgramme .section-container li {
+	clear: left;
+	border-top: 1px solid #3F3F3F;
+	padding: 20px 0;
+	overflow: hidden;
+
+	time {
+		display: block;
+		float: left;
+		padding-right: 12px;
+		vertical-align: top;
+	}
+	.detail-conference {
+		position: relative;
+		vertical-align: top;
+
+		h3 {
+			margin: 0 0 10px 0;
+		}
+
+		.orateur{
+			display: block;
+			margin-bottom:8px;
+		}
+
+		p{
+			margin-bottom: 10px;
+		}
+
+		.a-propos-orateur {
+			overflow: hidden;
+			img {
+				display: block;
+				float:left;
+				margin: 0 8px 6px 0;
+			}
+		}
+
+		ol {
+
+			list-style-type: normal;
+			margin-left: 0;
+		}
+
+		li {
+			border: none;
+			padding: 10px 0;
+
+			.orateur {
+				display: inline;
+			}
+		}
+	}
+	.detail-elaboratoire {
+		border: none;
+		h3 {
+			margin: 0 0 10px 0;
+		}
+
+	}
 }
