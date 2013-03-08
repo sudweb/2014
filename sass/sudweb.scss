@@ -158,11 +158,21 @@ ol.conferences, ol.ateliers{
 	}
 }
 
-.pageProgramme .section-container li:first-child {
+
+.section-content {
+
+}
+
+
+.section-content .content-programme.elaboratoire{
+	background: none repeat scroll 0 0 #F8F8F8;
+}
+
+.section-content li:first-child {
 	padding: 20px 0;
 }
 
-.pageProgramme .section-container li {
+.section-content li {
 	clear: left;
 	border-top: 1px solid #3F3F3F;
 	padding: 20px 0;
@@ -215,6 +225,7 @@ ol.conferences, ol.ateliers{
 			}
 		}
 	}
+
 	.detail-elaboratoire {
 		border: none;
 		h3 {

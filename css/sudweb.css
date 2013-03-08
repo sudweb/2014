@@ -5091,72 +5091,77 @@ ol.conferences li:last-child .description-conference, ol.ateliers li:last-child 
   display: inline;
 }
 
-/* line 161, ../sass/sudweb.scss */
-.pageProgramme .section-container li:first-child {
+/* line 167, ../sass/sudweb.scss */
+.section-content .content-programme.elaboratoire {
+  background: none repeat scroll 0 0 #f8f8f8;
+}
+
+/* line 171, ../sass/sudweb.scss */
+.section-content li:first-child {
   padding: 20px 0;
 }
 
-/* line 165, ../sass/sudweb.scss */
-.pageProgramme .section-container li {
+/* line 175, ../sass/sudweb.scss */
+.section-content li {
   clear: left;
   border-top: 1px solid #3f3f3f;
   padding: 20px 0;
   overflow: hidden;
 }
-/* line 171, ../sass/sudweb.scss */
-.pageProgramme .section-container li time {
+/* line 181, ../sass/sudweb.scss */
+.section-content li time {
   display: block;
   float: left;
   padding-right: 12px;
   vertical-align: top;
 }
-/* line 177, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference {
+/* line 187, ../sass/sudweb.scss */
+.section-content li .detail-conference {
   position: relative;
   vertical-align: top;
 }
-/* line 181, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference h3 {
+/* line 191, ../sass/sudweb.scss */
+.section-content li .detail-conference h3 {
   margin: 0 0 10px 0;
 }
-/* line 185, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference .orateur {
+/* line 195, ../sass/sudweb.scss */
+.section-content li .detail-conference .orateur {
   display: block;
   margin-bottom: 8px;
 }
-/* line 190, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference p {
+/* line 200, ../sass/sudweb.scss */
+.section-content li .detail-conference p {
   margin-bottom: 10px;
 }
-/* line 194, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference .a-propos-orateur {
+/* line 204, ../sass/sudweb.scss */
+.section-content li .detail-conference .a-propos-orateur {
   overflow: hidden;
 }
-/* line 196, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference .a-propos-orateur img {
+/* line 206, ../sass/sudweb.scss */
+.section-content li .detail-conference .a-propos-orateur img {
   display: block;
   float: left;
   margin: 0 8px 6px 0;
 }
-/* line 203, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference ol {
+/* line 213, ../sass/sudweb.scss */
+.section-content li .detail-conference ol {
   list-style-type: normal;
   margin-left: 0;
 }
-/* line 209, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference li {
+/* line 219, ../sass/sudweb.scss */
+.section-content li .detail-conference li {
   border: none;
   padding: 10px 0;
 }
-/* line 213, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-conference li .orateur {
+/* line 223, ../sass/sudweb.scss */
+.section-content li .detail-conference li .orateur {
   display: inline;
 }
-/* line 218, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-elaboratoire {
+/* line 229, ../sass/sudweb.scss */
+.section-content li .detail-elaboratoire {
   border: none;
 }
-/* line 220, ../sass/sudweb.scss */
-.pageProgramme .section-container li .detail-elaboratoire h3 {
+/* line 231, ../sass/sudweb.scss */
+.section-content li .detail-elaboratoire h3 {
   margin: 0 0 10px 0;
 }
