@@ -17,12 +17,14 @@
 	
 	<article class="mainPage">
 		<header id="header" role="banner">
-			<figure class="row">
-				<div class="large-2 columns">
+			<div class="row">
+				<div class="large-12 columns lien-nav  menu-icon">
 					<a class="go-to-nav" title="navigation" href="#main-nav">☰ MENU</a>
+				</div>
+			</div>
+			<figure class="row">
+				<div class="large-12 columns">
 					<img src="/img/logo.png" alt="Sud Web 2013" class="logo" />
-				</div> 
-				<div class="large-10 columns">
 					<h1 class="baseline">Savoir-faire et faire-savoir</h1>
 					<div class="enplace">
 						<span class="date">Les 17 et 18 mai 2013</span><br />
@@ -57,7 +59,7 @@
 				<div class="large-12 columns">
 					<h2>Les conférences du vendredi 17 mai 2013</h2>
 					<p>Une journée intense pour vivre et apprendre autour des expériences et des solutions de notre métier web et mobile.</p>
-					<a href="/programme.html#programme-1" class="voir-programme">Voir tout le programme</a>
+					<a href="/programme.html#programme-1" class="small button secondary">Voir toutes les conférences</a>
 					<ol class="conferences">
 						<li>
 							<h3><a href="/programme.html#client-gentil-mechant">Le client : ce gentil méchant</a></h3>
@@ -117,7 +119,7 @@
 				<div class="large-12 columns">
 					<h2>L'élaboratoire du samedi 18 mai 2013</h2>
 					<p>Des ateliers participatifs, où on partage et on découvre des nouvelles méthodes et perspectives.</p>
-					<a href="/programme.html#programme-2" class="voir-elaboratoire">Voir tout l'élaboratoire</a>
+					<a href="/programme.html#programme-2" class="small button secondary">Voir tout l'élaboratoire</a>
 					<ol class="ateliers">
 						<li>
 							<h3><a href="/progremme.html#designons-code">Designons notre code</a></h3>
@@ -204,7 +206,7 @@
 					<h3>Meetup le jeudi 16 mai au soir</h3>
 					<p>Vous arrivez la veille de l'évènement ?<br />Venez nous rejoindre pour un pot à l'hôtel. Rencontrez les speakers et l'équipe de Sudweb. Faites comme chez vous</p>
 					<h3>Vous partez le dimanche ?</h3>
-					<p>Venez découvrir Avignon et ses environs. C'est une ville doté d'un patrimoine historique et surprenant. Pourquoi pensez-vous que l'on a choisi cette ville? pour le soleil ? Oui, ok, pour ça aussi.</p>
+					<p>Venez découvrir Avignon et ses environs. C'est une ville dotée d'un patrimoine historique et surprenant. Pourquoi pensez-vous que l'on a choisi cette ville? pour le soleil ? Oui, ok, pour ça aussi.</p>
 				</div>
 			</div>
 		</section>
@@ -234,7 +236,18 @@
 				</div>
 			</div>
 		</section>
+		<div class="row">
+			<div class="large-12 columns">
+				<a href="#top" class="lien-top">Haut de page</a>
+			</div>
+		</div>
 	</article>
+					
+	<div class="row">
+		<div class="large-12 columns">
+			<a class="button alert expand" href="/inscription.html">Inscription en ligne</a>
+		</div>
+	</div>
 	<aside role="complementary">
 		<div class="row">
 			<div id="sponsors" class="large-12 columns partenaires">
@@ -291,19 +304,12 @@
 			</div>
 		</div>
 	</aside>
-	<div class="row">
-		<div class="large-12 columns">
-			<a class="button alert expand" href="/inscription.html">Inscription en ligne</a>
-		</div>
-	</div>
 	<nav role="navigation" class="top-bar expanded" id="main-nav">
 		<section class="top-bar-section">
 			<ul class="right">
 				<li><a href="/inscription.html">Inscription</a></li>
 				<li><a href="/programme.html">Programme</a></li>
-				<li><a href="#">Infos pratiques</a></li>
-				<li><a href="http://sudweb.fr/blog/">Sud Web Blog</a></li>
-				<li class="haut-page"><a href="#top">Haut de page</a></li>
+				<li><a href="http://sudweb.fr/blog/">Blog</a></li>
 			</ul>
 		</section>
 	</nav>
@@ -323,18 +329,5 @@
 			</div>
 		</div>
 	</footer>	
-
-		
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
-  <script src="js/foundation/foundation.js"></script>
-  
-  <script>
-    $(document).foundation();
-  </script>
 </body>
 </html>

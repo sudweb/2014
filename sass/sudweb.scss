@@ -1,7 +1,5 @@
 @import "app.scss";
 
-
-
 /*********************  MIXINS *************/
 
 @mixin font-size($sizeValue: 1.6){
@@ -9,12 +7,18 @@
   font-size: $sizeValue + rem;
 }
 
-
 @mixin box-shadow($params) {
    -webkit-box-shadow: $params;
    -moz-box-shadow: $params;
    box-shadow: $params;
 }
+
+/*********************  VARIABLES *************/
+
+
+$baseline: #970B0E;
+$bgFooter: #402F33;
+$white: #ffffff;
 
 /*********************  COMMON *************/
 
@@ -36,10 +40,12 @@ h1, h2, h3, p, ul, ol, li {
 
 h1 {
 	@include font-size(2.2);
+	margin: 11px 0;
 }
 
 h2 {
 	@include font-size(2);
+	font-weight: bold;
 }
 
 h3 {
@@ -52,7 +58,9 @@ p {
 
 header {
 	img{
-		display: inline;
+		display: inline-block;
+		float: left;
+		margin-left: 55px;
 	}
 	figure {
 		div {
@@ -64,29 +72,32 @@ header {
 	}
 }
 
-.go-to-nav {
-	display: block;
-	height: 24px;
-    line-height: 24px;
-	position: absolute;
-	right: 10px;
-	top: 5px;
+.lien-nav {
+	padding: 10px 0;
+	text-align: right;
+}
 
+.lien-top {
+	@include font-size(0.9);
+	display: block;
+	float: right;
+	margin: 20px 0;
 }
 
 .top-bar-section {
 	@include box-shadow(0px 2px 5px #000 inset);
 }
 
-
-nav {
-	 margin-top: 25px;
+.enplace {
+	color: $baseline;
+	font-weight: bold;
+	line-height: normal;
 }
 
 footer {
-	background-color: #402F33;
+	background-color: $bgFooter;
 	@include box-shadow(0px 2px 5px #000 inset);
-    color: #FFFFFF;
+    color: $white;
     padding-bottom: 0;
     padding-top: 2em;
 }
@@ -99,6 +110,8 @@ section h2, aside h2 {
 	margin-top: 16px;
 }
 
+
+
 .introduction .columns, .elaboratoire .columns, .lieu .columns{
 	background: none repeat scroll 0 0 #e0e0e0;
 }
@@ -108,10 +121,6 @@ ol.conferences, ol.ateliers{
 	margin: 0;
 	h3 {
 		margin-top: 18px;
-	}
-	
-	.orateur {
-		color: #F8B319;
 	}
 	.description-conference {
 		border-bottom: 1px solid #3F3F3F;
@@ -144,7 +153,7 @@ ol.conferences, ol.ateliers{
 	}
 }
 
-.informations {
+.informations .columns{
 	background: none repeat scroll 0 0 #F8F8F8;
 }
 
@@ -158,24 +167,15 @@ ol.conferences, ol.ateliers{
 	}
 }
 
-
-.section-content {
-
-}
-
-
-.section-content .content-programme.elaboratoire{
+.content-programme.elaboratoire{
 	background: none repeat scroll 0 0 #F8F8F8;
 }
 
-.section-content li:first-child {
-	padding: 20px 0;
-}
 
-.section-content li {
+.content-programme li {
 	clear: left;
 	border-top: 1px solid #3F3F3F;
-	padding: 20px 0;
+	padding: 20px 0 10px 0;
 	overflow: hidden;
 
 	time {
@@ -231,6 +231,8 @@ ol.conferences, ol.ateliers{
 		h3 {
 			margin: 0 0 10px 0;
 		}
-
+		p {
+			margin-bottom: 10px;
+		}
 	}
 }
