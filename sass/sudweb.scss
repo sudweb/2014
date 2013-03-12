@@ -56,11 +56,15 @@ p {
 	line-height: 24px;
 }
 
+ul {
+	margin: 0 0 20px 16px;
+}
+
 header {
 	img{
 		display: inline-block;
 		float: left;
-		margin-left: 55px;
+		margin: 0 0 15px 55px;
 	}
 	figure {
 		div {
@@ -116,6 +120,11 @@ section h2, aside h2 {
 	background: none repeat scroll 0 0 #e0e0e0;
 }
 
+
+.introduction .columns {
+	padding-top: 16px;
+}
+
 ol.conferences, ol.ateliers{
 	list-style-type: none;
 	margin: 0;
@@ -140,6 +149,7 @@ ol.conferences, ol.ateliers{
 
 
 .lieu {
+	margin-bottom: 20px;
 	figure {
 		margin: 1em 0;
 		img {
