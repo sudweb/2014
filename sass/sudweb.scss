@@ -1,0 +1,393 @@
+//*********************  MIXINS *************/
+
+@mixin font-size($size: 16){
+	font-size: $size + px;
+	font-size: ($size / 10) + rem;
+}
+
+@mixin drop-shadow ($x: 0, $y: 0, $blur: .5em, $color: rgba(0,0,0,.5)) {
+	-webkit-filter: drop-shadow($x $y $blur $color);
+	-moz-filter: drop-shadow($x $y $blur $color);
+	-ms-filter: drop-shadow($x $y $blur $color);
+	-o-filter: drop-shadow($x $y $blur $color);
+	filter: drop-shadow($x $y $blur $color);
+}
+
+//*********************  VARIABLES *************/
+
+$body: #fff;
+$text: #312529;
+$primary: #f64b3a;
+$text-over-primary: #fef8f7;
+$secondary: #c51b3f;
+$text-over-secondary: #fcf1f2;
+$contrast: #10b6bf;
+$text-over-contrast: #feffff;
+$inverted: #402f35;
+$text-over-inverted: #f4f2f3;
+
+//*********************  COMMON *************/
+
+html {
+	font-size: 62.5%;
+	margin: 0;
+	background: #fff url(../img/bg.png) repeat center top;
+	color: $text;
+	font-family: arial, sans-serif;
+}
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+	@include font-size(16);
+	position: relative;
+}
+
+
+h1, h2, h3, p, ul, ol, li {
+	font-weight: normal;
+	line-height: 1.25;
+	word-spacing: .12em;
+}
+p:first-of-type {
+	@include font-size(18);
+}
+
+
+h1 {
+	@include font-size(22);
+	margin: 0 0 .5em;
+}
+
+h2 {
+	@include font-size(20);
+}
+
+h3 {
+	@include font-size(18);
+}
+
+ul,
+ol {
+	margin: 0 0 1em 1em;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:focus,
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+//*********************  SPECIFICS *************/
+.skiplink {
+	display: inline-block;
+}
+.button {
+	background: $contrast;
+	color: $text-over-contrast;
+	display: inline-block;
+	margin: 0 0 0 35%;
+	padding: .2em 1em;
+	position: relative;
+	min-height: 20px;
+	
+	@include drop-shadow(0, .2em, .3em, rgba($text, .2));
+	
+	&:before,
+	&:after {
+		content: "";
+		width: 0;
+		top: 0;
+		position: absolute;
+		display: block;
+		border: 13px solid $contrast;
+	}
+	&:before {
+		left: -1em;
+		border-right-width: .5em;
+		border-left-color: transparent !important;
+	}
+	&:after {
+		right: -1.5em;
+		border-left-width: .75em;
+		border-color: transparent transparent transparent $contrast;
+	}
+}
+
+.pageheader {
+	text-align: center;
+	.skiplink {
+		position: absolute;
+		top: 0;
+		right: 2em;
+		color: $text;
+		background: $body;
+		padding: .2em .5em;
+		box-shadow: .05em .2em .3em rgba($text, .5);
+	}
+	.ville,
+	.lieu,
+	.date {
+		display: block;
+	}
+}
+
+.introduction {
+	background: $body;
+	padding: 0 1em 2em;
+	margin: 0 1em;
+	box-shadow: 0 0 .5em rgba($text, .1);
+}
+
+.actualite,
+.programme,
+.salles,
+.sponsors,
+.pagefooter {
+	padding: .5em 1em 1em;
+}
+
+.banner {
+	background: $primary;
+	background: rgba($primary, .2), url(../img/bg.png);
+	color: $text-over-primary;
+	margin: 0 -2em;
+	padding: .5em 2em .25em;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 .35em .5em rgba($text, .8);
+	
+	.title {
+		display: block;
+		text-transform: uppercase;
+		line-height: 1.5;
+	}
+	.subtitle {
+		display: block;
+	}
+	&:before,
+	&:after {
+		content: "";
+		bottom: -2em;
+		position: absolute;
+		display: block;
+		border-style: solid;
+		border-color: darken($primary, 20%) transparent transparent transparent;
+		z-index: -1;
+	}
+	&:before {
+	  left: 0;
+	  border-width: 2em 0 0 2em;
+	}
+	&:after {
+	  right: 0;
+	  border-width: 2em 2em 0 0;
+	}
+	&+img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.programme h2 {
+	color: $primary;
+	text-align: center;
+	text-transform: uppercase;
+	@include font-size(24);
+	position: relative;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 25%;
+		border-top: 1px solid;
+		position: absolute;
+		top: .62em;
+		right: 75%;
+	}
+	&:after {
+		right: auto;
+		left: 75%;
+	}
+}
+
+.actualite h2,
+.programme h3,
+.sponsors h2 {
+	text-align: center;
+	text-transform: uppercase;
+	@include font-size(20);
+	font-weight: normal;
+	
+	background: $primary;
+	color: $text-over-primary;
+	position: relative;
+	margin: 2em 1em 1em;
+	padding: .5rem 0 .45rem;
+	min-height: 25px;
+	
+	&:before,
+	&:after {
+		content: "";
+		width: .2em;
+		top: 0;
+		position: absolute;
+		display: block;
+		border: 17px solid $primary;
+		z-index: -1;
+	}
+	&:before {
+		left: -1em;
+		border-right-width: .75em;
+		border-left-color: transparent !important;
+	}
+	&:after {
+		right: -1em;
+		border-left-width: .75em;
+		border-right-color: transparent !important;
+	}
+}
+.actualite h2 {
+	background: $secondary;
+	color: $text-over-secondary;
+	
+	&:before,
+	&:after {
+		border-color: $secondary;
+	}
+}
+.sponsors h2 {
+	background: $inverted;
+	color: $text-over-inverted;
+	
+	&:before,
+	&:after {
+		border-color: $inverted;
+	}
+}
+.sponsors h3 {
+	color: #c0babd;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		height: 5px;
+		width: 25%;
+		border-top: 1px solid;
+		border-bottom: 1px dotted;
+		position: absolute;
+		top: .62em;
+		right: 75%;
+	}
+	&:after {
+		right: auto;
+		left: 75%;
+	}
+}
+
+
+.sponsors {
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		color: $contrast;
+	}
+}
+
+.salles {
+	background: $secondary;
+	color: $text-over-secondary;
+}
+.to-top {
+	color: $contrast;
+	display: inline-block;
+	margin: 1em;
+	padding-left: 20px;
+	background: url(../img/to-top.png) no-repeat left top;
+}
+.pagefooter {
+	clear: both;
+	background: $inverted;
+	color: $text-over-inverted;
+	
+	a:link,
+	a:visited {
+		color: $text-over-inverted;
+	}
+	a:focus,
+	a:hover,
+	p a:link,
+	p a:visited {
+		color: $contrast;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.nav {
+		background: $inverted;
+		margin: 0 -1em;
+		text-transform: uppercase;
+		a {
+			display: block;
+			margin-top: .25em;
+			padding: .5em 1em .75em;
+			border-bottom: 1px solid #5c4a50;
+		}
+	}
+	.connect {
+		li,
+		img {
+			display: inline;
+		}
+		a {
+			margin: 0 1em;
+			img {
+				display: inline-block;
+			}
+			
+			&:focus img,
+			&:hover img {
+				background: $text-over-inverted;
+			}
+		}
+	}
+	.legal {
+		li {
+			display: inline;
+			margin-right: .5em;
+			&:not(:last-child):after {
+				content: "|";
+				margin-left: .5em;
+			}
+		}
+	}
+}
+// Spécialement pour Marie :-)
+#main-nav:target {
+	position: absolute;
+	top: 0;
+	left: 1em;
+	right: 1em;
+}
