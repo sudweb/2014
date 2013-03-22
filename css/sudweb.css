@@ -24,6 +24,11 @@ h1, h2, h3, p, ul, ol, li {
 }
 
 /* line 52, ../sass/sudweb.scss */
+h1, h2, h3, p:first-of-type {
+  font-family: Ruluko, arial, sans-serif;
+}
+
+/* line 55, ../sass/sudweb.scss */
 p:first-of-type {
   font-size: 18px;
   font-size: 1.8rem;

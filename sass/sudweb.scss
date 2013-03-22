@@ -49,6 +49,9 @@ h1, h2, h3, p, ul, ol, li {
 	line-height: 1.25;
 	word-spacing: .12em;
 }
+h1, h2, h3, p:first-of-type {
+	font-family: Ruluko, arial, sans-serif;
+}
 p:first-of-type {
 	@include font-size(18);
 }
