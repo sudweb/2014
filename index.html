@@ -9,60 +9,90 @@
 </head>
 <body id="top">
 	<header class="pageheader" role="banner">
-		<a href="#main-nav" class="skiplink to-nav"><span class="navicon">☰</span> Navigation</a>
-		<span class="date">les 17 et 18 mai</span>
+		<div class="container">
+			<a href="#main-nav" class="skiplink to-nav">Navigation</a>
 			<a href="/" class="logo">
 				<img src="img/logo.png" alt="Sud Web 2013 à Avignon" />
 			</a>
+			<div class="date">Les 17 et 18 mai</div>
+			<nav role="navigation" class="nav" id="main-nav">
+				<ul>
+					<li>
+						<a href="inscription.html">Inscription</a>
+					</li>
+					<li>
+						<a href="programme.html">Conférences</a>
+					</li>
+					<li>
+						<a href="programme.html">Ateliers</a>
+					</li>
+					<li>
+						<a href="lieux.html">Lieux</a>
+					</li>
+					<li>
+						<a href="infos-pratiques.html">Infos pratiques</a>
+					</li>
+					<li>
+						<a href="http://sudweb.fr/blog/">Blog</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
-	<section class="introduction">
-		<div class="banner">
-			<h1>
+	<section>
+		<article class="introduction">
+			<h1 class="banner">
 				<span class="title">Conférences et ateliers</span>
 				<span class="subtitle">Partagez plus que du web</span>
 			</h1>
-		</div>
-		<img src="img/illustration.png" alt="" />
-		<p>Venez découvrir, approfondir et pratiquer les métiers du Web durant deux journées bien remplies -et dans la bonne humeur !</p>
-		<p>Inscriptions ouvertes jusqu'au 29 avril 2013</p>
-		<a href="inscription.html" class="button">Inscrivez-vous vite !</a>
-	</section>
-	<section class="actualite">
-		<h2>À savoir</h2>
-		<p>Economisez sur le transport et l'hébergement grâce à <a href="http://sudweb.fr/blog">nos partenariats</a>.</p>
-		<p>Pour ne manquer aucune info, abonnez-vous &nbsp;:</p>
-		<a href="http://sudweb.us2.list-manage.com/subscribe?u=af19b58cf514c01eca3f7652e&id=b579f5b507" class="button">Inscription newsletter</a>
-	</section>
-	<section class="programme">
-		<h2>Programme</h2>
+			<p>Venez découvrir, approfondir et pratiquer les métiers du Web durant deux journées bien remplies -et dans la bonne humeur !</p>
+			<p>Inscriptions ouvertes jusqu'au 29 avril 2013</p>
+			<a href="inscription.html" class="action">Inscrivez-vous vite !</a>
+		</article>
+		<article class="actualites">
+			<h2>À savoir</h2>
+			<div class="excerpt">
+				<p>Economisez sur le transport et l'hébergement grâce à <a href="http://sudweb.fr/blog">nos partenariats</a>.</p>
+			</div><div class="more">
+				<p>Pour ne manquer aucune info, abonnez-vous à notre <a href="http://sudweb.us2.list-manage.com/subscribe?u=af19b58cf514c01eca3f7652e&id=b579f5b507">newsletter</a>.</p>
+			</div>
+		</article>
 		
-		<h3>Les conférences</h3>
-		<p>Développement, design, bonnes pratiques, gestion de projet, relations humaines et plus encore.</p>
-		<p>Venez approfondir vos connaissances métier, découvrir comment de grands acteurs du Web déploient des sites adaptés au mobile, gèrent les projets complexes et les problématiques de monitoring, le tout dans une salle exceptionnelle.</p>
-		<p>La journée sera également rythmée par 8 <span lang="en">lightning talks</span> et une conférence mystère, à découvrir sur place.</p>
-		<a href="programme.html" class="button">Programme détaillé</a>
+		<h2 class="programme">Programme</h2>
+		<article class="conferences">
+			<h3>Les conférences</h3>
+			<p>Développement, design, bonnes pratiques, gestion de projet, relations humaines et plus encore.</p>
+			<p>Venez approfondir vos connaissances métier, découvrir comment de grands acteurs du Web déploient des sites adaptés au mobile, gèrent les projets complexes et les problématiques de monitoring, le tout dans une salle exceptionnelle.</p>
+			<p>La journée sera également rythmée par 8 <span lang="en">lightning talks</span> et une conférence mystère, à découvrir sur place.</p>
+			<a href="programme.html" class="action">Programme détaillé</a>
+		</article>
 		
-		<h3>Les ateliers</h3>
-		<p>Samedi, l’organisation en ateliers vous incite à mettre en pratique et approfondir les sujets abordés la veille, à apprendre en faisant, et même à proposer vos propres sujets&nbsp;!</p>
-		<p>Quelques exemples parmi les ateliers déjà proposés : dessiner une interface mobile, créer des emails responsive, gérer les événements tactiles, mieux coder en JavaScript... et bien plus encore.</p>
-		<a href="/programme.html#programme-2" class="button">Programme des ateliers</a>
+		<article class="ateliers">
+			<h3>Les ateliers</h3>
+			<p>Samedi, l’organisation en ateliers vous incite à mettre en pratique et approfondir les sujets abordés la veille, à apprendre en faisant, et même à proposer vos propres sujets&nbsp;!</p>
+			<p>Quelques exemples parmi les ateliers déjà proposés : dessiner une interface mobile, créer des emails responsive, gérer les événements tactiles, mieux coder en JavaScript... et bien plus encore.</p>
+			<a href="/programme.html#programme-2" class="action">Programme des ateliers</a>
+		</article>
 		
-		<h3>Les soirées</h3>
-		<p>Autant que les conférences et ateliers, les rencontres et les échanges donnent tout leur sens à Sud Web. Profitez des moments de détente pour faire connaissance avec les autres participants.</p>
-
-		<p><strong>Jeudi soir</strong> aura lieu <strong>la veillée</strong> avec orateurs, organisateurs et participants, et <strong>vendredi</strong> se poursuivra par une <strong>soirée communautaire</strong> (<a href="#">suivez-nous pour être informés de l’ouverture des inscriptions</a>).</p>
+		<article class="soirees">
+			<h3>Les soirées</h3>
+			<p>Autant que les conférences et ateliers, les rencontres et les échanges donnent tout leur sens à Sud Web. Profitez des moments de détente pour faire connaissance avec les autres participants.</p>
+	
+			<p><strong>Jeudi soir</strong> aura lieu <strong>la veillée</strong> avec orateurs, organisateurs et participants, et <strong>vendredi</strong> se poursuivra par une <strong>soirée communautaire</strong> (<a href="#">suivez-nous pour être informés de l’ouverture des inscriptions</a>).</p>
+			
+			<p>Et sachez que vous serez nombreux à rester après les ateliers pour prolonger les discussions. N’hésitez pas également à rester le dimanche pour découvrir le centre historique d'Avignon.</p>
+		</article>
 		
-		<p>Et sachez que vous serez nombreux à rester après les ateliers pour prolonger les discussions. N’hésitez pas également à rester le dimanche pour découvrir le centre historique d'Avignon.</p>
-	</section>
-	<section class="salles">
-		<h2>Salles</h2>
-		<p>Les conférences se tiendront dans la mythique salle du conclave du Palais des Papes. Incroyable mais vrai !</p>
-		<img src="img/SalleConclave.jpg" alt="Salle du conclave du palais des Papes" />
-		<p>Cette année, Sud Web aura lieu à Avignon, une des rares villes françaises à avoir conservé ses remparts et son centre historique. La ville est classée au patrimoine mondial de l'<abbr>UNESCO</abbr>.</p>
-		
-		<p>Les ateliers se dérouleront dans les bâtiments de la Chambre de Commerce et d'Industrie du Vaucluse, dans un magnifique immeuble de l'époque Napoléonienne.</p>
-		
-		<p>Nous vous proposons donc une occasion unique de rentrer dans l'histoire !</p>
+		<article class="salles">
+			<h2>Palais des papes</h2>
+			<p>Les conférences se tiendront dans la mythique salle du conclave du Palais des Papes. Incroyable mais vrai !</p>
+			<img src="img/SalleConclave.jpg" alt="Salle du conclave du palais des Papes" />
+			<p>Cette année, Sud Web aura lieu à Avignon, une des rares villes françaises à avoir conservé ses remparts et son centre historique. La ville est classée au patrimoine mondial de l'<abbr>UNESCO</abbr>.</p>
+			
+			<p>Les ateliers se dérouleront dans les bâtiments de la Chambre de Commerce et d'Industrie du Vaucluse, dans un magnifique immeuble de l'époque Napoléonienne.</p>
+			
+			<p>Nous vous proposons donc une occasion unique de rentrer dans l'histoire !</p>
+		</article>
 	</section>
 	<aside role="complimentary" class="sponsors">
 		<h2>Nos partenaires</h2>
@@ -87,60 +117,82 @@
 		<ul>
 			<li><a href="http://www.globalis-ms.com/"><img src="img/sponsors/globalisms.png" alt="Globalis Media Systems" /></a></li>
 		</ul>
-		<p>Vous souhaitez nous aider&nbsp;?</p>
-		<a href="http://sudweb.fr/2013/dossier-partenariat-sudweb-2013.pdf">Téléchargez notre dossier de partenariat</a>
-		<p lang="en">Wanna help us?</p>
-		<a href="http://sudweb.fr/2013/sudweb-2013-partnership-information.pdf">Grab our partnership information</a>
+		<p><span>Vous souhaitez nous aider&nbsp;?</span> <a href="http://sudweb.fr/2013/dossier-partenariat-sudweb-2013.pdf">Téléchargez notre dossier de partenariat</a></p>
+		<p lang="en"><span>Wanna help us?</span> <a href="http://sudweb.fr/2013/sudweb-2013-partnership-information.pdf">Grab our partnership information</a></p>
 	</aside>
-	<a href="#top" class="skiplink to-top">Haut de page</a>
+	
 	<footer role="contentinfo" class="pagefooter">
-		<nav role="navigation" class="nav" id="main-nav">
-			<ul>
-				<li>
-					<a href="inscription.html">Inscription</a>
-				</li>
-				<li>
-					<a href="programme.html#">Conférences</a>
-				</li>
-				<li>
-					<a href="programme.html#">Ateliers</a>
-				</li>
-				<li>
-					<a href="lieux.html#">Lieux</a>
-				</li>
-				<li>
-					<a href="infos-pratiques.html">Infos pratiques</a>
-				</li>
-				<li>
-					<a href="http://sudweb.fr/blog/">Blog</a>
-				</li>
-			</ul>
-		</nav>
-		<h2>Restez en contact</h2>
-		<ul class="connect">
-			<li><a href="https://twitter.com/SudWeb"><img src="img/picto_twitter.png" alt="Twitter" /></a></li>
-			<li><a href="https://facebook.com/SudWeb"><img src="img/picto_facebook.png" alt="Facebook" /></a></li>
-			<li><a href="http://lanyrd.com/2013/sudweb/"><img src="img/picto_lanyrd.png" alt="Lanyrd.com" /></a></li>
-		</ul>
-		<p>Les éditions précédentes :
-			<a href="http://sudweb.fr/2011">2011 à Nîmes</a>,
-			<a href="http://sudweb.fr/2012">2012 à Toulouse</a>.
-		</p>
-		<ul class="legal">
-			<li>
-				<a href="#">Contact</a>
-			</li>
-			<li>
-				<a href="#">Presse</a>
-			</li>
-			<li>
-				<a href="#">A propos</a>
-			</li>
-			<li>
-				<a href="#">Mentions légales</a>
-			</li>
-		</ul>
-		<p>Sud Web est organisé par une équipe de bénévoles passionnés.</p>
+		<div class="container">
+			<a href="#top" class="skiplink to-top">Haut de page</a>
+			
+			<nav role="navigation" class="nav">
+				<ul>
+					<li>
+						<a href="inscription.html">Inscription</a>
+					</li>
+					<li>
+						<a href="programme.html#">Conférences</a>
+					</li>
+					<li>
+						<a href="programme.html#">Ateliers</a>
+					</li>
+					<li>
+						<a href="lieux.html#">Lieux</a>
+					</li>
+					<li>
+						<a href="infos-pratiques.html">Infos pratiques</a>
+					</li>
+					<li>
+						<a href="http://sudweb.fr/blog/">Blog</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<div class="connect">
+				<h2>Restez en contact</h2>
+				<ul>
+					<li>
+						<a href="https://twitter.com/SudWeb" class="twitter">Twitter</a>
+					</li>
+					<li>
+						<a href="https://facebook.com/SudWeb" class="facebook">Facebook</a>
+					</li>
+					<li>
+						<a href="http://lanyrd.com/2013/sudweb/" class="lanyrd">Lanyrd</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="precedentes">
+				<h2>Les éditions précédentes</h2>
+				<ul>
+					<li>
+						<a href="http://sudweb.fr/2011">2011 à Nîmes</a>
+					</li>
+					<li>
+						<a href="http://sudweb.fr/2012">2012 à Toulouse</a>
+					</li>
+				</ul>
+			</div>
+			
+			<nav class="footer">
+				<ul>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+					<li>
+						<a href="#">Presse</a>
+					</li>
+					<li>
+						<a href="#">A propos</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<p class="colophon">Sud Web est organisé par une équipe de bénévoles passionnés.</p>
+			
+			<p class="legal"><a href="#">Mentions légales</a></p>
+		</div>
 	</footer>
 </body>
 </html>

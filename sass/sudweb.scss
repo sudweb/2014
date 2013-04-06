@@ -1,17 +1,4 @@
-//*********************  MIXINS *************/
-
-@mixin font-size($size: 16){
-	font-size: $size + px;
-	font-size: ($size / 10) + rem;
-}
-
-@mixin drop-shadow ($x: 0, $y: 0, $blur: .5em, $color: rgba(0,0,0,.5)) {
-	-webkit-filter: drop-shadow($x $y $blur $color);
-	-moz-filter: drop-shadow($x $y $blur $color);
-	-ms-filter: drop-shadow($x $y $blur $color);
-	-o-filter: drop-shadow($x $y $blur $color);
-	filter: drop-shadow($x $y $blur $color);
-}
+@import "_mixins";
 
 //*********************  VARIABLES *************/
 
@@ -25,37 +12,35 @@ $contrast: #10b6bf;
 $text-over-contrast: #feffff;
 $inverted: #402f35;
 $text-over-inverted: #f4f2f3;
+$dark: #3f2f34;
+$text-over-dark: #f7f6f7;
 
-//*********************  COMMON *************/
+$narrow: 32em;
+$medium: 45em;
+$widest: 60em;
 
+//*********************  ELEMENTS  *************/
+* {
+	@include vendorize(box-sizing, border-box);
+	margin: 0;
+	padding: 0;
+}
 html {
 	font-size: 62.5%;
-	margin: 0;
 	background: #fff url(../img/bg.png) repeat center top;
 	color: $text;
 	font-family: arial, sans-serif;
 }
 
 body {
-	max-width: 960px;
-	margin: 0 auto;
 	@include font-size(16);
-	position: relative;
 }
-
 
 h1, h2, h3, p, ul, ol, li {
 	font-weight: normal;
 	line-height: 1.25;
 	word-spacing: .12em;
 }
-h1, h2, h3, p:first-of-type {
-	font-family: Ruluko, arial, sans-serif;
-}
-p:first-of-type {
-	@include font-size(18);
-}
-
 
 h1 {
 	@include font-size(22);
@@ -70,6 +55,9 @@ h3 {
 	@include font-size(18);
 }
 
+p {
+	margin-bottom: .5em;
+}
 ul,
 ol {
 	margin: 0 0 1em 1em;
@@ -85,150 +73,350 @@ a:hover {
 }
 
 img {
-	display: block;
-	margin: 0 auto;
 	max-width: 100%;
 	height: auto;
 }
 
-//*********************  SPECIFICS *************/
+a img {
+	border: none;
+}
+
+//*********************  GENERIC LAYOUT  *************/
+section,
+.container {
+	position: relative;
+	max-width: $widest;
+	margin: 0 auto;
+}
+
 .skiplink {
 	display: inline-block;
 }
-.button {
-	background: $contrast;
-	color: $text-over-contrast;
-	display: inline-block;
-	margin: 0 0 0 35%;
-	padding: .2em 1em;
-	position: relative;
-	min-height: 20px;
-	
-	@include drop-shadow(0, .2em, .3em, rgba($text, .2));
-	
-	&:before,
-	&:after {
-		content: "";
-		width: 0;
-		top: 0;
-		position: absolute;
+.nav {
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		display: inline;
+	}
+	a:link,
+	a:visited {
 		display: block;
-		border: 13px solid $contrast;
+		padding: .75em .5em;
 	}
-	&:before {
-		left: -1em;
-		border-right-width: .5em;
-		border-left-color: transparent !important;
-	}
-	&:after {
-		right: -1.5em;
-		border-left-width: .75em;
-		border-color: transparent transparent transparent $contrast;
+	a:focus,
+	a:hover {
+		text-decoration: none;
 	}
 }
-
-.pageheader {
-	text-align: center;
-	.skiplink {
-		position: absolute;
-		top: 0;
-		right: 2em;
-		color: $text;
-		background: $body;
-		padding: .2em .5em;
-		box-shadow: .05em .2em .3em rgba($text, .5);
-	}
-	.ville,
-	.lieu,
-	.date {
-		display: block;
-	}
+//*********************  SKIN  *************/
+html {
+	background: #fff url(../img/bg.png) repeat center top;
+	color: $text;
 }
-
-.introduction {
+h1, h2, h3, p:first-of-type {
+	font-family: Ruluko, arial, sans-serif;
+}
+p:first-of-type {
+	@include font-size(18);
+}
+a:link,
+a:visited {
+	color: $contrast;
+}
+.to-nav:before {
+	content: "☰";
+	padding-right: .3em;
+}
+.to-nav {
+	position: absolute;
+	top: 0;
+	right: 2em;
 	background: $body;
-	padding: 0 1em 2em;
-	margin: 0 1em;
-	box-shadow: 0 0 .5em rgba($text, .1);
+	padding: .3em .6em .4em;
+	box-shadow: .05em .2em .3em rgba($text, .5);
+	&:link,
+	&:visited {
+		color: $text;
+	}
+	&:hover {
+		background: $inverted;
+		color: $text-over-inverted;
+		text-decoration: none;
+	}
+	@include respond-to(wide) {
+		display: none;
+	}
 }
-
-.actualite,
-.programme,
-.salles,
-.sponsors,
-.pagefooter {
-	padding: .5em 1em 1em;
-}
-
-.banner {
-	background: $primary;
-	background: rgba($primary, .2), url(../img/bg.png);
-	color: $text-over-primary;
-	margin: 0 -2em;
-	padding: .5em 2em .25em;
+.logo {
+	display: block;
 	text-align: center;
-	position: relative;
-	box-shadow: 0 .35em .5em rgba($text, .8);
-	
-	.title {
-		display: block;
-		text-transform: uppercase;
-		line-height: 1.5;
-	}
-	.subtitle {
-		display: block;
-	}
-	&:before,
-	&:after {
-		content: "";
-		bottom: -2em;
+	padding-top: 1em;
+	@include respond-to(wide) {
 		position: absolute;
-		display: block;
-		border-style: solid;
-		border-color: darken($primary, 20%) transparent transparent transparent;
-		z-index: -1;
-	}
-	&:before {
-	  left: 0;
-	  border-width: 2em 0 0 2em;
-	}
-	&:after {
-	  right: 0;
-	  border-width: 2em 2em 0 0;
-	}
-	&+img {
-		width: 100%;
-		height: auto;
+		margin-top: .5em;
+		left: 0;
 	}
 }
+.pageheader {
+	@include respond-to(wide) {
+		background: $inverted;
+		color: $text-over-inverted;
+		margin-bottom: 11em;
+	}
+	.nav {
+		background: $inverted;
+		color: $text-over-inverted;
+		@include respond-to(medium) {
+			position: absolute;
+			top: -150%;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			
+			&:target {
+				@include vendorize(transition, top .3s ease-out);
+				top: 0;
+			}
+		}
+		@include respond-to(wide) {
+			text-align: right;
+			margin-left: 230px;
+			padding: 1em 1em 0 0;
+		}
+		a:link,
+		a:visited {
+			text-transform: uppercase;
+			color: $text-over-inverted;
+			@include respond-to(medium) {
+				border-bottom: 1px solid #5c4a50;
+			}
+			@include respond-to(wide) {
+				display: inline-block;
+				vertical-align: top;
+				border-right: 1px solid #5c4a50;
+			}
+		}
+		a:focus,
+		a:hover {
+			background: $contrast;
+			color: $text-over-contrast;
+			text-decoration: none;
+		}
+		li:last-child a {
+			@include respond-to(wide) {
+				border: none;
+				padding-right: 0;
+			}
+		}
+	}
+	.date {
+		text-align: center;
+		@include respond-to(medium) {
+			color: $secondary;
+		}
+		
+		@include respond-to(wide) {
+			position: absolute;
+			right: 0;
+			bottom: -9rem;
+			width: 17.1em;
+			color: $text;
+			@include font-size(25);
+		}
+	}
+}
+section {
+	@include respond-to(medium-and-up) {
+		max-width: $widest;
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+}
+.introduction {
+	background: $body url(../img/illustration.png) no-repeat center top;
+	background-size: auto 15em;
+	box-shadow: 0 0 .5em rgba($text, .8);
+	margin: 5em 0 0;
+	padding: 16em 1em 1em;
+	position: relative;
+	
+	@include respond-to(medium-only) {
+		background-image: -webkit-linear-gradient(top, transparent 15em, $body 15em), url(../img/illustration.png);
+		background-image:    -moz-linear-gradient(top, transparent 15em, $body 15em), url(../img/illustration.png);
+		background-image:     -ms-linear-gradient(top, transparent 15em, $body 15em), url(../img/illustration.png);
+		background-image:   linear-gradient(to bottom, transparent 15em, $body 15em), url(../img/illustration.png);
+		background-position: center top;
+		background-size: contain;
+	}
 
-.programme h2 {
+	@include respond-to(medium-and-up) {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 3em 1em 2em 65%;
+		background-image: -webkit-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
+		background-image:    -moz-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
+		background-image:     -ms-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
+		background-image:     linear-gradient(to right, transparent 63%, $body 63%), url(../img/illustration.png);
+		background-position: left center;
+		background-size: 100% 100%, auto 150%;
+	}
+	
+	.banner {
+		background: $primary;
+		color: $text-over-primary;
+		padding: .5em 3% .75em;
+		text-align: center;
+		position: absolute;
+		top: -5rem;
+		left: -1em;
+		right: -1.5rem;
+		box-shadow: 0 .35em .5em rgba($text, .8);
+		@include respond-to(medium) {
+			@include backfold (darken($primary, 20%), 2rem);
+		}
+		@include respond-to(medium-and-up) {
+			top: -3em;
+			left: auto;
+			min-width: 50%;
+			padding-left: 4em;
+			padding-right: 4em;
+			
+			@include backfold (darken($primary, 20%), 1em, right);
+		}
+		
+		.title {
+			display: block;
+			text-transform: uppercase;
+			line-height: 1.5;
+		}
+	}
+}
+.actualites {
+	margin-top: 1em;
+	max-width: $widest;
+	position: relative;
+	
+	@include respond-to(medium-and-up) {
+		background: $inverted;
+		color: $text-over-inverted;
+		margin-top: 2em;
+		padding: 1.75em 1em 1em;
+	}
+	
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		@include font-size(20);
+		font-weight: normal;
+		
+		background: $secondary;
+		color: $text-over-secondary;
+		position: relative;
+		margin: 1em;
+		padding: .5rem 0 .45rem;
+		min-height: 25px;
+		
+		@include respond-to(medium) {
+			@include ribbon($secondary, 17px);
+		}
+		
+		@include respond-to(medium-and-up) {
+			display: inline-block;
+			padding-left: 1em;
+			padding-right: 1em;
+			position: absolute;
+			z-index: 1;
+			left: -1.4em;
+			top: -1.8em;
+			@include backfold(darken($secondary, 20%), .6em, left);
+			@include ribbon($secondary, 17px, right);
+		}
+	}
+	@include respond-to(medium-and-up) {
+		white-space: nowrap;
+		
+		.excerpt {
+			white-space: normal;
+			display: inline-block;
+			vertical-align: top;
+			width: 64%;
+			border-right: 1px solid darken($text-over-inverted, 50%);
+			margin-right: -1px;
+		}
+		.more {
+			white-space: normal;
+			display: inline-block;
+			width: 36%;
+			padding-left: 1em;
+			border-left: 1px solid darken($text-over-inverted, 50%);
+		}
+	}
+}
+section {
+	max-width: $widest;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+/* Titre "Programme" avec traits gauche et droite */
+.programme {
 	color: $primary;
 	text-align: center;
 	text-transform: uppercase;
 	@include font-size(24);
 	position: relative;
+	margin-top: 1em;
 	
 	&:before,
 	&:after {
 		content: "";
 		display: block;
 		height: 1px;
-		width: 25%;
+		width: 15%;
 		border-top: 1px solid;
 		position: absolute;
 		top: .62em;
-		right: 75%;
+		right: 85%;
+		@include respond-to(medium-and-up) {
+			width: 33%;
+			right: 69%;
+		}
 	}
 	&:after {
 		right: auto;
-		left: 75%;
+		left: 85%;
+		@include respond-to(medium-and-up) {
+			left: 66%;
+		}
 	}
 }
+/* Pictos sprité pour les 3 grands moments */
+.conferences:before,
+.ateliers:before,
+.soirees:before {
+	content: "";
+	display: block;
+	float: right;
+	width: 65px;
+	height: 170px;
+	margin-top: 4.9em;
+	padding-left: 10px;
+	background: url(../img/pictos_programme.png) no-repeat right center;
+	background-size: 100% auto;
+}
+.ateliers:before {
+	background-position: right top;
+}
+.soirees:before {
+	background-position: right bottom;
+}
 
-.actualite h2,
-.programme h3,
-.sponsors h2 {
+.conferences h3,
+.ateliers h3,
+.soirees h3 {
 	text-align: center;
 	text-transform: uppercase;
 	@include font-size(20);
@@ -237,146 +425,266 @@ img {
 	background: $primary;
 	color: $text-over-primary;
 	position: relative;
-	margin: 2em 1em 1em;
+	margin: 1em;
 	padding: .5rem 0 .45rem;
 	min-height: 25px;
+	white-space: nowrap;
 	
-	&:before,
-	&:after {
-		content: "";
-		width: .2em;
-		top: 0;
-		position: absolute;
-		display: block;
-		border: 17px solid $primary;
-		z-index: -1;
+	@include respond-to(narrow) {
+		@include ribbon($primary, 17px);
 	}
-	&:before {
-		left: -1em;
-		border-right-width: .75em;
-		border-left-color: transparent !important;
-	}
-	&:after {
-		right: -1em;
-		border-left-width: .75em;
-		border-right-color: transparent !important;
+	@include respond-to(medium-and-up) {
+		padding-left: 3em;
 	}
 }
-.actualite h2 {
-	background: $secondary;
-	color: $text-over-secondary;
-	
-	&:before,
-	&:after {
-		border-color: $secondary;
+@include respond-to(medium-only) {
+	.conferences h3 {
+		padding-left: 1em;
+		margin-right: 0;
+	}
+	.ateliers h3 {
+		margin-left: 0;
+	}
+	.soirees h3 {
+		padding-left: 1em;
+		margin-right: 0;
 	}
 }
-.sponsors h2 {
-	background: $inverted;
-	color: $text-over-inverted;
-	
-	&:before,
-	&:after {
-		border-color: $inverted;
+.conferences h3 {
+	@include respond-to(wide) {
+		padding-left: 1em;
 	}
 }
-.sponsors h3 {
-	color: #c0babd;
-	text-align: center;
-	text-transform: uppercase;
-	position: relative;
-	
-	&:before,
-	&:after {
-		content: "";
-		display: block;
-		height: 5px;
-		width: 25%;
-		border-top: 1px solid;
-		border-bottom: 1px dotted;
-		position: absolute;
-		top: .62em;
-		right: 75%;
-	}
-	&:after {
-		right: auto;
-		left: 75%;
-	}
-}
-
-
-.sponsors {
-	ul,
-	li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	a {
-		color: $contrast;
-	}
-}
-
 .salles {
 	background: $secondary;
 	color: $text-over-secondary;
-}
-.to-top {
-	color: $contrast;
-	display: inline-block;
-	margin: 1em;
-	padding-left: 20px;
-	background: url(../img/to-top.png) no-repeat left top;
-}
-.pagefooter {
-	clear: both;
-	background: $inverted;
-	color: $text-over-inverted;
-	
-	a:link,
-	a:visited {
-		color: $text-over-inverted;
+	margin-top: 1em;
+	padding: .5em 1em;
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: .75em;
 	}
-	a:focus,
-	a:hover,
-	p a:link,
-	p a:visited {
-		color: $contrast;
+	@include respond-to(wide) {
+		img {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+}
+@include respond-to(medium-only) {
+	.conferences,
+	.ateliers,
+	.soirees,
+	.salles {
+		display: inline-block;
+		vertical-align: top;
+		width: 46%;
+	}
+	.conferences,
+	.soirees {
+		margin-right: 2%;
+	}
+	.ateliers,
+	.salles {
+		margin-left: 2%;
+	}
+	.conferences h3,
+	.soirees h3 {
+		@include ribbon($primary, 17px, left);
+	}
+	.ateliers h3,
+	.salles h3 {
+		@include ribbon($primary, 17px, right);
+	}
+}
+@include respond-to(wide) {
+	.conferences,
+	.ateliers,
+	.soirees {
+		display: inline-block;
+		vertical-align: top;
+		width: 31%;
+	}
+	.ateliers {
+		margin: 0 2%;
+		h3 {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.conferences h3 {
+		@include ribbon($primary, 17px, left);
+		margin-right: 0;
+	}
+	.soirees h3 {
+		@include ribbon($primary, 17px, right);
+		margin-left: 0;
+	}
+}
+.sponsors {
+	padding: 1em;
+	max-width: $widest;
+	margin: 0 auto;
+	
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		@include font-size(20);
+		font-weight: normal;
+		
+		background: $inverted;
+		color: $text-over-inverted;
+		@include ribbon($inverted, 17px);
+		position: relative;
+		margin: 1em;
+		padding: .5rem 0 .45rem;
+		min-height: 25px;
+	}
+	h3 {
+		color: #c0babd;
+		text-align: center;
+		text-transform: uppercase;
+		position: relative;
+		
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			height: 5px;
+			width: 25%;
+			border-top: 1px solid;
+			border-bottom: 1px dotted;
+			position: absolute;
+			top: .62em;
+			right: 75%;
+		}
+		&:after {
+			right: auto;
+			left: 75%;
+		}
 	}
 	ul {
-		margin: 0;
-		padding: 0;
 		list-style: none;
+		text-align: center;
+		padding: 1em 0;
+	}
+	li {
+		display: inline;
+		margin: 0 1em;
+	}
+	p {
+		margin-bottom: 1em;
+		@include respond-to(medium-and-up) {
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+		}
+		span {
+			display: block;
+			@include respond-to(medium) {
+				@include font-size(24);
+			}
+		}
+	}
+}
+
+
+.pagefooter {
+	background: $inverted;
+	color: $text-over-inverted;
+	margin-top: 2.5em;
+	padding: 0 1em 1em;
+	position: relative;
+	@include respond-to(medium-and-up) {
+		padding-top: 1.5em;
+	}
+	
+	.to-top {
+		position: absolute;
+		top: -2em;
+		right: 0;
+		color: $contrast;
+		padding-left: 20px;
+		background: url(../img/to-top.png) no-repeat left top;
+		@include respond-to(medium-and-up) {
+			top: -3.5em;
+		}
 	}
 	.nav {
-		background: $inverted;
-		margin: 0 -1em;
-		text-transform: uppercase;
-		a {
-			display: block;
-			margin-top: .25em;
-			padding: .5em 1em .75em;
+		margin-bottom: 1em;
+		@include respond-to(narrow) {
+			margin: 0 -1em;
+		}
+		@include respond-to(narrow-and-up) {
+			display: none;
+		}
+		a:link,
+		a:visited {
+			color: $text-over-inverted;
 			border-bottom: 1px solid #5c4a50;
+			@include respond-to(medium-only) {
+				padding-left: 2em;
+			}
+		}
+		a:hover,
+		a:focus {
+			background: $contrast;
+			color: $text-over-contrast;
 		}
 	}
-	.connect {
-		li,
-		img {
+	
+	.connect,
+	.precedentes,
+	.footer {
+		ul {
+			margin-left: 0;
+			list-style: none;
+		}
+		li {
 			display: inline;
 		}
-		a {
-			margin: 0 1em;
-			img {
-				display: inline-block;
-			}
-			
-			&:focus img,
-			&:hover img {
-				background: $text-over-inverted;
-			}
+		a:link,
+		a:visited {
+			display: inline-block;
+			margin: 0 1em 0 0;
 		}
 	}
-	.legal {
+	.connect,
+	.precedentes {
+		@include respond-to(medium-and-up) {
+			display: inline-block;
+			vertical-align: top;
+			width: 45%;
+		}
+		@include respond-to(medium) {
+			padding-top: 1em;
+		}
+		h2 {
+			margin-bottom: .25em;
+		}
+	}
+	.twitter,
+	.facebook,
+	.lanyrd {
+		display: inline-block;
+		text-indent: -9999px;
+		overflow: hidden;
+		width: 50px;
+		height: 50px;
+		background: url(../img/pictos_connect.png) no-repeat left center;
+	}
+	.twitter {
+		background-position: left top;
+	}
+	.facebook {
+		background-position: left -100px;
+	}
+	.lanyrd {
+		height: 40px;
+		width: 120px;
+		background-position: left bottom;
+	}
+	.footer {
 		li {
 			display: inline;
 			margin-right: .5em;
@@ -385,12 +693,17 @@ img {
 				margin-left: .5em;
 			}
 		}
+		a:link,
+		a:visited {
+			margin-right: 0;
+		}
 	}
-}
-// Spécialement pour Marie :-)
-#main-nav:target {
-	position: absolute;
-	top: 0;
-	left: 1em;
-	right: 1em;
+	.colophon {
+		clear: both;
+		margin-bottom: .5em;
+	}
+	.legal {
+		display: block;
+		@include font-size(13);
+	}
 }

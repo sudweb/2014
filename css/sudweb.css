@@ -1,82 +1,94 @@
-/* line 31, ../sass/sudweb.scss */
+/* line 23, ../sass/sudweb.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 28, ../sass/sudweb.scss */
 html {
   font-size: 62.5%;
-  margin: 0;
   background: white url(../img/bg.png) repeat center top;
   color: #312529;
   font-family: arial, sans-serif;
 }
 
-/* line 39, ../sass/sudweb.scss */
+/* line 35, ../sass/sudweb.scss */
 body {
-  max-width: 960px;
-  margin: 0 auto;
   font-size: 16px;
   font-size: 1.6rem;
-  position: relative;
 }
 
-/* line 47, ../sass/sudweb.scss */
+/* line 39, ../sass/sudweb.scss */
 h1, h2, h3, p, ul, ol, li {
   font-weight: normal;
   line-height: 1.25;
   word-spacing: .12em;
 }
 
-/* line 52, ../sass/sudweb.scss */
-h1, h2, h3, p:first-of-type {
-  font-family: Ruluko, arial, sans-serif;
-}
-
-/* line 55, ../sass/sudweb.scss */
-p:first-of-type {
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-
-/* line 57, ../sass/sudweb.scss */
+/* line 45, ../sass/sudweb.scss */
 h1 {
   font-size: 22px;
   font-size: 2.2rem;
   margin: 0 0 .5em;
 }
 
-/* line 62, ../sass/sudweb.scss */
+/* line 50, ../sass/sudweb.scss */
 h2 {
   font-size: 20px;
   font-size: 2rem;
 }
 
-/* line 66, ../sass/sudweb.scss */
+/* line 54, ../sass/sudweb.scss */
 h3 {
   font-size: 18px;
   font-size: 1.8rem;
 }
 
-/* line 71, ../sass/sudweb.scss */
+/* line 58, ../sass/sudweb.scss */
+p {
+  margin-bottom: .5em;
+}
+
+/* line 62, ../sass/sudweb.scss */
 ul,
 ol {
   margin: 0 0 1em 1em;
 }
 
-/* line 76, ../sass/sudweb.scss */
+/* line 67, ../sass/sudweb.scss */
 a:link,
 a:visited {
   text-decoration: none;
 }
 
-/* line 80, ../sass/sudweb.scss */
+/* line 71, ../sass/sudweb.scss */
 a:focus,
 a:hover {
   text-decoration: underline;
 }
 
-/* line 84, ../sass/sudweb.scss */
+/* line 75, ../sass/sudweb.scss */
 img {
-  display: block;
-  margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+
+/* line 80, ../sass/sudweb.scss */
+a img {
+  border: none;
+}
+
+/* line 86, ../sass/sudweb.scss */
+section,
+.container {
+  position: relative;
+  max-width: 60em;
+  margin: 0 auto;
 }
 
 /* line 92, ../sass/sudweb.scss */
@@ -84,158 +96,493 @@ img {
   display: inline-block;
 }
 
-/* line 95, ../sass/sudweb.scss */
-.button {
-  background: #10b6bf;
-  color: #feffff;
-  display: inline-block;
-  margin: 0 0 0 35%;
-  padding: .2em 1em;
-  position: relative;
-  min-height: 20px;
-  -webkit-filter: drop-shadow(0 0.2em 0.3em rgba(49, 37, 41, 0.2));
-  -moz-filter: drop-shadow(0 0.2em 0.3em rgba(49, 37, 41, 0.2));
-  -ms-filter: drop-shadow(0 0.2em 0.3em rgba(49, 37, 41, 0.2));
-  -o-filter: drop-shadow(0 0.2em 0.3em rgba(49, 37, 41, 0.2));
-  filter: drop-shadow(0 0.2em 0.3em rgba(49, 37, 41, 0.2));
+/* line 97, ../sass/sudweb.scss */
+.nav ul,
+.nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-/* line 107, ../sass/sudweb.scss */
-.button:before, .button:after {
-  content: "";
-  width: 0;
-  top: 0;
-  position: absolute;
+/* line 102, ../sass/sudweb.scss */
+.nav li {
+  display: inline;
+}
+/* line 106, ../sass/sudweb.scss */
+.nav a:link,
+.nav a:visited {
   display: block;
-  border: 13px solid #10b6bf;
+  padding: .75em .5em;
 }
-/* line 115, ../sass/sudweb.scss */
-.button:before {
-  left: -1em;
-  border-right-width: .5em;
-  border-left-color: transparent !important;
+/* line 111, ../sass/sudweb.scss */
+.nav a:focus,
+.nav a:hover {
+  text-decoration: none;
 }
+
+/* line 116, ../sass/sudweb.scss */
+html {
+  background: white url(../img/bg.png) repeat center top;
+  color: #312529;
+}
+
 /* line 120, ../sass/sudweb.scss */
-.button:after {
-  right: -1.5em;
-  border-left-width: .75em;
-  border-color: transparent transparent transparent #10b6bf;
+h1, h2, h3, p:first-of-type {
+  font-family: Ruluko, arial, sans-serif;
+}
+
+/* line 123, ../sass/sudweb.scss */
+p:first-of-type {
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 /* line 127, ../sass/sudweb.scss */
-.pageheader {
-  text-align: center;
+a:link,
+a:visited {
+  color: #10b6bf;
 }
-/* line 129, ../sass/sudweb.scss */
-.pageheader .skiplink {
+
+/* line 130, ../sass/sudweb.scss */
+.to-nav:before {
+  content: "☰";
+  padding-right: .3em;
+}
+
+/* line 134, ../sass/sudweb.scss */
+.to-nav {
   position: absolute;
   top: 0;
   right: 2em;
-  color: #312529;
   background: white;
-  padding: .2em .5em;
+  padding: .3em .6em .4em;
   box-shadow: 0.05em 0.2em 0.3em rgba(49, 37, 41, 0.5);
 }
-/* line 140, ../sass/sudweb.scss */
-.pageheader .ville,
-.pageheader .lieu,
-.pageheader .date {
-  display: block;
+/* line 142, ../sass/sudweb.scss */
+.to-nav:link, .to-nav:visited {
+  color: #312529;
 }
-
 /* line 145, ../sass/sudweb.scss */
-.introduction {
-  background: white;
-  padding: 0 1em 2em;
-  margin: 0 1em;
-  box-shadow: 0 0 0.5em rgba(49, 37, 41, 0.1);
+.to-nav:hover {
+  background: #402f35;
+  color: #f4f2f3;
+  text-decoration: none;
+}
+@media only screen and (min-width: 45em) {
+  /* line 134, ../sass/sudweb.scss */
+  .to-nav {
+    display: none;
+  }
 }
 
-/* line 156, ../sass/sudweb.scss */
-.actualite,
-.programme,
-.salles,
-.sponsors,
-.pagefooter {
-  padding: .5em 1em 1em;
-}
-
-/* line 160, ../sass/sudweb.scss */
-.banner {
-  background: #f64b3a;
-  background: rgba(246, 75, 58, 0.2), url(../img/bg.png);
-  color: #fef8f7;
-  margin: 0 -2em;
-  padding: .5em 2em .25em;
+/* line 154, ../sass/sudweb.scss */
+.logo {
+  display: block;
   text-align: center;
-  position: relative;
-  box-shadow: 0 0.35em 0.5em rgba(49, 37, 41, 0.8);
+  padding-top: 1em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 154, ../sass/sudweb.scss */
+  .logo {
+    position: absolute;
+    margin-top: .5em;
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 164, ../sass/sudweb.scss */
+  .pageheader {
+    background: #402f35;
+    color: #f4f2f3;
+    margin-bottom: 11em;
+  }
 }
 /* line 170, ../sass/sudweb.scss */
-.banner .title {
+.pageheader .nav {
+  background: #402f35;
+  color: #f4f2f3;
+}
+@media only screen and (max-width: 45em) {
+  /* line 170, ../sass/sudweb.scss */
+  .pageheader .nav {
+    position: absolute;
+    top: -150%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  /* line 180, ../sass/sudweb.scss */
+  .pageheader .nav:target {
+    -webkit-transition: top 0.3s ease-out;
+    -moz-transition: top 0.3s ease-out;
+    -ms-transition: top 0.3s ease-out;
+    -o-transition: top 0.3s ease-out;
+    transition: top 0.3s ease-out;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 170, ../sass/sudweb.scss */
+  .pageheader .nav {
+    text-align: right;
+    margin-left: 230px;
+    padding: 1em 1em 0 0;
+  }
+}
+/* line 191, ../sass/sudweb.scss */
+.pageheader .nav a:link,
+.pageheader .nav a:visited {
+  text-transform: uppercase;
+  color: #f4f2f3;
+}
+@media only screen and (max-width: 45em) {
+  /* line 191, ../sass/sudweb.scss */
+  .pageheader .nav a:link,
+  .pageheader .nav a:visited {
+    border-bottom: 1px solid #5c4a50;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 191, ../sass/sudweb.scss */
+  .pageheader .nav a:link,
+  .pageheader .nav a:visited {
+    display: inline-block;
+    vertical-align: top;
+    border-right: 1px solid #5c4a50;
+  }
+}
+/* line 204, ../sass/sudweb.scss */
+.pageheader .nav a:focus,
+.pageheader .nav a:hover {
+  background: #10b6bf;
+  color: #feffff;
+  text-decoration: none;
+}
+@media only screen and (min-width: 45em) {
+  /* line 209, ../sass/sudweb.scss */
+  .pageheader .nav li:last-child a {
+    border: none;
+    padding-right: 0;
+  }
+}
+/* line 216, ../sass/sudweb.scss */
+.pageheader .date {
+  text-align: center;
+}
+@media only screen and (max-width: 45em) {
+  /* line 216, ../sass/sudweb.scss */
+  .pageheader .date {
+    color: #c51b3f;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 216, ../sass/sudweb.scss */
+  .pageheader .date {
+    position: absolute;
+    right: 0;
+    bottom: -9rem;
+    width: 17.1em;
+    color: #312529;
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 232, ../sass/sudweb.scss */
+  section {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+}
+
+/* line 239, ../sass/sudweb.scss */
+.introduction {
+  background: white url(../img/illustration.png) no-repeat center top;
+  background-size: auto 15em;
+  box-shadow: 0 0 0.5em rgba(49, 37, 41, 0.8);
+  margin: 5em 0 0;
+  padding: 16em 1em 1em;
+  position: relative;
+}
+@media only screen and (min-width: 32em) and (max-width: 45em) {
+  /* line 239, ../sass/sudweb.scss */
+  .introduction {
+    background-image: -webkit-linear-gradient(top, transparent 15em, white 15em), url(../img/illustration.png);
+    background-image: -moz-linear-gradient(top, transparent 15em, white 15em), url(../img/illustration.png);
+    background-image: -ms-linear-gradient(top, transparent 15em, white 15em), url(../img/illustration.png);
+    background-image: linear-gradient(to bottom, transparent 15em, #ffffff 15em), url(../img/illustration.png);
+    background-position: center top;
+    background-size: contain;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 239, ../sass/sudweb.scss */
+  .introduction {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 3em 1em 2em 65%;
+    background-image: -webkit-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png);
+    background-image: -moz-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png);
+    background-image: -ms-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png);
+    background-image: linear-gradient(to right, transparent 63%, #ffffff 63%), url(../img/illustration.png);
+    background-position: left center;
+    background-size: 100% 100%, auto 150%;
+  }
+}
+/* line 268, ../sass/sudweb.scss */
+.introduction .banner {
+  background: #f64b3a;
+  color: #fef8f7;
+  padding: .5em 3% .75em;
+  text-align: center;
+  position: absolute;
+  top: -5rem;
+  left: -1em;
+  right: -1.5rem;
+  box-shadow: 0 0.35em 0.5em rgba(49, 37, 41, 0.8);
+}
+@media only screen and (max-width: 45em) {
+  /* line 150, ../sass/_mixins.scss */
+  .introduction .banner:before, .introduction .banner:after {
+    content: "";
+    display: block;
+    bottom: -2rem;
+    position: absolute;
+    z-index: -1;
+    border-style: solid;
+    border-color: #c11909 transparent transparent transparent;
+  }
+  /* line 159, ../sass/_mixins.scss */
+  .introduction .banner:before {
+    left: 0;
+    border-width: 2rem 0 0 2rem;
+  }
+  /* line 163, ../sass/_mixins.scss */
+  .introduction .banner:after {
+    right: 0;
+    border-width: 2rem 2rem 0 0;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 268, ../sass/sudweb.scss */
+  .introduction .banner {
+    top: -3em;
+    left: auto;
+    min-width: 50%;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  /* line 136, ../sass/_mixins.scss */
+  .introduction .banner:after {
+    content: "";
+    display: block;
+    bottom: -1em;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    border-style: solid;
+    border-color: #c11909 transparent transparent transparent;
+    border-width: 1em 1em 0 0;
+  }
+}
+/* line 291, ../sass/sudweb.scss */
+.introduction .banner .title {
   display: block;
   text-transform: uppercase;
   line-height: 1.5;
 }
-/* line 175, ../sass/sudweb.scss */
-.banner .subtitle {
-  display: block;
+
+/* line 298, ../sass/sudweb.scss */
+.actualites {
+  margin-top: 1em;
+  max-width: 60em;
+  position: relative;
 }
-/* line 179, ../sass/sudweb.scss */
-.banner:before, .banner:after {
-  content: "";
-  bottom: -2em;
-  position: absolute;
-  display: block;
-  border-style: solid;
-  border-color: #c11909 transparent transparent transparent;
-  z-index: -1;
+@media only screen and (min-width: 45em) {
+  /* line 298, ../sass/sudweb.scss */
+  .actualites {
+    background: #402f35;
+    color: #f4f2f3;
+    margin-top: 2em;
+    padding: 1.75em 1em 1em;
+  }
 }
-/* line 188, ../sass/sudweb.scss */
-.banner:before {
-  left: 0;
-  border-width: 2em 0 0 2em;
+/* line 310, ../sass/sudweb.scss */
+.actualites h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  background: #c51b3f;
+  color: #fcf1f2;
+  position: relative;
+  margin: 1em;
+  padding: .5rem 0 .45rem;
+  min-height: 25px;
 }
-/* line 192, ../sass/sudweb.scss */
-.banner:after {
-  right: 0;
-  border-width: 2em 2em 0 0;
+@media only screen and (max-width: 45em) {
+  /* line 90, ../sass/_mixins.scss */
+  .actualites h2:before, .actualites h2:after {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #c51b3f;
+  }
+  /* line 99, ../sass/_mixins.scss */
+  .actualites h2:before {
+    left: -1em;
+    border-left-color: transparent !important;
+  }
+  /* line 109, ../sass/_mixins.scss */
+  .actualites h2:after {
+    right: -1em;
+    border-right-color: transparent !important;
+  }
 }
-/* line 196, ../sass/sudweb.scss */
-.banner + img {
-  width: 100%;
-  height: auto;
+@media only screen and (min-width: 45em) {
+  /* line 310, ../sass/sudweb.scss */
+  .actualites h2 {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    z-index: 1;
+    left: -1.4em;
+    top: -1.8em;
+  }
+  /* line 123, ../sass/_mixins.scss */
+  .actualites h2:before {
+    content: "";
+    display: block;
+    bottom: -0.6em;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border-style: solid;
+    border-color: #6b0f22 transparent transparent transparent;
+    border-width: 0.6em 0 0 0.6em;
+  }
+  /* line 70, ../sass/_mixins.scss */
+  .actualites h2:after {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    right: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #c51b3f;
+    border-right-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 298, ../sass/sudweb.scss */
+  .actualites {
+    white-space: nowrap;
+  }
+  /* line 342, ../sass/sudweb.scss */
+  .actualites .excerpt {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    width: 64%;
+    border-right: 1px solid #7d6a73;
+    margin-right: -1px;
+  }
+  /* line 350, ../sass/sudweb.scss */
+  .actualites .more {
+    white-space: normal;
+    display: inline-block;
+    width: 36%;
+    padding-left: 1em;
+    border-left: 1px solid #7d6a73;
+  }
 }
 
-/* line 202, ../sass/sudweb.scss */
-.programme h2 {
+/* line 359, ../sass/sudweb.scss */
+section {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* Titre "Programme" avec traits gauche et droite */
+/* line 365, ../sass/sudweb.scss */
+.programme {
   color: #f64b3a;
   text-align: center;
   text-transform: uppercase;
   font-size: 24px;
   font-size: 2.4rem;
   position: relative;
+  margin-top: 1em;
 }
-/* line 210, ../sass/sudweb.scss */
-.programme h2:before, .programme h2:after {
+/* line 374, ../sass/sudweb.scss */
+.programme:before, .programme:after {
   content: "";
   display: block;
   height: 1px;
-  width: 25%;
+  width: 15%;
   border-top: 1px solid;
   position: absolute;
   top: .62em;
-  right: 75%;
+  right: 85%;
 }
-/* line 220, ../sass/sudweb.scss */
-.programme h2:after {
+@media only screen and (min-width: 45em) {
+  /* line 374, ../sass/sudweb.scss */
+  .programme:before, .programme:after {
+    width: 33%;
+    right: 69%;
+  }
+}
+/* line 388, ../sass/sudweb.scss */
+.programme:after {
   right: auto;
-  left: 75%;
+  left: 85%;
+}
+@media only screen and (min-width: 45em) {
+  /* line 388, ../sass/sudweb.scss */
+  .programme:after {
+    left: 66%;
+  }
 }
 
-/* line 228, ../sass/sudweb.scss */
-.actualite h2,
-.programme h3,
-.sponsors h2 {
+/* Pictos sprité pour les 3 grands moments */
+/* line 399, ../sass/sudweb.scss */
+.conferences:before,
+.ateliers:before,
+.soirees:before {
+  content: "";
+  display: block;
+  float: right;
+  width: 65px;
+  height: 170px;
+  margin-top: 4.9em;
+  padding-left: 10px;
+  background: url(../img/pictos_programme.png) no-repeat right center;
+  background-size: 100% auto;
+}
+
+/* line 410, ../sass/sudweb.scss */
+.ateliers:before {
+  background-position: right top;
+}
+
+/* line 413, ../sass/sudweb.scss */
+.soirees:before {
+  background-position: right bottom;
+}
+
+/* line 419, ../sass/sudweb.scss */
+.conferences h3,
+.ateliers h3,
+.soirees h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
@@ -244,69 +591,248 @@ img {
   background: #f64b3a;
   color: #fef8f7;
   position: relative;
-  margin: 2em 1em 1em;
+  margin: 1em;
+  padding: .5rem 0 .45rem;
+  min-height: 25px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 32em) {
+  /* line 90, ../sass/_mixins.scss */
+  .conferences h3:before, .conferences h3:after,
+  .ateliers h3:before,
+  .ateliers h3:after,
+  .soirees h3:before,
+  .soirees h3:after {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #f64b3a;
+  }
+  /* line 99, ../sass/_mixins.scss */
+  .conferences h3:before,
+  .ateliers h3:before,
+  .soirees h3:before {
+    left: -1em;
+    border-left-color: transparent !important;
+  }
+  /* line 109, ../sass/_mixins.scss */
+  .conferences h3:after,
+  .ateliers h3:after,
+  .soirees h3:after {
+    right: -1em;
+    border-right-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 419, ../sass/sudweb.scss */
+  .conferences h3,
+  .ateliers h3,
+  .soirees h3 {
+    padding-left: 3em;
+  }
+}
+
+@media only screen and (min-width: 32em) and (max-width: 45em) {
+  /* line 441, ../sass/sudweb.scss */
+  .conferences h3 {
+    padding-left: 1em;
+    margin-right: 0;
+  }
+
+  /* line 445, ../sass/sudweb.scss */
+  .ateliers h3 {
+    margin-left: 0;
+  }
+
+  /* line 448, ../sass/sudweb.scss */
+  .soirees h3 {
+    padding-left: 1em;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 453, ../sass/sudweb.scss */
+  .conferences h3 {
+    padding-left: 1em;
+  }
+}
+
+/* line 458, ../sass/sudweb.scss */
+.salles {
+  background: #c51b3f;
+  color: #fcf1f2;
+  margin-top: 1em;
+  padding: .5em 1em;
+}
+/* line 463, ../sass/sudweb.scss */
+.salles h2 {
+  text-transform: uppercase;
+  margin-bottom: .75em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 468, ../sass/sudweb.scss */
+  .salles img {
+    float: right;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 32em) and (max-width: 45em) {
+  /* line 478, ../sass/sudweb.scss */
+  .conferences,
+  .ateliers,
+  .soirees,
+  .salles {
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+  }
+
+  /* line 484, ../sass/sudweb.scss */
+  .conferences,
+  .soirees {
+    margin-right: 2%;
+  }
+
+  /* line 488, ../sass/sudweb.scss */
+  .ateliers,
+  .salles {
+    margin-left: 2%;
+  }
+
+  /* line 51, ../sass/_mixins.scss */
+  .conferences h3:before,
+  .soirees h3:before {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    left: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #f64b3a;
+    border-left-color: transparent !important;
+  }
+
+  /* line 70, ../sass/_mixins.scss */
+  .ateliers h3:after,
+  .salles h3:after {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    right: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #f64b3a;
+    border-right-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 503, ../sass/sudweb.scss */
+  .conferences,
+  .ateliers,
+  .soirees {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+  }
+
+  /* line 508, ../sass/sudweb.scss */
+  .ateliers {
+    margin: 0 2%;
+  }
+  /* line 510, ../sass/sudweb.scss */
+  .ateliers h3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 515, ../sass/sudweb.scss */
+  .conferences h3 {
+    margin-right: 0;
+  }
+  /* line 51, ../sass/_mixins.scss */
+  .conferences h3:before {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    left: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #f64b3a;
+    border-left-color: transparent !important;
+  }
+
+  /* line 519, ../sass/sudweb.scss */
+  .soirees h3 {
+    margin-left: 0;
+  }
+  /* line 70, ../sass/_mixins.scss */
+  .soirees h3:after {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    right: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 17px solid #f64b3a;
+    border-right-color: transparent !important;
+  }
+}
+/* line 524, ../sass/sudweb.scss */
+.sponsors {
+  padding: 1em;
+  max-width: 60em;
+  margin: 0 auto;
+}
+/* line 529, ../sass/sudweb.scss */
+.sponsors h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  background: #402f35;
+  color: #f4f2f3;
+  position: relative;
+  margin: 1em;
   padding: .5rem 0 .45rem;
   min-height: 25px;
 }
-/* line 242, ../sass/sudweb.scss */
-.actualite h2:before, .actualite h2:after,
-.programme h3:before,
-.programme h3:after,
-.sponsors h2:before,
-.sponsors h2:after {
+/* line 90, ../sass/_mixins.scss */
+.sponsors h2:before, .sponsors h2:after {
   content: "";
-  width: .2em;
+  display: block;
+  width: 0;
   top: 0;
   position: absolute;
-  display: block;
-  border: 17px solid #f64b3a;
   z-index: -1;
+  border: 17px solid #402f35;
 }
-/* line 251, ../sass/sudweb.scss */
-.actualite h2:before,
-.programme h3:before,
+/* line 99, ../sass/_mixins.scss */
 .sponsors h2:before {
   left: -1em;
-  border-right-width: .75em;
   border-left-color: transparent !important;
 }
-/* line 256, ../sass/sudweb.scss */
-.actualite h2:after,
-.programme h3:after,
+/* line 109, ../sass/_mixins.scss */
 .sponsors h2:after {
   right: -1em;
-  border-left-width: .75em;
   border-right-color: transparent !important;
 }
-
-/* line 262, ../sass/sudweb.scss */
-.actualite h2 {
-  background: #c51b3f;
-  color: #fcf1f2;
-}
-/* line 267, ../sass/sudweb.scss */
-.actualite h2:before, .actualite h2:after {
-  border-color: #c51b3f;
-}
-
-/* line 271, ../sass/sudweb.scss */
-.sponsors h2 {
-  background: #402f35;
-  color: #f4f2f3;
-}
-/* line 276, ../sass/sudweb.scss */
-.sponsors h2:before, .sponsors h2:after {
-  border-color: #402f35;
-}
-
-/* line 280, ../sass/sudweb.scss */
+/* line 543, ../sass/sudweb.scss */
 .sponsors h3 {
   color: #c0babd;
   text-align: center;
   text-transform: uppercase;
   position: relative;
 }
-/* line 287, ../sass/sudweb.scss */
+/* line 550, ../sass/sudweb.scss */
 .sponsors h3:before, .sponsors h3:after {
   content: "";
   display: block;
@@ -318,108 +844,202 @@ img {
   top: .62em;
   right: 75%;
 }
-/* line 298, ../sass/sudweb.scss */
+/* line 561, ../sass/sudweb.scss */
 .sponsors h3:after {
   right: auto;
   left: 75%;
 }
-
-/* line 307, ../sass/sudweb.scss */
-.sponsors ul,
-.sponsors li {
+/* line 566, ../sass/sudweb.scss */
+.sponsors ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  padding: 1em 0;
 }
-/* line 312, ../sass/sudweb.scss */
-.sponsors a {
-  color: #10b6bf;
+/* line 571, ../sass/sudweb.scss */
+.sponsors li {
+  display: inline;
+  margin: 0 1em;
+}
+/* line 575, ../sass/sudweb.scss */
+.sponsors p {
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 575, ../sass/sudweb.scss */
+  .sponsors p {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+  }
+}
+/* line 582, ../sass/sudweb.scss */
+.sponsors p span {
+  display: block;
+}
+@media only screen and (max-width: 45em) {
+  /* line 582, ../sass/sudweb.scss */
+  .sponsors p span {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
 }
 
-/* line 317, ../sass/sudweb.scss */
-.salles {
-  background: #c51b3f;
-  color: #fcf1f2;
+/* line 592, ../sass/sudweb.scss */
+.pagefooter {
+  background: #402f35;
+  color: #f4f2f3;
+  margin-top: 2.5em;
+  padding: 0 1em 1em;
+  position: relative;
 }
-
-/* line 321, ../sass/sudweb.scss */
-.to-top {
+@media only screen and (min-width: 45em) {
+  /* line 592, ../sass/sudweb.scss */
+  .pagefooter {
+    padding-top: 1.5em;
+  }
+}
+/* line 602, ../sass/sudweb.scss */
+.pagefooter .to-top {
+  position: absolute;
+  top: -2em;
+  right: 0;
   color: #10b6bf;
-  display: inline-block;
-  margin: 1em;
   padding-left: 20px;
   background: url(../img/to-top.png) no-repeat left top;
 }
-
-/* line 328, ../sass/sudweb.scss */
-.pagefooter {
-  clear: both;
-  background: #402f35;
-  color: #f4f2f3;
+@media only screen and (min-width: 45em) {
+  /* line 602, ../sass/sudweb.scss */
+  .pagefooter .to-top {
+    top: -3.5em;
+  }
 }
-/* line 334, ../sass/sudweb.scss */
-.pagefooter a:link,
-.pagefooter a:visited {
-  color: #f4f2f3;
-}
-/* line 340, ../sass/sudweb.scss */
-.pagefooter a:focus,
-.pagefooter a:hover,
-.pagefooter p a:link,
-.pagefooter p a:visited {
-  color: #10b6bf;
-}
-/* line 343, ../sass/sudweb.scss */
-.pagefooter ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/* line 348, ../sass/sudweb.scss */
+/* line 613, ../sass/sudweb.scss */
 .pagefooter .nav {
-  background: #402f35;
-  margin: 0 -1em;
-  text-transform: uppercase;
+  margin-bottom: 1em;
 }
-/* line 352, ../sass/sudweb.scss */
-.pagefooter .nav a {
-  display: block;
-  margin-top: .25em;
-  padding: .5em 1em .75em;
+@media only screen and (max-width: 32em) {
+  /* line 613, ../sass/sudweb.scss */
+  .pagefooter .nav {
+    margin: 0 -1em;
+  }
+}
+@media only screen and (min-width: 32em) {
+  /* line 613, ../sass/sudweb.scss */
+  .pagefooter .nav {
+    display: none;
+  }
+}
+/* line 622, ../sass/sudweb.scss */
+.pagefooter .nav a:link,
+.pagefooter .nav a:visited {
+  color: #f4f2f3;
   border-bottom: 1px solid #5c4a50;
 }
-/* line 361, ../sass/sudweb.scss */
+@media only screen and (min-width: 32em) and (max-width: 45em) {
+  /* line 622, ../sass/sudweb.scss */
+  .pagefooter .nav a:link,
+  .pagefooter .nav a:visited {
+    padding-left: 2em;
+  }
+}
+/* line 630, ../sass/sudweb.scss */
+.pagefooter .nav a:hover,
+.pagefooter .nav a:focus {
+  background: #10b6bf;
+  color: #feffff;
+}
+/* line 639, ../sass/sudweb.scss */
+.pagefooter .connect ul,
+.pagefooter .precedentes ul,
+.pagefooter .footer ul {
+  margin-left: 0;
+  list-style: none;
+}
+/* line 643, ../sass/sudweb.scss */
 .pagefooter .connect li,
-.pagefooter .connect img {
+.pagefooter .precedentes li,
+.pagefooter .footer li {
   display: inline;
 }
-/* line 364, ../sass/sudweb.scss */
-.pagefooter .connect a {
-  margin: 0 1em;
-}
-/* line 366, ../sass/sudweb.scss */
-.pagefooter .connect a img {
+/* line 647, ../sass/sudweb.scss */
+.pagefooter .connect a:link,
+.pagefooter .connect a:visited,
+.pagefooter .precedentes a:link,
+.pagefooter .precedentes a:visited,
+.pagefooter .footer a:link,
+.pagefooter .footer a:visited {
   display: inline-block;
+  margin: 0 1em 0 0;
 }
-/* line 371, ../sass/sudweb.scss */
-.pagefooter .connect a:focus img, .pagefooter .connect a:hover img {
-  background: #f4f2f3;
+@media only screen and (min-width: 45em) {
+  /* line 653, ../sass/sudweb.scss */
+  .pagefooter .connect,
+  .pagefooter .precedentes {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+  }
 }
-/* line 377, ../sass/sudweb.scss */
-.pagefooter .legal li {
+@media only screen and (max-width: 45em) {
+  /* line 653, ../sass/sudweb.scss */
+  .pagefooter .connect,
+  .pagefooter .precedentes {
+    padding-top: 1em;
+  }
+}
+/* line 662, ../sass/sudweb.scss */
+.pagefooter .connect h2,
+.pagefooter .precedentes h2 {
+  margin-bottom: .25em;
+}
+/* line 668, ../sass/sudweb.scss */
+.pagefooter .twitter,
+.pagefooter .facebook,
+.pagefooter .lanyrd {
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  background: url(../img/pictos_connect.png) no-repeat left center;
+}
+/* line 676, ../sass/sudweb.scss */
+.pagefooter .twitter {
+  background-position: left top;
+}
+/* line 679, ../sass/sudweb.scss */
+.pagefooter .facebook {
+  background-position: left -100px;
+}
+/* line 682, ../sass/sudweb.scss */
+.pagefooter .lanyrd {
+  height: 40px;
+  width: 120px;
+  background-position: left bottom;
+}
+/* line 688, ../sass/sudweb.scss */
+.pagefooter .footer li {
   display: inline;
   margin-right: .5em;
 }
-/* line 380, ../sass/sudweb.scss */
-.pagefooter .legal li:not(:last-child):after {
+/* line 691, ../sass/sudweb.scss */
+.pagefooter .footer li:not(:last-child):after {
   content: "|";
   margin-left: .5em;
 }
-
-/* line 388, ../sass/sudweb.scss */
-#main-nav:target {
-  position: absolute;
-  top: 0;
-  left: 1em;
-  right: 1em;
+/* line 697, ../sass/sudweb.scss */
+.pagefooter .footer a:link,
+.pagefooter .footer a:visited {
+  margin-right: 0;
+}
+/* line 701, ../sass/sudweb.scss */
+.pagefooter .colophon {
+  clear: both;
+  margin-bottom: .5em;
+}
+/* line 705, ../sass/sudweb.scss */
+.pagefooter .legal {
+  display: block;
+  font-size: 13px;
+  font-size: 1.3rem;
 }
