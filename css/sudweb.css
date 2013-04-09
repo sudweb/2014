@@ -536,7 +536,7 @@ section {
 @media only screen and (min-width: 45em) {
   /* line 374, ../sass/sudweb.scss */
   .programme:before, .programme:after {
-    width: 33%;
+    width: 30%;
     right: 69%;
   }
 }
