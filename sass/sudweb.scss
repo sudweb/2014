@@ -184,7 +184,7 @@ a:visited {
 		}
 		@include respond-to(wide) {
 			text-align: right;
-			margin-left: 230px;
+			margin-left: 200px;
 			padding: 1em 1em 0 0;
 		}
 		a:link,
@@ -209,7 +209,6 @@ a:visited {
 		li:last-child a {
 			@include respond-to(wide) {
 				border: none;
-				padding-right: 0;
 			}
 		}
 	}
