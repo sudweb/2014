@@ -142,7 +142,28 @@ a:visited {
   color: #10b6bf;
 }
 
-/* line 130, ../sass/sudweb.scss */
+/* line 131, ../sass/sudweb.scss */
+.action:link,
+.action:visited {
+  display: inline-block;
+  color: #feffff;
+  background: #10b6bf;
+  background: -webkit-linear-gradient(#10b6bf, #0a7378);
+  background: -moz-linear-gradient(#10b6bf, #0a7378);
+  background: -ms-linear-gradient(#10b6bf, #0a7378);
+  background: linear-gradient(#10b6bf, #0a7378);
+  padding: .5em 1em;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+/* line 143, ../sass/sudweb.scss */
+.action:focus,
+.action:hover {
+  background: #0c8990;
+  box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+/* line 147, ../sass/sudweb.scss */
 .to-nav:before {
   content: "☰";
   padding-right: .3em;
