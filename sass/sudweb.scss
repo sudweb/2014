@@ -312,45 +312,35 @@ section {
 	}
 }
 .actualites {
-	margin-top: 1em;
-	max-width: $widest;
-	position: relative;
-	
-	@include respond-to(medium-and-up) {
 		background: $inverted;
 		color: $text-over-inverted;
 		margin-top: 2em;
 		padding: 1.75em 1em 1em;
-	}
+	max-width: $widest;
+	position: relative;
 	
 	h2 {
-		text-align: center;
 		text-transform: uppercase;
-		@include font-size(20);
 		font-weight: normal;
 		
 		background: $secondary;
 		color: $text-over-secondary;
-		position: relative;
+		position: absolute;
 		margin: 1em;
 		padding: .5rem 0 .45rem;
 		min-height: 25px;
-		
-		@include respond-to(medium) {
-			@include ribbon($secondary, 17px);
-		}
-		
-		@include respond-to(medium-and-up) {
 			display: inline-block;
 			padding-left: 1em;
 			padding-right: 1em;
-			position: absolute;
 			z-index: 1;
 			left: -1.4em;
 			top: -1.8em;
 			@include backfold(darken($secondary, 20%), .6em, left);
 			@include ribbon($secondary, 17px, right);
 		}
+	.more {
+		padding-top: .5em;
+		border-top: 1px solid darken($text-over-inverted, 50%);
 	}
 	@include respond-to(medium-and-up) {
 		white-space: nowrap;
@@ -369,6 +359,8 @@ section {
 			width: 36%;
 			padding-left: 1em;
 			border-left: 1px solid darken($text-over-inverted, 50%);
+			padding-top: 0;
+			border-top: none;
 		}
 	}
 }

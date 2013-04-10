@@ -414,64 +414,28 @@ a:visited {
   line-height: 1.5;
 }
 
-/* line 298, ../sass/sudweb.scss */
-.actualites {
-  margin-top: 1em;
-  max-width: 60em;
-  position: relative;
-}
-@media only screen and (min-width: 45em) {
-  /* line 298, ../sass/sudweb.scss */
+/* line 289, ../sass/sudweb.scss */
   .actualites {
     background: #402f35;
     color: #f4f2f3;
     margin-top: 2em;
     padding: 1.75em 1em 1em;
+  max-width: 60em;
+  position: relative;
   }
-}
-/* line 310, ../sass/sudweb.scss */
+/* line 297, ../sass/sudweb.scss */
 .actualites h2 {
-  text-align: center;
   text-transform: uppercase;
-  font-size: 20px;
-  font-size: 2rem;
   font-weight: normal;
   background: #c51b3f;
   color: #fcf1f2;
-  position: relative;
+  position: absolute;
   margin: 1em;
   padding: .5rem 0 .45rem;
   min-height: 25px;
-}
-@media only screen and (max-width: 45em) {
-  /* line 90, ../sass/_mixins.scss */
-  .actualites h2:before, .actualites h2:after {
-    content: "";
-    display: block;
-    width: 0;
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    border: 17px solid #c51b3f;
-  }
-  /* line 99, ../sass/_mixins.scss */
-  .actualites h2:before {
-    left: -1em;
-    border-left-color: transparent !important;
-  }
-  /* line 109, ../sass/_mixins.scss */
-  .actualites h2:after {
-    right: -1em;
-    border-right-color: transparent !important;
-  }
-}
-@media only screen and (min-width: 45em) {
-  /* line 310, ../sass/sudweb.scss */
-  .actualites h2 {
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
-    position: absolute;
     z-index: 1;
     left: -1.4em;
     top: -1.8em;
@@ -500,6 +464,9 @@ a:visited {
     border: 17px solid #c51b3f;
     border-right-color: transparent !important;
   }
+.actualites .more {
+  padding-top: .5em;
+  border-top: 1px solid #7d6a73;
 }
 @media only screen and (min-width: 45em) {
   /* line 298, ../sass/sudweb.scss */
@@ -522,6 +489,8 @@ a:visited {
     width: 36%;
     padding-left: 1em;
     border-left: 1px solid #7d6a73;
+    padding-top: 0;
+    border-top: none;
   }
 }
 
