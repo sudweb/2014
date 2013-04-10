@@ -171,21 +171,17 @@ a:visited {
 
 /* line 134, ../sass/sudweb.scss */
 .to-nav {
-  position: absolute;
-  top: 0;
-  right: 2em;
-  background: white;
+  text-align: right;
   padding: .3em .6em .4em;
-  box-shadow: 0.05em 0.2em 0.3em rgba(49, 37, 41, 0.5);
 }
 /* line 142, ../sass/sudweb.scss */
 .to-nav:link, .to-nav:visited {
-  color: #312529;
+  color: #f4f2f3;
 }
 /* line 145, ../sass/sudweb.scss */
 .to-nav:hover {
-  background: #402f35;
-  color: #f4f2f3;
+  background: #10b6bf;
+  color: #feffff;
   text-decoration: none;
 }
 @media only screen and (min-width: 45em) {

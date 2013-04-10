@@ -149,19 +149,15 @@ a:visited {
 	padding-right: .3em;
 }
 .to-nav {
-	position: absolute;
-	top: 0;
-	right: 2em;
-	background: $body;
+	text-align: right;
 	padding: .3em .6em .4em;
-	box-shadow: .05em .2em .3em rgba($text, .5);
 	&:link,
 	&:visited {
-		color: $text;
+		color: $text-over-inverted;
 	}
 	&:hover {
-		background: $inverted;
-		color: $text-over-inverted;
+		background: $contrast;
+		color: $text-over-contrast;
 		text-decoration: none;
 	}
 	@include respond-to(wide) {
