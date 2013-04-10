@@ -249,6 +249,8 @@ a:visited {
     margin-left: 200px;
     padding: 1em 1em 0 0;
   }
+  .pageheader .nav .close {
+    display: none;
 }
 /* line 191, ../sass/sudweb.scss */
 .pageheader .nav a:link,

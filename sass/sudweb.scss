@@ -203,6 +203,9 @@ a:visited {
 			text-align: right;
 			margin-left: 200px;
 			padding: 1em 1em 0 0;
+			.close {
+				display: none;
+			}
 		}
 		a:link,
 		a:visited {
