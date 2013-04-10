@@ -301,6 +301,7 @@ a:visited {
 /* line 216, ../sass/sudweb.scss */
 .pageheader .date {
 .pageheader .banner {
+  border-top: 2px dashed #402f35;
   text-align: center;
   background: #f64b3a;
   color: #fef8f7;
@@ -851,6 +852,7 @@ section {
 
 /* line 592, ../sass/sudweb.scss */
 .pagefooter {
+  border-top: 2px dashed white;
   background: #402f35;
   color: #f4f2f3;
   margin-top: 2.5em;
