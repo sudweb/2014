@@ -630,6 +630,7 @@ section {
   color: #fcf1f2;
   margin-top: 1em;
   padding: .5em 1em;
+  overflow: hidden;
 }
 /* line 463, ../sass/sudweb.scss */
 .salles h2 {
