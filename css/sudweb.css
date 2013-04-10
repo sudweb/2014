@@ -209,7 +209,6 @@ a:visited {
   }
 }
 
-@media only screen and (min-width: 45em) {
   /* line 164, ../sass/sudweb.scss */
   .pageheader {
   text-align: right;
@@ -299,7 +298,6 @@ a:visited {
   }
 }
 /* line 216, ../sass/sudweb.scss */
-.pageheader .date {
 .pageheader .banner {
   border-top: 2px dashed #402f35;
   text-align: center;
