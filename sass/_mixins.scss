@@ -166,3 +166,10 @@ $widest: 60em;
 		}
 	}
 }
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both
+	}
+}
