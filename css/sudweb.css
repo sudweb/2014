@@ -754,6 +754,25 @@ a:visited {
   }
 }
 
+.ateliers .sessions {
+  list-style: none;
+  margin: 0;
+}
+.ateliers .sessions li {
+  padding: .2em .5em;
+}
+@media only screen and (max-width: 45em) {
+  .ateliers .sessions li {
+    border-top: 1px solid #10b6bf;
+  }
+}
+.ateliers .sessions li:nth-child(even) {
+  background: #e6e6e6;
+  background: rgba(35, 25, 29, 0.1);
+}
+.ateliers .sessions h2 {
+  margin-bottom: .5em;
+}
 .pagefooter {
   border-top: 2px dashed white;
   background: #402f35;
