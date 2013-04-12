@@ -349,7 +349,7 @@ a:visited {
 }
 
 /* line 239, ../sass/sudweb.scss */
-.introduction {
+.hero {
   background: white url(../img/illustration.png) no-repeat center top;
   background-image: -webkit-linear-gradient(top, transparent 10em, white 10em), url(../img/illustration.png);
   background-image: -moz-linear-gradient(top, transparent 10em, white 10em), url(../img/illustration.png);
@@ -363,14 +363,14 @@ a:visited {
 }
   /* line 239, ../sass/sudweb.scss */
 @media only screen and (min-width: 32em) {
-  .introduction {
+  .hero {
     background-size: cover;
     background-position: center top, center -4em;
   }
 }
 @media only screen and (min-width: 45em) {
   /* line 239, ../sass/sudweb.scss */
-  .introduction {
+  .hero {
     margin-left: 0;
     margin-right: 0;
     padding: 1em 1em 1em 65%;
