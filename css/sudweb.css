@@ -922,6 +922,38 @@ aside.ateliers:before {
 .ateliers .sessions h2 {
   margin-bottom: .5em;
 }
+
+.salles .ateliers,
+.salles .soirees {
+  background: white;
+  padding: .5em 1em;
+}
+@media only screen and (max-width: 45em) {
+  .salles .ateliers,
+  .salles .soirees {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1em 0;
+  }
+}
+@media only screen and (min-width: 45em) {
+  .salles .ateliers,
+  .salles .soirees {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-top: 1em;
+  }
+  .salles .ateliers:nth-last-child(even),
+  .salles .soirees:nth-last-child(even) {
+    margin-right: 3%;
+  }
+}
+.salles .ateliers h2,
+.salles .soirees h2 {
+  color: #f64b3a;
+  margin-bottom: .5em;
+}
+
 .pagefooter {
   border-top: 2px dashed white;
   background: #402f35;

@@ -749,6 +749,36 @@ aside.ateliers:before {
 	}
 }
 
+.salles {
+	.ateliers,
+	.soirees {
+		background: $body;
+		padding: .5em 1em;
+		
+		@include respond-to(medium) {
+			border: 1px solid rgba(black, .1);
+			margin: 1em 0;
+		}
+		
+		@include respond-to(medium-and-up) {
+			display: inline-block;
+			vertical-align: top;
+			width: 48%;
+			margin-top: 1em;
+			
+			&:nth-last-child(even) {
+				margin-right: 3%;
+			}
+		}
+		
+		
+		h2 {
+			color: $primary;
+			margin-bottom: .5em;
+		}
+	}
+}
+
 .pagefooter {
 	border-top: 2px dashed $body;
 	background: $inverted;
