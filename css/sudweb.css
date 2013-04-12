@@ -222,28 +222,26 @@ a:visited {
     display: none;
 }
 }
-.pageheader .nav a:link,
-.pageheader .nav a:visited {
+.pageheader .nav a {
   text-transform: uppercase;
   color: #f4f2f3;
   background: #402f35;
 }
 @media only screen and (max-width: 45em) {
-  .pageheader .nav a:link,
-  .pageheader .nav a:visited {
+  .pageheader .nav a {
     border-bottom: 1px solid #5c4a50;
   }
 }
 @media only screen and (min-width: 45em) {
-  .pageheader .nav a:link,
-  .pageheader .nav a:visited {
+  .pageheader .nav a {
     display: inline-block;
     vertical-align: top;
     border-right: 1px solid #5c4a50;
   }
 }
 .pageheader .nav a:focus,
-.pageheader .nav a:hover {
+.pageheader .nav a:hover,
+.pageheader .nav .current {
   background: #10b6bf;
   color: #feffff;
   text-decoration: none;
