@@ -418,6 +418,25 @@ a:visited {
 	background-position: right bottom;
 }
 
+	.salles {
+		background: $secondary;
+		color: $text-over-secondary;
+		margin-top: 1em;
+		padding: .5em 1em;
+		overflow: hidden;
+		h2 {
+			text-transform: uppercase;
+			margin-bottom: .75em;
+		}
+		img {
+			display: block;
+			margin: 1em auto;
+			@include respond-to(wide) {
+				float: right;
+				margin: 0 0 1em 1em;
+			}
+		}
+	}
 .conferences h3,
 .ateliers h3,
 .soirees h3 {
@@ -457,23 +476,6 @@ a:visited {
 .conferences h3 {
 	@include respond-to(wide) {
 		padding-left: 1em;
-	}
-}
-.salles {
-	background: $secondary;
-	color: $text-over-secondary;
-	margin-top: 1em;
-	padding: .5em 1em;
-	overflow: hidden;
-	h2 {
-		text-transform: uppercase;
-		margin-bottom: .75em;
-	}
-	@include respond-to(wide) {
-		img {
-			float: right;
-			margin-left: 1em;
-		}
 	}
 }
 @include respond-to(medium-only) {

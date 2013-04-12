@@ -466,6 +466,27 @@ a:visited {
 .soirees:before {
   background-position: right bottom;
 }
+.main .salles {
+  background: #c51b3f;
+  color: #fcf1f2;
+  margin-top: 1em;
+  padding: .5em 1em;
+  overflow: hidden;
+}
+.main .salles h2 {
+  text-transform: uppercase;
+  margin-bottom: .75em;
+}
+.main .salles img {
+  display: block;
+  margin: 1em auto;
+}
+@media only screen and (min-width: 45em) {
+  .main .salles img {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+}
 
 .conferences h3,
 .ateliers h3,
@@ -536,24 +557,6 @@ a:visited {
 @media only screen and (min-width: 45em) {
   .conferences h3 {
     padding-left: 1em;
-  }
-}
-
-.salles {
-  background: #c51b3f;
-  color: #fcf1f2;
-  margin-top: 1em;
-  padding: .5em 1em;
-  overflow: hidden;
-}
-.salles h2 {
-  text-transform: uppercase;
-  margin-bottom: .75em;
-}
-@media only screen and (min-width: 45em) {
-  .salles img {
-    float: right;
-    margin-left: 1em;
   }
 }
 
