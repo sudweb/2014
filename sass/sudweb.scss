@@ -398,6 +398,12 @@ a:visited {
 	}
 }
 /* Pictos sprité pour les 3 grands moments */
+.main {
+	.conferences,
+	.ateliers,
+	.soirees {
+		@include clearfix;
+	}
 .conferences:before,
 .ateliers:before,
 .soirees:before {
@@ -406,7 +412,6 @@ a:visited {
 	float: right;
 	width: 65px;
 	height: 170px;
-	margin-top: 4.9em;
 	padding-left: 10px;
 	background: url(../img/pictos_programme.png) no-repeat right center;
 	background-size: 100% auto;
@@ -417,7 +422,6 @@ a:visited {
 .soirees:before {
 	background-position: right bottom;
 }
-
 	.salles {
 		background: $secondary;
 		color: $text-over-secondary;
@@ -435,6 +439,16 @@ a:visited {
 				float: right;
 				margin: 0 0 1em 1em;
 			}
+		}
+	}
+}
+.accueil {
+	.conferences:before,
+	.ateliers:before,
+	.soirees:before {
+		margin-top: 3.9em;
+		@include respond-to(narrow-and-up) {
+			margin-top: 4.9em;
 		}
 	}
 .conferences h3,
@@ -486,6 +500,7 @@ a:visited {
 		display: inline-block;
 		vertical-align: top;
 		width: 46%;
+			@include clearfix;
 	}
 	.conferences,
 	.soirees {

@@ -445,25 +445,29 @@ a:visited {
 }
 
 /* Pictos sprité pour les 3 grands moments */
-.conferences:before,
-.ateliers:before,
-.soirees:before {
+.main .conferences:after,
+.main .ateliers:after,
+.main .soirees:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main .conferences:before,
+.main .ateliers:before,
+.main .soirees:before {
   content: "";
   display: block;
   float: right;
   width: 65px;
   height: 170px;
-  margin-top: 4.9em;
   padding-left: 10px;
   background: url(../img/pictos_programme.png) no-repeat right center;
   background-size: 100% auto;
 }
-
-.ateliers:before {
+.main .ateliers:before {
   background-position: right top;
 }
-
-.soirees:before {
+.main .soirees:before {
   background-position: right bottom;
 }
 .main .salles {
@@ -488,9 +492,21 @@ a:visited {
   }
 }
 
-.conferences h3,
-.ateliers h3,
-.soirees h3 {
+.accueil .conferences:before,
+.accueil .ateliers:before,
+.accueil .soirees:before {
+  margin-top: 3.9em;
+}
+@media only screen and (min-width: 32em) {
+  .accueil .conferences:before,
+  .accueil .ateliers:before,
+  .accueil .soirees:before {
+    margin-top: 4.9em;
+  }
+}
+.accueil .conferences h3,
+.accueil .ateliers h3,
+.accueil .soirees h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
@@ -505,11 +521,11 @@ a:visited {
   white-space: nowrap;
 }
 @media only screen and (max-width: 32em) {
-  .conferences h3:before, .conferences h3:after,
-  .ateliers h3:before,
-  .ateliers h3:after,
-  .soirees h3:before,
-  .soirees h3:after {
+  .accueil .conferences h3:before, .accueil .conferences h3:after,
+  .accueil .ateliers h3:before,
+  .accueil .ateliers h3:after,
+  .accueil .soirees h3:before,
+  .accueil .soirees h3:after {
     content: "";
     display: block;
     width: 0;
