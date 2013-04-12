@@ -306,10 +306,10 @@ a:visited {
 		background-image:     -ms-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
 		background-image:     linear-gradient(to right, transparent 63%, $body 63%), url(../img/illustration.png);
 		background-position: left center;
-		background-size: 100% 100%, auto 150%;
+		background-size: 100% 100%, auto 180%;
 	}
 }
-.actualites {
+.callout {
 	background: $inverted;
 	color: $text-over-inverted;
 	margin-top: 2em;

@@ -391,7 +391,7 @@ a:visited {
 /* line 291, ../sass/sudweb.scss */
 
 /* line 289, ../sass/sudweb.scss */
-  .actualites {
+.callout {
     background: #402f35;
     color: #f4f2f3;
     margin-top: 2em;
@@ -400,7 +400,7 @@ a:visited {
   position: relative;
   }
 /* line 297, ../sass/sudweb.scss */
-.actualites h2 {
+.callout h2 {
   text-transform: uppercase;
   font-weight: normal;
   background: #c51b3f;
@@ -417,7 +417,7 @@ a:visited {
     top: -1.8em;
   }
   /* line 123, ../sass/_mixins.scss */
-  .actualites h2:before {
+.callout h2:before {
     content: "";
     display: block;
     bottom: -0.6em;
@@ -429,7 +429,7 @@ a:visited {
     border-width: 0.6em 0 0 0.6em;
   }
   /* line 70, ../sass/_mixins.scss */
-  .actualites h2:after {
+.callout h2:after {
     content: "";
     display: block;
     width: 0;
@@ -440,17 +440,17 @@ a:visited {
     border: 17px solid #c51b3f;
     border-right-color: transparent !important;
   }
-.actualites .more {
+.callout .more {
   padding-top: .5em;
   border-top: 1px solid #7d6a73;
 }
 @media only screen and (min-width: 45em) {
   /* line 298, ../sass/sudweb.scss */
-  .actualites {
+  .callout {
     white-space: nowrap;
   }
   /* line 342, ../sass/sudweb.scss */
-  .actualites .excerpt {
+  .callout .excerpt {
     white-space: normal;
     display: inline-block;
     vertical-align: top;
@@ -459,7 +459,7 @@ a:visited {
     margin-right: -1px;
   }
   /* line 350, ../sass/sudweb.scss */
-  .actualites .more {
+  .callout .more {
     white-space: normal;
     display: inline-block;
     width: 36%;
