@@ -174,12 +174,12 @@ a:visited {
   }
 }
 
-  .pageheader {
+.pageheader {
   text-align: right;
-    background: #402f35;
-    color: #f4f2f3;
+  background: #402f35;
+  color: #f4f2f3;
   margin-bottom: 4em;
-  }
+}
 @media only screen and (min-width: 45em) {
   .pageheader {
     margin-bottom: 8em;
@@ -220,7 +220,7 @@ a:visited {
   }
   .pageheader .nav .close {
     display: none;
-}
+  }
 }
 .pageheader .nav a {
   text-transform: uppercase;
@@ -330,13 +330,13 @@ a:visited {
 }
 
 .callout {
-    background: #402f35;
-    color: #f4f2f3;
-    margin-top: 2em;
-    padding: 1.75em 1em 1em;
+  background: #402f35;
+  color: #f4f2f3;
+  margin-top: 2em;
+  padding: 1.75em 1em 1em;
   max-width: 60em;
   position: relative;
-  }
+}
 .callout h2 {
   text-transform: uppercase;
   font-weight: normal;
@@ -346,35 +346,35 @@ a:visited {
   margin: 1em;
   padding: .5rem 0 .45rem;
   min-height: 25px;
-    display: inline-block;
-    padding-left: 1em;
-    padding-right: 1em;
-    z-index: 1;
-    left: -1.4em;
-    top: -1.8em;
-  }
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  z-index: 1;
+  left: -1.4em;
+  top: -1.8em;
+}
 .callout h2:before {
-    content: "";
-    display: block;
-    bottom: -0.6em;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    border-style: solid;
-    border-color: #6b0f22 transparent transparent transparent;
-    border-width: 0.6em 0 0 0.6em;
-  }
+  content: "";
+  display: block;
+  bottom: -0.6em;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  border-style: solid;
+  border-color: #6b0f22 transparent transparent transparent;
+  border-width: 0.6em 0 0 0.6em;
+}
 .callout h2:after {
-    content: "";
-    display: block;
-    width: 0;
-    top: 0;
-    right: -1em;
-    position: absolute;
-    z-index: -1;
-    border: 17px solid #c51b3f;
-    border-right-color: transparent !important;
-  }
+  content: "";
+  display: block;
+  width: 0;
+  top: 0;
+  right: -1em;
+  position: absolute;
+  z-index: -1;
+  border: 17px solid #c51b3f;
+  border-right-color: transparent !important;
+}
 .callout .more {
   padding-top: .5em;
   border-top: 1px solid #7d6a73;
@@ -534,70 +534,71 @@ a:visited {
     z-index: -1;
     border: 17px solid #f64b3a;
   }
-  .conferences h3:before,
-  .ateliers h3:before,
-  .soirees h3:before {
+  .accueil .conferences h3:before,
+  .accueil .ateliers h3:before,
+  .accueil .soirees h3:before {
     left: -1em;
     border-left-color: transparent !important;
   }
-  .conferences h3:after,
-  .ateliers h3:after,
-  .soirees h3:after {
+  .accueil .conferences h3:after,
+  .accueil .ateliers h3:after,
+  .accueil .soirees h3:after {
     right: -1em;
     border-right-color: transparent !important;
   }
 }
 @media only screen and (min-width: 45em) {
-  .conferences h3,
-  .ateliers h3,
-  .soirees h3 {
+  .accueil .conferences h3,
+  .accueil .ateliers h3,
+  .accueil .soirees h3 {
     padding-left: 3em;
   }
 }
-
 @media only screen and (min-width: 32em) and (max-width: 45em) {
-  .conferences h3 {
+  .accueil .conferences h3 {
     padding-left: 1em;
     margin-right: 0;
   }
-
-  .ateliers h3 {
+  .accueil .ateliers h3 {
     margin-left: 0;
   }
-
-  .soirees h3 {
+  .accueil .soirees h3 {
     padding-left: 1em;
     margin-right: 0;
   }
 }
 @media only screen and (min-width: 45em) {
-  .conferences h3 {
+  .accueil .conferences h3 {
     padding-left: 1em;
   }
 }
-
 @media only screen and (min-width: 32em) and (max-width: 45em) {
-  .conferences,
-  .ateliers,
-  .soirees,
-  .salles {
+  .accueil .conferences,
+  .accueil .ateliers,
+  .accueil .soirees,
+  .accueil .salles {
     display: inline-block;
     vertical-align: top;
     width: 46%;
   }
-
-  .conferences,
-  .soirees {
+  .accueil .conferences:after,
+  .accueil .ateliers:after,
+  .accueil .soirees:after,
+  .accueil .salles:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .accueil .conferences,
+  .accueil .soirees {
     margin-right: 2%;
   }
-
-  .ateliers,
-  .salles {
+  .accueil .ateliers,
+  .accueil .salles {
     margin-left: 2%;
   }
-
-  .conferences h3:before,
-  .soirees h3:before {
+  .accueil .conferences h3:before,
+  .accueil .soirees h3:before {
     content: "";
     display: block;
     width: 0;
@@ -608,9 +609,8 @@ a:visited {
     border: 17px solid #f64b3a;
     border-left-color: transparent !important;
   }
-
-  .ateliers h3:after,
-  .salles h3:after {
+  .accueil .ateliers h3:after,
+  .accueil .salles h3:after {
     content: "";
     display: block;
     width: 0;
@@ -623,26 +623,24 @@ a:visited {
   }
 }
 @media only screen and (min-width: 45em) {
-  .conferences,
-  .ateliers,
-  .soirees {
+  .accueil .conferences,
+  .accueil .ateliers,
+  .accueil .soirees {
     display: inline-block;
     vertical-align: top;
     width: 31%;
   }
-
-  .ateliers {
+  .accueil .ateliers {
     margin: 0 2%;
   }
-  .ateliers h3 {
+  .accueil .ateliers h3 {
     margin-left: 0;
     margin-right: 0;
   }
-
-  .conferences h3 {
+  .accueil .conferences h3 {
     margin-right: 0;
   }
-  .conferences h3:before {
+  .accueil .conferences h3:before {
     content: "";
     display: block;
     width: 0;
@@ -653,11 +651,10 @@ a:visited {
     border: 17px solid #f64b3a;
     border-left-color: transparent !important;
   }
-
-  .soirees h3 {
+  .accueil .soirees h3 {
     margin-left: 0;
   }
-  .soirees h3:after {
+  .accueil .soirees h3:after {
     content: "";
     display: block;
     width: 0;
