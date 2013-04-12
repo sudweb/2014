@@ -103,9 +103,6 @@ section,
 html {
   background: white url(../img/bg.png) repeat center top;
   color: #312529;
-}
-
-h1, h2, h3, p:first-of-type {
   font-family: Ruluko, arial, sans-serif;
 }
 
