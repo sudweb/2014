@@ -273,7 +273,7 @@ a:visited {
 		}
 	}
 }
-section {
+.main {
 	@include respond-to(medium-and-up) {
 		max-width: $widest;
 		margin: 0 auto;

@@ -341,7 +341,7 @@ a:visited {
 
 @media only screen and (min-width: 45em) {
   /* line 232, ../sass/sudweb.scss */
-  section {
+  .main {
     max-width: 60em;
     margin: 0 auto;
     padding: 0 1em;
