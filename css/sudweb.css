@@ -754,6 +754,154 @@ a:visited {
   }
 }
 
+.chapo h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #f64b3a;
+  display: inline-block;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+  text-transform: uppercase;
+}
+.chapo .subtitle {
+  color: #f64b3a;
+}
+
+.page aside {
+  margin: 1em 0;
+  padding: 1em;
+  background: white;
+}
+@media only screen and (max-width: 45em) {
+  .page aside {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (min-width: 45em) {
+  .page aside {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+  }
+  .page aside:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .page aside:nth-last-child(even) {
+    margin-right: 3%;
+  }
+}
+
+aside.ateliers:before {
+  margin-top: 1em;
+}
+
+.timetable ol,
+.timetable li {
+  list-style: none;
+  margin: 0;
+}
+.timetable .session,
+.timetable .meta,
+.timetable .lt {
+  margin: 1em 0 0;
+  padding: .5em .5em .2em;
+}
+.timetable .session:after,
+.timetable .meta:after,
+.timetable .lt:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (max-width: 45em) {
+  .timetable .session,
+  .timetable .meta,
+  .timetable .lt {
+    border-top: 1px solid #10b6bf;
+  }
+}
+.timetable .meta {
+  background: #e6e6e6;
+  background: rgba(179, 179, 179, 0.2);
+}
+.timetable .lt {
+  background: #e6e6e6;
+  background: rgba(35, 25, 29, 0.1);
+}
+.timetable .lt .session__photo {
+  display: none;
+}
+.timetable time,
+.timetable .session__title {
+  color: #f64b3a;
+  margin-bottom: .2em;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.timetable .session__title {
+  margin-bottom: .5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.timetable time {
+  display: block;
+  float: left;
+  margin-right: .5em;
+  margin-bottom: -.2em;
+  color: #402f35;
+}
+@media only screen and (min-width: 45em) {
+  .timetable time {
+    float: none;
+    color: #f4f2f3;
+    background: #402f35;
+    margin-bottom: 0;
+    padding-right: .5em;
+  }
+  .timetable time:before {
+    content: "";
+    display: block;
+    width: 0;
+    top: 0;
+    left: -1em;
+    position: absolute;
+    z-index: -1;
+    border: 0.65em solid #402f35;
+    border-left-color: transparent !important;
+  }
+}
+.timetable .session__photo {
+  max-width: 20%;
+  height: auto;
+  float: right;
+  margin: 0 .4em .2em;
+  padding: .2em;
+  box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 45em) {
+  .timetable .meta,
+  .timetable .session,
+  .timetable .lt {
+    position: relative;
+    margin-left: 4.5em;
+  }
+  .timetable .meta time,
+  .timetable .session time,
+  .timetable .lt time {
+    position: absolute;
+    left: -3.5em;
+    top: .5em;
+  }
+  .timetable .session__speaker {
+    color: #f64b3a;
+  }
+  .timetable .session__photo {
+    max-width: 6.5em;
+  }
+}
+
 .ateliers .sessions {
   list-style: none;
   margin: 0;

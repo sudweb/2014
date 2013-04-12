@@ -610,6 +610,123 @@ a:visited {
 	}
 }
 
+.chapo {
+	h1 {
+		@include font-size(24);
+		color: $primary;
+		display: inline-block;
+		font-weight: bold;
+		font-family: arial, sans-serif;
+		text-transform: uppercase;
+	}
+	.subtitle {
+		color: $primary;
+	}
+}
+
+.page aside {
+	margin: 1em 0;
+	padding: 1em;
+	background: $body;
+	@include respond-to(medium) {
+		border: 1px solid rgba(black, .1);
+	}
+	@include respond-to(medium-and-up) {
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+		@include clearfix;
+		
+		// Add margin to every other aside, but start from the end because there may be any number of tags before
+		&:nth-last-child(even) {
+			margin-right: 3%;
+		}
+	}
+}
+aside.ateliers:before {
+	margin-top: 1em;
+}
+.timetable {
+	ol,
+	li {
+		list-style: none;
+		margin: 0;
+	}
+	.session,
+	.meta,
+	.lt {
+		margin: 1em 0 0;
+		padding: .5em .5em .2em;
+		@include clearfix;
+		@include respond-to(medium) {
+			border-top: 1px solid $contrast;
+		}
+	}
+	.meta {
+		background: darken($body, 10%);
+		background: rgba(darken($body, 30%), .2);
+	}
+	.lt {
+		background: darken($body, 10%);
+		background: rgba(darken($inverted, 10%), .1);
+	}
+	.lt .session__photo {
+		display: none;
+	}
+	time,
+	.session__title {
+		color: $primary;
+		margin-bottom: .2em;
+		@include font-size(18);
+	}
+	.session__title {
+		margin-bottom: .5em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	time {
+		display: block;
+		float: left;
+		margin-right: .5em;
+		margin-bottom: -.2em; // Pour qu'ils ne mangent pas la ligne du dessous
+		color: $inverted;
+		@include respond-to(medium-and-up) {
+			float: none;
+			color: $text-over-inverted;
+			background: $inverted;
+			margin-bottom: 0;
+			padding-right: .5em;
+			@include ribbon($inverted, .65em, left);
+		}
+	}
+	.session__photo {
+		max-width: 20%;
+		height: auto;
+		float: right;
+		margin: 0 .4em .2em;
+		padding: .2em;
+		box-shadow: 0 .2em .3em rgba(black, .3);
+	}
+	@include respond-to(medium-and-up) {
+		.meta,
+		.session,
+		.lt {
+			position: relative;
+			margin-left: 4.5em;
+			time {
+				position: absolute;
+				left: -3.5em;
+				top: .5em;
+			}
+		}
+		.session__speaker {
+			color: $primary;
+		}
+		.session__photo {
+			max-width: 6.5em;
+		}
+	}
+}
 .ateliers .sessions {
 	list-style: none;
 	margin: 0;
