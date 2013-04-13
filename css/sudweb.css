@@ -703,7 +703,6 @@ a:visited {
   border-right-color: transparent !important;
 }
 .sponsors h3 {
-  color: #c0babd;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -722,6 +721,15 @@ a:visited {
 .sponsors h3:after {
   right: auto;
   left: 75%;
+}
+.sponsors .or {
+  color: #FEB100;
+}
+.sponsors .argent {
+  color: #979B9D;
+}
+.sponsors .bronze {
+  color: #402f35;
 }
 .sponsors ul {
   list-style: none;

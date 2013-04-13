@@ -404,24 +404,24 @@ a:visited {
 	.soirees {
 		@include clearfix;
 	}
-.conferences:before,
-.ateliers:before,
-.soirees:before {
-	content: "";
-	display: block;
-	float: right;
-	width: 65px;
-	height: 170px;
-	padding-left: 10px;
-	background: url(../img/pictos_programme.png) no-repeat right center;
-	background-size: 100% auto;
-}
-.ateliers:before {
-	background-position: right top;
-}
-.soirees:before {
-	background-position: right bottom;
-}
+	.conferences:before,
+	.ateliers:before,
+	.soirees:before {
+		content: "";
+		display: block;
+		float: right;
+		width: 65px;
+		height: 170px;
+		padding-left: 10px;
+		background: url(../img/pictos_programme.png) no-repeat right center;
+		background-size: 100% auto;
+	}
+	.ateliers:before {
+		background-position: right top;
+	}
+	.soirees:before {
+		background-position: right bottom;
+	}
 	.salles {
 		background: $secondary;
 		color: $text-over-secondary;
@@ -451,98 +451,98 @@ a:visited {
 			margin-top: 4.9em;
 		}
 	}
-.conferences h3,
-.ateliers h3,
-.soirees h3 {
-	text-align: center;
-	text-transform: uppercase;
-	@include font-size(20);
-	font-weight: normal;
-	
-	background: $primary;
-	color: $text-over-primary;
-	position: relative;
-	margin: 1em;
-	padding: .5rem 0 .45rem;
-	min-height: 25px;
-	white-space: nowrap;
-	
-	@include respond-to(narrow) {
-		@include ribbon($primary, 17px);
-	}
-	@include respond-to(medium-and-up) {
-		padding-left: 3em;
-	}
-}
-@include respond-to(medium-only) {
-	.conferences h3 {
-		padding-left: 1em;
-		margin-right: 0;
-	}
-	.ateliers h3 {
-		margin-left: 0;
-	}
-	.soirees h3 {
-		padding-left: 1em;
-		margin-right: 0;
-	}
-}
-.conferences h3 {
-	@include respond-to(wide) {
-		padding-left: 1em;
-	}
-}
-@include respond-to(medium-only) {
-	.conferences,
-	.ateliers,
-	.soirees,
-	.salles {
-		display: inline-block;
-		vertical-align: top;
-		width: 46%;
-			@include clearfix;
-	}
-	.conferences,
-	.soirees {
-		margin-right: 2%;
-	}
-	.ateliers,
-	.salles {
-		margin-left: 2%;
-	}
 	.conferences h3,
-	.soirees h3 {
-		@include ribbon($primary, 17px, left);
-	}
 	.ateliers h3,
-	.salles h3 {
-		@include ribbon($primary, 17px, right);
+	.soirees h3 {
+		text-align: center;
+		text-transform: uppercase;
+		@include font-size(20);
+		font-weight: normal;
+		
+		background: $primary;
+		color: $text-over-primary;
+		position: relative;
+		margin: 1em;
+		padding: .5rem 0 .45rem;
+		min-height: 25px;
+		white-space: nowrap;
+		
+		@include respond-to(narrow) {
+			@include ribbon($primary, 17px);
+		}
+		@include respond-to(medium-and-up) {
+			padding-left: 3em;
+		}
 	}
-}
-@include respond-to(wide) {
-	.conferences,
-	.ateliers,
-	.soirees {
-		display: inline-block;
-		vertical-align: top;
-		width: 31%;
-	}
-	.ateliers {
-		margin: 0 2%;
-		h3 {
+	@include respond-to(medium-only) {
+		.conferences h3 {
+			padding-left: 1em;
+			margin-right: 0;
+		}
+		.ateliers h3 {
 			margin-left: 0;
+		}
+		.soirees h3 {
+			padding-left: 1em;
 			margin-right: 0;
 		}
 	}
 	.conferences h3 {
-		@include ribbon($primary, 17px, left);
-		margin-right: 0;
+		@include respond-to(wide) {
+			padding-left: 1em;
+		}
 	}
-	.soirees h3 {
-		@include ribbon($primary, 17px, right);
-		margin-left: 0;
+	@include respond-to(medium-only) {
+		.conferences,
+		.ateliers,
+		.soirees,
+		.salles {
+			display: inline-block;
+			vertical-align: top;
+			width: 46%;
+			@include clearfix;
+		}
+		.conferences,
+		.soirees {
+			margin-right: 2%;
+		}
+		.ateliers,
+		.salles {
+			margin-left: 2%;
+		}
+		.conferences h3,
+		.soirees h3 {
+			@include ribbon($primary, 17px, left);
+		}
+		.ateliers h3,
+		.salles h3 {
+			@include ribbon($primary, 17px, right);
+		}
 	}
-}
+	@include respond-to(wide) {
+		.conferences,
+		.ateliers,
+		.soirees {
+			display: inline-block;
+			vertical-align: top;
+			width: 31%;
+		}
+		.ateliers {
+			margin: 0 2%;
+			h3 {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+		.conferences h3 {
+			@include ribbon($primary, 17px, left);
+			margin-right: 0;
+		}
+		.soirees h3 {
+			@include ribbon($primary, 17px, right);
+			margin-left: 0;
+		}
+	}
 }
 .sponsors {
 	padding: 1em;
@@ -564,7 +564,6 @@ a:visited {
 		min-height: 25px;
 	}
 	h3 {
-		color: #c0babd;
 		text-align: center;
 		text-transform: uppercase;
 		position: relative;
@@ -585,6 +584,15 @@ a:visited {
 			right: auto;
 			left: 75%;
 		}
+	}
+	.or {
+		color: #FEB100;
+	}
+	.argent {
+		color: #979B9D;
+	}
+	.bronze {
+		color: $inverted;
 	}
 	ul {
 		list-style: none;
