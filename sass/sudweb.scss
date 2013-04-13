@@ -597,11 +597,21 @@ a:visited {
 	ul {
 		list-style: none;
 		text-align: center;
+		margin: 0;
 		padding: 1em 0;
 	}
 	li {
 		display: inline;
-		margin: 0 1em;
+	}
+	img {
+		margin: 1em;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100px;
+		height: auto;
+		@include respond-to(medium-and-up) {
+			max-width: 150px;
+		}
 	}
 	p {
 		margin-bottom: 1em;

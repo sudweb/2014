@@ -734,11 +734,23 @@ a:visited {
 .sponsors ul {
   list-style: none;
   text-align: center;
+  margin: 0;
   padding: 1em 0;
 }
 .sponsors li {
   display: inline;
-  margin: 0 1em;
+}
+.sponsors img {
+  margin: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100px;
+  height: auto;
+}
+@media only screen and (min-width: 45em) {
+  .sponsors img {
+    max-width: 150px;
+  }
 }
 .sponsors p {
   margin-bottom: 1em;
