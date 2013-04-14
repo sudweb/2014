@@ -203,20 +203,8 @@ a:visited {
     background: #f64b3a;
     color: #fef8f7;
     padding: 0.5em 1em; }
-  @media only screen and (max-width: 32em) {
-    .pageheader .baseline {
-      position: absolute;
-      left: 130px;
-      right: 0;
-      bottom: -6rem;
-      color: #312529; } }
   @media only screen and (min-width: 45em) {
     .pageheader .baseline {
-      position: absolute;
-      right: 0;
-      bottom: -9rem;
-      width: 17.1em;
-      color: #312529;
       font-size: 25px;
       font-size: 2.5rem; } }
   .pageheader .description {
@@ -225,7 +213,8 @@ a:visited {
   @media only screen and (min-width: 45em) {
     .pageheader .date {
       display: inline;
-      padding-left: 1em; } }
+      text-transform: uppercase;
+      padding-left: .25em; } }
 
 @media only screen and (min-width: 45em) {
   .main {

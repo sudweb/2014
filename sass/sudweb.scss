@@ -244,19 +244,7 @@ a:visited {
 		padding: .5em 1em;
 	}
 	.baseline {
-		@include respond-to(narrow) {
-			position: absolute;
-			left: 130px;
-			right: 0;
-			bottom: -6rem;
-			color: $text;
-		}
 		@include respond-to(wide) {
-			position: absolute;
-			right: 0;
-			bottom: -9rem;
-			width: 17.1em;
-			color: $text;
 			@include font-size(25);
 		}
 	}
@@ -267,7 +255,8 @@ a:visited {
 	@include respond-to(wide) {
 		.date {
 			display: inline;
-			padding-left: 1em;
+			text-transform: uppercase;
+			padding-left: .25em;
 		}
 	}
 }
