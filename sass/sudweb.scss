@@ -118,9 +118,7 @@ html {
 	color: $text;
 	font-family: Ruluko, arial, sans-serif;
 }
-p:first-of-type {
-	@include font-size(18);
-}
+
 a:link,
 a:visited {
 	color: $contrast;
