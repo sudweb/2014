@@ -86,6 +86,10 @@ html {
   color: #312529;
   font-family: Ruluko, arial, sans-serif; }
 
+.emphasis {
+  font-size: 18px;
+  font-size: 1.8rem; }
+
 a:link,
 a:visited {
   color: #10b6bf; }

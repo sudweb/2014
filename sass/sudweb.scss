@@ -118,7 +118,9 @@ html {
 	color: $text;
 	font-family: Ruluko, arial, sans-serif;
 }
-
+.emphasis {
+	@include font-size(18);
+}	
 a:link,
 a:visited {
 	color: $contrast;
