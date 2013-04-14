@@ -609,11 +609,9 @@ a:visited {
   .sponsors p {
     margin-bottom: 1em; }
     .sponsors p span {
-      display: block; }
-      @media only screen and (max-width: 45em) {
-        .sponsors p span {
-          font-size: 24px;
-          font-size: 2.4rem; } }
+      display: block;
+      font-size: 24px;
+      font-size: 2.4rem; }
 
 .chapo h1 {
   font-size: 24px;

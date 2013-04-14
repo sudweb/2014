@@ -615,9 +615,7 @@ a:visited {
 		margin-bottom: 1em;
 		span {
 			display: block;
-			@include respond-to(medium) {
-				@include font-size(24);
-			}
+			@include font-size(24);
 		}
 	}
 }
