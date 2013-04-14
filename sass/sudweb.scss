@@ -613,11 +613,6 @@ a:visited {
 	}
 	p {
 		margin-bottom: 1em;
-		@include respond-to(medium-and-up) {
-			display: inline-block;
-			vertical-align: top;
-			width: 49%;
-		}
 		span {
 			display: block;
 			@include respond-to(medium) {
