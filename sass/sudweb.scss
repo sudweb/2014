@@ -312,8 +312,8 @@ a:visited {
 		color: $text-over-secondary;
 		position: absolute;
 		margin: 1em;
-		padding: .5rem 0 .45rem;
-		min-height: 25px;
+		padding: .5rem 0;
+		min-height: 36px;
 		display: inline-block;
 		padding-left: 1em;
 		padding-right: 1em;
@@ -321,7 +321,7 @@ a:visited {
 		left: -1.4em;
 		top: -1.8em;
 		@include backfold(darken($secondary, 20%), .6em, left);
-		@include ribbon($secondary, 17px, right);
+		@include ribbon($secondary, 18px, right);
 	}
 	.more {
 		padding-top: .5em;
@@ -453,11 +453,11 @@ a:visited {
 		position: relative;
 		margin: 1em;
 		padding: .5rem 0 .45rem;
-		min-height: 25px;
+		min-height: 36px;
 		white-space: nowrap;
 		
 		@include respond-to(narrow) {
-			@include ribbon($primary, 17px);
+			@include ribbon($primary, 18px);
 		}
 		@include respond-to(medium-and-up) {
 			padding-left: 3em;
@@ -501,11 +501,11 @@ a:visited {
 		}
 		.conferences h3,
 		.soirees h3 {
-			@include ribbon($primary, 17px, left);
+			@include ribbon($primary, 18px, left);
 		}
 		.ateliers h3,
 		.salles h3 {
-			@include ribbon($primary, 17px, right);
+			@include ribbon($primary, 18px, right);
 		}
 	}
 	@include respond-to(wide) {
@@ -524,11 +524,11 @@ a:visited {
 			}
 		}
 		.conferences h3 {
-			@include ribbon($primary, 17px, left);
+			@include ribbon($primary, 18px, left);
 			margin-right: 0;
 		}
 		.soirees h3 {
-			@include ribbon($primary, 17px, right);
+			@include ribbon($primary, 18px, right);
 			margin-left: 0;
 		}
 	}
@@ -546,11 +546,11 @@ a:visited {
 		
 		background: $inverted;
 		color: $text-over-inverted;
-		@include ribbon($inverted, 17px);
+		@include ribbon($inverted, 18px);
 		position: relative;
 		margin: 1em;
 		padding: .5rem 0 .45rem;
-		min-height: 25px;
+		min-height: 36px;
 	}
 	h3 {
 		text-align: center;
@@ -691,13 +691,14 @@ aside.ateliers:before {
 		margin-right: .5em;
 		margin-bottom: -.2em; // Pour qu'ils ne mangent pas la ligne du dessous
 		color: $inverted;
+		min-height: 22px;
 		@include respond-to(medium-and-up) {
 			float: none;
 			color: $text-over-inverted;
 			background: $inverted;
 			margin-bottom: 0;
 			padding-right: .5em;
-			@include ribbon($inverted, .65em, left);
+			@include ribbon($inverted, 11px, left);
 		}
 	}
 	.session__photo {
