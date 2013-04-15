@@ -79,9 +79,9 @@ a:link, a:visited { color: #10b6bf; }
 @media only screen and (min-width: 45em) { .hero { margin-left: 0; margin-right: 0; padding: 1em 1em 1em 65%; background-image: -webkit-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png); background-image: -moz-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png); background-image: -ms-linear-gradient(left, transparent 63%, white 63%), url(../img/illustration.png); background-image: linear-gradient(to right, transparent 63%, #ffffff 63%), url(../img/illustration.png); background-position: left center; background-size: 100% 100%, auto 180%; } }
 
 .callout { background: #402f35; color: #f4f2f3; margin-top: 2em; padding: 1.75em 1em 1em; max-width: 60em; position: relative; }
-.callout h2 { text-transform: uppercase; font-weight: normal; background: #c51b3f; color: #fcf1f2; position: absolute; margin: 1em; padding: .5rem 0 .45rem; min-height: 25px; display: inline-block; padding-left: 1em; padding-right: 1em; z-index: 1; left: -1.4em; top: -1.8em; }
+.callout h2 { text-transform: uppercase; font-weight: normal; background: #c51b3f; color: #fcf1f2; position: absolute; margin: 1em; padding: .5rem 0; min-height: 36px; display: inline-block; padding-left: 1em; padding-right: 1em; z-index: 1; left: -1.4em; top: -1.8em; }
 .callout h2:before { content: ""; display: block; bottom: -0.6em; left: 0; position: absolute; z-index: -1; border-style: solid; border-color: #6b0f22 transparent transparent transparent; border-width: 0.6em 0 0 0.6em; }
-.callout h2:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 17px solid #c51b3f; border-right-color: transparent !important; }
+.callout h2:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 18px solid #c51b3f; border-right-color: transparent !important; }
 .callout .more { padding-top: .5em; border-top: 1px solid #7d6a73; }
 @media only screen and (min-width: 45em) { .callout { white-space: nowrap; }
   .callout .excerpt { white-space: normal; display: inline-block; vertical-align: top; width: 64%; border-right: 1px solid #7d6a73; margin-right: -1px; }
@@ -108,8 +108,8 @@ a:link, a:visited { color: #10b6bf; }
 
 .accueil .conferences:before, .accueil .ateliers:before, .accueil .soirees:before { margin-top: 3.9em; }
 @media only screen and (min-width: 32em) { .accueil .conferences:before, .accueil .ateliers:before, .accueil .soirees:before { margin-top: 4.9em; } }
-.accueil .conferences h3, .accueil .ateliers h3, .accueil .soirees h3 { text-align: center; text-transform: uppercase; font-size: 20px; font-size: 2rem; font-weight: normal; background: #f64b3a; color: #fef8f7; position: relative; margin: 1em; padding: .5rem 0 .45rem; min-height: 25px; white-space: nowrap; }
-@media only screen and (max-width: 32em) { .accueil .conferences h3:before, .accueil .conferences h3:after, .accueil .ateliers h3:before, .accueil .ateliers h3:after, .accueil .soirees h3:before, .accueil .soirees h3:after { content: ""; display: block; width: 0; top: 0; position: absolute; z-index: -1; border: 17px solid #f64b3a; }
+.accueil .conferences h3, .accueil .ateliers h3, .accueil .soirees h3 { text-align: center; text-transform: uppercase; font-size: 20px; font-size: 2rem; font-weight: normal; background: #f64b3a; color: #fef8f7; position: relative; margin: 1em; padding: .5rem 0 .45rem; min-height: 36px; white-space: nowrap; }
+@media only screen and (max-width: 32em) { .accueil .conferences h3:before, .accueil .conferences h3:after, .accueil .ateliers h3:before, .accueil .ateliers h3:after, .accueil .soirees h3:before, .accueil .soirees h3:after { content: ""; display: block; width: 0; top: 0; position: absolute; z-index: -1; border: 18px solid #f64b3a; }
   .accueil .conferences h3:before, .accueil .ateliers h3:before, .accueil .soirees h3:before { left: -1em; border-left-color: transparent !important; }
   .accueil .conferences h3:after, .accueil .ateliers h3:after, .accueil .soirees h3:after { right: -1em; border-right-color: transparent !important; } }
 @media only screen and (min-width: 45em) { .accueil .conferences h3, .accueil .ateliers h3, .accueil .soirees h3 { padding-left: 3em; } }
@@ -121,19 +121,19 @@ a:link, a:visited { color: #10b6bf; }
   .accueil .conferences:after, .accueil .ateliers:after, .accueil .soirees:after, .accueil .salles:after { content: ""; display: table; clear: both; }
   .accueil .conferences, .accueil .soirees { margin-right: 2%; }
   .accueil .ateliers, .accueil .salles { margin-left: 2%; }
-  .accueil .conferences h3:before, .accueil .soirees h3:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 17px solid #f64b3a; border-left-color: transparent !important; }
-  .accueil .ateliers h3:after, .accueil .salles h3:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 17px solid #f64b3a; border-right-color: transparent !important; } }
+  .accueil .conferences h3:before, .accueil .soirees h3:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 18px solid #f64b3a; border-left-color: transparent !important; }
+  .accueil .ateliers h3:after, .accueil .salles h3:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 18px solid #f64b3a; border-right-color: transparent !important; } }
 @media only screen and (min-width: 45em) { .accueil .conferences, .accueil .ateliers, .accueil .soirees { display: inline-block; vertical-align: top; width: 31%; }
   .accueil .ateliers { margin: 0 2%; }
   .accueil .ateliers h3 { margin-left: 0; margin-right: 0; }
   .accueil .conferences h3 { margin-right: 0; }
-  .accueil .conferences h3:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 17px solid #f64b3a; border-left-color: transparent !important; }
+  .accueil .conferences h3:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 18px solid #f64b3a; border-left-color: transparent !important; }
   .accueil .soirees h3 { margin-left: 0; }
-  .accueil .soirees h3:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 17px solid #f64b3a; border-right-color: transparent !important; } }
+  .accueil .soirees h3:after { content: ""; display: block; width: 0; top: 0; right: -1em; position: absolute; z-index: -1; border: 18px solid #f64b3a; border-right-color: transparent !important; } }
 
 .sponsors { padding: 1em; max-width: 60em; margin: 0 auto; }
-.sponsors h2 { text-align: center; text-transform: uppercase; font-size: 20px; font-size: 2rem; font-weight: normal; background: #402f35; color: #f4f2f3; position: relative; margin: 1em; padding: .5rem 0 .45rem; min-height: 25px; }
-.sponsors h2:before, .sponsors h2:after { content: ""; display: block; width: 0; top: 0; position: absolute; z-index: -1; border: 17px solid #402f35; }
+.sponsors h2 { text-align: center; text-transform: uppercase; font-size: 20px; font-size: 2rem; font-weight: normal; background: #402f35; color: #f4f2f3; position: relative; margin: 1em; padding: .5rem 0 .45rem; min-height: 36px; }
+.sponsors h2:before, .sponsors h2:after { content: ""; display: block; width: 0; top: 0; position: absolute; z-index: -1; border: 18px solid #402f35; }
 .sponsors h2:before { left: -1em; border-left-color: transparent !important; }
 .sponsors h2:after { right: -1em; border-right-color: transparent !important; }
 .sponsors h3 { text-align: center; text-transform: uppercase; position: relative; }
@@ -169,9 +169,9 @@ aside.ateliers:before { margin-top: 1em; }
 .timetable .lt .session__photo { display: none; }
 .timetable time, .timetable .session__title { color: #f64b3a; margin-bottom: .2em; font-size: 18px; font-size: 1.8rem; }
 .timetable .session__title { margin-bottom: .5em; font-weight: bold; text-transform: uppercase; }
-.timetable time { display: block; float: left; margin-right: .5em; margin-bottom: -.2em; color: #402f35; }
+.timetable time { display: block; float: left; margin-right: .5em; margin-bottom: -.2em; color: #402f35; min-height: 22px; }
 @media only screen and (min-width: 45em) { .timetable time { float: none; color: #f4f2f3; background: #402f35; margin-bottom: 0; padding-right: .5em; }
-  .timetable time:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 0.65em solid #402f35; border-left-color: transparent !important; } }
+  .timetable time:before { content: ""; display: block; width: 0; top: 0; left: -1em; position: absolute; z-index: -1; border: 11px solid #402f35; border-left-color: transparent !important; } }
 .timetable .session__photo { max-width: 20%; height: auto; float: right; margin: 0 .4em .2em; padding: .2em; box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.3); }
 @media only screen and (min-width: 45em) { .timetable .meta, .timetable .session, .timetable .lt { position: relative; margin-left: 4.5em; }
   .timetable .meta time, .timetable .session time, .timetable .lt time { position: absolute; left: -3.5em; top: .5em; }
