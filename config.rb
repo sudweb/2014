@@ -22,4 +22,7 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 # require "zurb-foundation"
-output_style = :expanded # by Compass.app 
+line_comments = false # by Compass.app 
+
+
+output_style = :compact # by Compass.app 
