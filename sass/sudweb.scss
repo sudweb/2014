@@ -288,6 +288,7 @@ a:visited {
 		margin-left: 0;
 		margin-right: 0;
 		padding: 1em 1em 1em 65%;
+		background-image: none;
 		background-image: -webkit-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
 		background-image:    -moz-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
 		background-image:     -ms-linear-gradient(left, transparent 63%, $body 63%), url(../img/illustration.png);
