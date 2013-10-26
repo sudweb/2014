@@ -14,6 +14,7 @@ $inverted: #402f35;
 $text-over-inverted: #f4f2f3;
 $dark: #3f2f34;
 $text-over-dark: #f7f6f7;
+$bright: #ffa802;
 
 $narrow: 32em;
 $medium: 45em;
@@ -164,10 +165,10 @@ a:visited {
 }
 .logo {
 	display: block;
-	width: 150px;
+	width: 120px;
 	height: auto;
 	position: absolute;
-	left: -1em;
+	left: 0;
 	top: 1.2em;
 	z-index: 1;
 	@include respond-to(wide) {
@@ -180,9 +181,6 @@ a:visited {
 	background: $inverted;
 	color: $text-over-inverted;
 	margin-bottom: 4em;
-	@include respond-to(medium-and-up) {
-		margin-bottom: 8em;
-	}
 	.container {
 		padding-left: 100px;
 		@include respond-to(wide) {
@@ -274,7 +272,6 @@ a:visited {
 	background-image:     -ms-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
 	background-image:   linear-gradient(to bottom, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
 	background-size: contain;
-	box-shadow: 0 0 .5em rgba($text, .8);
 	margin: 5em 0 0;
 	padding: 11em 1em 1em;
 	position: relative;
