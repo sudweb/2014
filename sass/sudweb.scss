@@ -483,7 +483,7 @@ a:visited {
 		.conferences,
 		.ateliers,
 		.soirees,
-		.salles {
+		.callout {
 			display: inline-block;
 			vertical-align: top;
 			width: 46%;
@@ -494,7 +494,7 @@ a:visited {
 			margin-right: 2%;
 		}
 		.ateliers,
-		.salles {
+		.callout {
 			margin-left: 2%;
 		}
 		.conferences h3,
@@ -502,7 +502,7 @@ a:visited {
 			@include ribbon($primary, 18px, left);
 		}
 		.ateliers h3,
-		.salles h3 {
+		.callout h3 {
 			@include ribbon($primary, 18px, right);
 		}
 	}
