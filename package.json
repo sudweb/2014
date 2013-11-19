@@ -1,0 +1,27 @@
+{
+	"name": "SudWeb",
+	"description": "Deux journées pour apprendre et s'inspirer du web",
+	"homepage": "http://sudweb.fr/2014",
+	"version": "2.0.14",
+	"author": {
+		"name": "SudWeb Team",
+		"url": "http://sudweb.fr/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/sudweb/2014.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sudweb/2014/issues"
+	},
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"grunt": "~0.4.0",
+		"grunt-contrib-watch": "*",
+		"grunt-htmlhint": "*",
+		"grunt-sass": "~0.6.0",
+		"grunt-contrib-compass": "~0.6.0",
+		"matchdep": "*"
+	}
+}

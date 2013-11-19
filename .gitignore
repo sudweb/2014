@@ -1,3 +1,5 @@
 .sass-cache/*
 *.orig
 *.scssc
+
+node_modules/*
