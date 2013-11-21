@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 					'id-unique': true,
 					'style-disabled': true
 				},
-				src: ['index.html']
+				src: ['*.html']
 			}
 		},
 		compass: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			html: {
-				files: ['index.html','mentions-legales.html'],
+				files: '<%= htmlhint.build.src %>',
 				tasks: ['htmlhint']
 			},
 			css: {
