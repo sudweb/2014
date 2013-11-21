@@ -7,6 +7,9 @@
 		"name": "SudWeb Team",
 		"url": "http://sudweb.fr/"
 	},
+        "scripts": {
+                "test": "grunt htmlhint"
+        },
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/sudweb/2014.git"
