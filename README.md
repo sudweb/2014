@@ -1,4 +1,5 @@
-# Sud Web 2014 website
+# Sud Web 2014 website [![Build Status](https://travis-ci.org/sudweb/2014.png?branch=master)](https://travis-ci.org/sudweb/2014)
+
 
 Just some good old static webpages. We like to KISS.
 
