@@ -334,7 +334,6 @@ a:visited {
 		border-top: 1px solid darken($text-over-inverted, 50%);
 	}
 	@include respond-to(medium-and-up) {
-
 		.excerpt {
 			display: inline-block;
 			vertical-align: top;
@@ -391,12 +390,13 @@ a:visited {
 .main {
 	.conferences,
 	.ateliers,
-	.soirees {
+	.soirees,
+  .column{
 		@include clearfix;
 	}
 	.conferences:before,
 	.ateliers:before,
-	.soirees:before {
+	.soirees:before{
 		content: "";
 		display: block;
 		float: right;
@@ -439,7 +439,8 @@ a:visited {
 .accueil {
 	.conferences:before,
 	.ateliers:before,
-	.soirees:before {
+	.soirees:before,
+  .column:before {
 		margin-top: 3.9em;
 		@include respond-to(narrow-and-up) {
 			margin-top: 4.9em;
@@ -516,11 +517,20 @@ a:visited {
 	@include respond-to(wide) {
 		.conferences,
 		.ateliers,
-		.soirees {
+		.soirees,
+    .column {
 			display: inline-block;
 			vertical-align: top;
 			width: 31%;
 		}
+    .column {
+      margin-left: 1em;
+      width: 23%;
+
+      &:first-child {
+	margin-left: 0;
+      }
+    }
 		.ateliers {
 			margin: 0 2%;
 			h3 {
@@ -537,6 +547,15 @@ a:visited {
 			margin-left: 0;
 		}
 	}
+}
+.orateur {
+  .avatar {
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+    }
+  }
 }
 .sponsors {
 	padding: 1em;
