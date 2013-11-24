@@ -469,6 +469,28 @@ a:visited {
 			padding-left: 3em;
 		}
 	}
+
+  .orateur {
+    h3 {
+      text-align: center;
+    }
+  }
+
+  @include respond-to(narrow-and-up) {
+    .column {
+      display: inline-block;
+      margin-left: 1em;
+      vertical-align: top;
+
+      &:first-child {
+	margin-left: 0;
+      }
+    }
+
+    .column.orateur {
+      width: 46%;
+    }
+  }
 	@include respond-to(medium-only) {
 		.conferences h3 {
 			padding-left: 1em;
@@ -517,19 +539,13 @@ a:visited {
 	@include respond-to(wide) {
 		.conferences,
 		.ateliers,
-		.soirees,
-    .column {
+		.soirees {
 			display: inline-block;
 			vertical-align: top;
 			width: 31%;
 		}
-    .column {
-      margin-left: 1em;
-      width: 23%;
-
-      &:first-child {
-	margin-left: 0;
-      }
+    .column.orateur {
+      width: 22%;
     }
 		.ateliers {
 			margin: 0 2%;
