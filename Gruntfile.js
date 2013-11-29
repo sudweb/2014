@@ -5,6 +5,12 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+    deployableFiles: [
+      '*.{html,txt,pdf}',
+      'css/*',
+      'img/**/*',
+      'js/**/*'
+    ],
 		htmlhint: {
 			build: {
 				options: {
@@ -29,18 +35,13 @@ module.exports = function(grunt) {
 		},
     'gh-pages': {
       'production': {
-        src: [
-          '*.{html,txt,pdf}',
-          'css/*',
-          'img/**/*',
-          'js/**/*'
-        ],
+        src: '<%= deployableFiles %>',
         options: {
           repo: 'git@github.com:sudweb/2014.git'
         }
       },
       'dev': {
-        src: '<%= gh-pages.production.src %>'
+        src: '<%= deployableFiles %>'
       }
     },
 		watch: {
