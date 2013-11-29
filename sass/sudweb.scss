@@ -327,22 +327,17 @@ a:visited {
 		border-top: 1px solid darken($text-over-inverted, 50%);
 	}
 	@include respond-to(medium-and-up) {
-		white-space: nowrap;
 
 		.excerpt {
-			white-space: normal;
 			display: inline-block;
 			vertical-align: top;
-			width: 64%;
-			border-right: 1px solid darken($text-over-inverted, 50%);
-			margin-right: -1px;
+			width: 62%;
 		}
 		.more {
-			white-space: normal;
+      border-left: 3px solid darken($text-over-inverted, 50%);
 			display: inline-block;
 			width: 36%;
 			padding-left: 1em;
-			border-left: 1px solid darken($text-over-inverted, 50%);
 			padding-top: 0;
 			border-top: none;
 		}
