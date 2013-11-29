@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		htmlhint: {
@@ -26,6 +27,22 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+    'gh-pages': {
+      'production': {
+        src: [
+          '*.{html,txt,pdf}',
+          'css/*',
+          'img/**/*',
+          'js/**/*'
+        ],
+        options: {
+          repo: 'git@github.com:sudweb/2014.git'
+        }
+      },
+      'dev': {
+        src: '<%= gh-pages.production.src %>'
+      }
+    },
 		watch: {
 			html: {
 				files: '<%= htmlhint.build.src %>',
@@ -40,4 +57,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['htmlhint', 'compass', 'watch']);
 
+  grunt.registerTask('deploy', ['deploy-prod']);
+  grunt.registerTask('deploy-dev', ['compass', 'gh-pages:dev']);
+  grunt.registerTask('deploy-prod', ['compass', 'gh-pages:production']);
 };
