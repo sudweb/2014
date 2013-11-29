@@ -411,6 +411,10 @@ a:visited {
 		margin-top: 1em;
 		padding: .5em 1em;
 		overflow: hidden;
+    a {
+      color: $text-over-secondary;
+      text-decoration: underline;
+    }
 		h2 {
 			text-transform: uppercase;
 			margin-bottom: .75em;
