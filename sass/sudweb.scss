@@ -121,7 +121,7 @@ html {
 }
 .emphasis {
 	@include font-size(18);
-}	
+}
 a:link,
 a:visited {
 	color: $contrast;
@@ -195,7 +195,7 @@ a:visited {
 			left: 0;
 			right: 0;
 			z-index: 1;
-			
+
 			&:target {
 				@include vendorize(transition, top .3s ease-out);
 				top: 0;
@@ -223,7 +223,8 @@ a:visited {
 		}
 		a:focus,
 		a:hover,
-		.current {
+		.current,
+    .cta{
 			background: $contrast;
 			color: $text-over-contrast;
 			text-decoration: none;
@@ -275,7 +276,7 @@ a:visited {
 	margin: 5em 0 0;
 	padding: 11em 1em 1em;
 	position: relative;
-	
+
 	@include respond-to(narrow-and-up) {
 		background-size: cover;
 		background-position: center top, center -2em;
@@ -301,11 +302,11 @@ a:visited {
 	padding: 1.75em 1em 1em;
 	max-width: $widest;
 	position: relative;
-	
+
 	h2 {
 		text-transform: uppercase;
 		font-weight: normal;
-		
+
 		background: $secondary;
 		color: $text-over-secondary;
 		position: absolute;
@@ -327,7 +328,7 @@ a:visited {
 	}
 	@include respond-to(medium-and-up) {
 		white-space: nowrap;
-		
+
 		.excerpt {
 			white-space: normal;
 			display: inline-block;
@@ -360,7 +361,7 @@ a:visited {
 	@include font-size(24);
 	position: relative;
 	margin-top: 1em;
-	
+
 	&:before,
 	&:after {
 		content: "";
@@ -445,7 +446,7 @@ a:visited {
 		text-transform: uppercase;
 		@include font-size(20);
 		font-weight: normal;
-		
+
 		background: $primary;
 		color: $text-over-primary;
 		position: relative;
@@ -453,7 +454,7 @@ a:visited {
 		padding: .5rem 0 .45rem;
 		min-height: 36px;
 		white-space: nowrap;
-		
+
 		@include respond-to(narrow) {
 			@include ribbon($primary, 18px);
 		}
@@ -535,13 +536,13 @@ a:visited {
 	padding: 1em;
 	max-width: $widest;
 	margin: 0 auto;
-	
+
 	h2 {
 		text-align: center;
 		text-transform: uppercase;
 		@include font-size(20);
 		font-weight: normal;
-		
+
 		background: $inverted;
 		color: $text-over-inverted;
 		@include ribbon($inverted, 18px);
@@ -554,7 +555,7 @@ a:visited {
 		text-align: center;
 		text-transform: uppercase;
 		position: relative;
-		
+
 		&:before,
 		&:after {
 			content: "";
@@ -635,7 +636,7 @@ a:visited {
 		vertical-align: top;
 		width: 48%;
 		@include clearfix;
-		
+
 		// Add margin to every other aside, but start from the end because there may be any number of tags before
 		&:nth-last-child(even) {
 			margin-right: 3%;
@@ -730,14 +731,14 @@ aside.ateliers:before {
 .ateliers .sessions {
 	list-style: none;
 	margin: 0;
-	
+
 	li {
 		padding: .2em .5em;
 		@include respond-to(medium) {
 			border-top: 1px solid $contrast;
 		}
-		
-		
+
+
 		&:nth-child(even) {
 			background: darken($body, 10%);
 			background: rgba(darken($inverted, 10%), .1);
@@ -753,24 +754,24 @@ aside.ateliers:before {
 	.soirees {
 		background: $body;
 		padding: .5em 1em;
-		
+
 		@include respond-to(medium) {
 			border: 1px solid rgba(black, .1);
 			margin: 1em 0;
 		}
-		
+
 		@include respond-to(medium-and-up) {
 			display: inline-block;
 			vertical-align: top;
 			width: 48%;
 			margin-top: 1em;
-			
+
 			&:nth-last-child(even) {
 				margin-right: 3%;
 			}
 		}
-		
-		
+
+
 		h2 {
 			color: $primary;
 			margin-bottom: .5em;
@@ -788,7 +789,7 @@ aside.ateliers:before {
 	@include respond-to(medium-and-up) {
 		padding-top: 1.5em;
 	}
-	
+
 	.to-top {
 		position: absolute;
 		top: -2em;
@@ -822,7 +823,7 @@ aside.ateliers:before {
 			color: $text-over-contrast;
 		}
 	}
-	
+
 	.connect,
 	.precedentes,
 	.footer {
