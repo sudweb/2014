@@ -1,0 +1,24 @@
+/* SUDWEB TEAM */
+
+	Goulven Champenois (@goulvench)
+	from Lyon, France
+
+	Thomas Parisot (@oncletom)
+	from London, England
+
+	Nathalie Rosenberg (@nrosenberg)
+	from Toulouse, France
+
+	Frank Taillandier (@DirtyF)
+	from Toulouse, France
+
+/* THANKS * /
+
+	Design by Corinne Sanchez (@coc_san)
+	from Toulouse, France
+
+/* SITE */
+
+	Last update:2013/11/02
+	Standards: HTML5, CSS3
+	Software: Sublime Text, Git, Sass, Compass, Grunt.js
