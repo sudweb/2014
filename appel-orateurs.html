@@ -27,7 +27,8 @@
 			</a>
 			<nav role="navigation" class="nav" id="main-nav">
 				<ul>
-	  <li><a href="orateurs.html">Les orateurs</a></li>
+	  <li><a href="inscription.html" class="cta">Inscription</a></li>
+	  <li><a href="index.html#orateurs">Orateurs</a></li>
 	  <li><a href="http://sudweb.fr/blog/contact/">Contact</a></li>
 					<li><a href="http://sudweb.fr/blog/">Blog</a></li>
 					<li class="close"><a href="#top">Fermer le menu</a></li>
@@ -43,43 +44,57 @@
 	</header>
 
 	<section class="main">
-    <article class="chapo">
-      <h1>Les orateurs</h1>
-    </article>
-
     <article class="chapo" id="participer">
       <h1>Appel à orateur</h1>
 
-      <form class="form mailto-form" action="mailto:propositions@sudweb.fr" method="post">
-	<div class="row">
-	  <div class="large-12 columns">
-	    <label for="speaker-name">Prénom et nom</label>
-	    <input type="text" placeholder="Gentil orateur" id="speaker-name">
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <label for="talk-title">Titre du <em>Lightning Talk</em></label>
-	    <input type="text" name="title" id="talk-title">
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <label for="talk-description">De quoi ça va parler ?</label>
-	    <textarea name="description" id="talk-description" cols="30" rows="10"></textarea>
-	    <small class="help">C'est juste pour nous aider à comprendre. Ce texte ne sera pas rendu public.</small>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <label for="talk-description">Des remarques ? Des questions ?</label>
-	    <textarea name="questions" id="talk-questions" cols="30" rows="10"></textarea>
-	  </div>
-	</div>
-	<div class="row form-actions">
-	  <button type="submit">Soumettre cette proposition</button>
-	</div>
+      <form class="form mailto-form" id="mailto-form" action="mailto:propositions@sudweb.fr" method="post" data-spreadsheet-id="1412jD1crc2DZK1MhmtEyQYpavK9gAl-ayj8l25Fcm5A">
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="speaker-name">Votre prénom et nom</label>
+            <input type="text" name="entry.174408459" id="speaker-name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="speaker-email">Votre adresse email</label>
+            <input type="email" name="entry.1910784286" id="speaker-email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="talk-format-lt">Format(s)</label>
+
+            <ul class="inline">
+              <li><label><input type="checkbox" name="entry.978785564" value="Lightning Talk" id="talk-format-lt"> Lightning Talk (5 minutes)</label></li>
+              <li><label><input type="checkbox" name="entry.978785564" value="Élaboratoire" id="talk-format-elaboratoire"> Élaboratoires (1h30)</label></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="talk-description">Que devrait en retenir le public ?</label>
+            <textarea name="entry.859987257" id="talk-description" cols="30" rows="10" required></textarea>
+            <small class="help">Ce texte ne sera pas rendu public : c'est pour nous aider à comprendre ce que vous cherchez à partager.</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="talk-questions">Des remarques ? Des questions ? Des besoins particuliers ?</label>
+            <textarea name="entry.1030661705" id="talk-questions" cols="30" rows="10"></textarea>
+            <small class="help">Ça aussi ça ne sera pas rendu public.</small>
+          </div>
+        </div>
+        <div class="row form-actions">
+          <button type="submit" class="action">Soumettre cette proposition par email</button>
+        </div>
       </form>
+    </article>
+
+    <article class="callout">
+      <h2>Défraiement</h2>
+
+      <p>Si votre proposition est retenue, </p>
+      <p>Restent à votre charge l'hébergement et le transport.</p>
     </article>
   </section>
 
@@ -115,6 +130,9 @@
 
 			<p class="colophon">Sud Web est un évènement à but non-lucratif organisé par une équipe de bénévoles passionnés.</p>
 		</div>
+
+    <script src="https://rawgithub.com/oncletom/mailto/0.1.1/dist/mailto.min.js"></script>
+    <script src="js/cfp.js" async></script>
 	</footer>
 </body>
 </html>

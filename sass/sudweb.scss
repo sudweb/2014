@@ -127,17 +127,20 @@ a:link,
 a:visited {
 	color: $contrast;
 }
+.action,
 .action:link,
 .action:visited {
-	display: inline-block;
-	color: $text-over-contrast;
+  border: none;
 	background: $contrast;
 	background: -webkit-linear-gradient($contrast, darken($contrast, 15%));
 	background:    -moz-linear-gradient($contrast, darken($contrast, 15%));
 	background:     -ms-linear-gradient($contrast, darken($contrast, 15%));
 	background:         linear-gradient($contrast, darken($contrast, 15%));
+  box-shadow: 0 .2em .5em rgba(black, .5);
+  color: $text-over-contrast;
+  cursor: pointer;
+  display: inline-block;
 	padding: .5em 1em;
-	box-shadow: 0 .2em .5em rgba(black, .5);
 }
 .action:focus,
 .action:hover {
@@ -940,4 +943,24 @@ aside.ateliers:before {
 		clear: both;
 		margin-bottom: .5em;
 	}
+}
+
+.form {
+  .row {
+    margin-bottom: 1.5em;
+  }
+
+  label,
+  .help {
+    display: block;
+  }
+
+  select,
+  textarea,
+  input[type="email"],
+  input[type="text"] {
+    border: 1px solid fade-out($inverted, 0.3);
+    padding: .3em;
+    width: 50%;
+  }
 }
