@@ -181,6 +181,11 @@ a:visited {
 	background: $inverted;
 	color: $text-over-inverted;
 	margin-bottom: 4em;
+
+  &.with-hero {
+    margin-bottom: 0;
+  }
+
 	.container {
 		padding-left: 100px;
 		@include respond-to(wide) {
@@ -267,38 +272,40 @@ a:visited {
 	}
 }
 .hero {
-	background: $body url(../img/conferences-780.jpg) no-repeat center top;
-	background-image: -webkit-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:    -moz-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:     -ms-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:   linear-gradient(to bottom, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-size: contain;
-	margin: 5em 0 0;
+	background: $inverted url(../img/conferences-780.jpg) no-repeat center top;
+	background-image: -webkit-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image:    -moz-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image:     -ms-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image: linear-gradient(to bottom, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-size: auto, cover;
+  background-position: center top, center center;
+  margin: 0;
 	padding: 11em 1em 1em;
 	position: relative;
 
-	@include respond-to(narrow-and-up) {
-		background-size: cover;
-		background-position: center top, center -2em;
-	}
+  a {
+    color: $text;
+    text-decoration: underline;
+  }
 
 	@include respond-to(wide) {
-		margin-left: 0;
-		margin-right: 0;
-		padding: 1em 1em 1em 65%;
 		background-image: none;
-		background-image: -webkit-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:    -moz-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:     -ms-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:     linear-gradient(to right, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
+		background-image: -webkit-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:    -moz-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:     -ms-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:         linear-gradient(to right, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+    box-shadow: 0 0 0.3em fade-out(#000, 0.2);
 		background-position: left center;
-		background-size: 100% 100%, auto 180%;
+		background-size: 100% 100%, cover;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2em 1em 2em 65%;
 	}
 }
 .callout {
 	background: $inverted;
 	color: $text-over-inverted;
-	margin-top: 2em;
+	margin: 2em 0;
 	padding: 1.75em 1em 1em;
 	max-width: $widest;
 	position: relative;
@@ -411,6 +418,10 @@ a:visited {
 		margin-top: 1em;
 		padding: .5em 1em;
 		overflow: hidden;
+    a {
+      color: $text-over-secondary;
+      text-decoration: underline;
+    }
 		h2 {
 			text-transform: uppercase;
 			margin-bottom: .75em;
