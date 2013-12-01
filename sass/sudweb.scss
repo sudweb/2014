@@ -121,7 +121,7 @@ html {
 }
 .emphasis {
 	@include font-size(18);
-}	
+}
 a:link,
 a:visited {
 	color: $contrast;
@@ -181,6 +181,11 @@ a:visited {
 	background: $inverted;
 	color: $text-over-inverted;
 	margin-bottom: 4em;
+
+  &.with-hero {
+    margin-bottom: 0;
+  }
+
 	.container {
 		padding-left: 100px;
 		@include respond-to(wide) {
@@ -195,7 +200,7 @@ a:visited {
 			left: 0;
 			right: 0;
 			z-index: 1;
-			
+
 			&:target {
 				@include vendorize(transition, top .3s ease-out);
 				top: 0;
@@ -223,7 +228,8 @@ a:visited {
 		}
 		a:focus,
 		a:hover,
-		.current {
+		.current,
+    .cta{
 			background: $contrast;
 			color: $text-over-contrast;
 			text-decoration: none;
@@ -266,46 +272,48 @@ a:visited {
 	}
 }
 .hero {
-	background: $body url(../img/conferences-780.jpg) no-repeat center top;
-	background-image: -webkit-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:    -moz-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:     -ms-linear-gradient(top, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-image:   linear-gradient(to bottom, transparent 10em, $body 10em), url(../img/conferences-780.jpg);
-	background-size: contain;
-	margin: 5em 0 0;
+	background: $inverted url(../img/conferences-780.jpg) no-repeat center top;
+	background-image: -webkit-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image:    -moz-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image:     -ms-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-image: linear-gradient(to bottom, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+	background-size: auto, cover;
+  background-position: center top, center center;
+  margin: 0;
 	padding: 11em 1em 1em;
 	position: relative;
-	
-	@include respond-to(narrow-and-up) {
-		background-size: cover;
-		background-position: center top, center -2em;
-	}
+
+  a {
+    color: $text;
+    text-decoration: underline;
+  }
 
 	@include respond-to(wide) {
-		margin-left: 0;
-		margin-right: 0;
-		padding: 1em 1em 1em 65%;
 		background-image: none;
-		background-image: -webkit-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:    -moz-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:     -ms-linear-gradient(left, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
-		background-image:     linear-gradient(to right, transparent 63%, $body 63%), url(../img/conferences-780.jpg);
+		background-image: -webkit-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:    -moz-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:     -ms-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+		background-image:         linear-gradient(to right, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+    box-shadow: 0 0 0.3em fade-out(#000, 0.2);
 		background-position: left center;
-		background-size: 100% 100%, auto 180%;
+		background-size: 100% 100%, cover;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2em 1em 2em 65%;
 	}
 }
 .callout {
 	background: $inverted;
 	color: $text-over-inverted;
-	margin-top: 2em;
+	margin: 2em 0;
 	padding: 1.75em 1em 1em;
 	max-width: $widest;
 	position: relative;
-	
+
 	h2 {
 		text-transform: uppercase;
 		font-weight: normal;
-		
+
 		background: $secondary;
 		color: $text-over-secondary;
 		position: absolute;
@@ -326,22 +334,16 @@ a:visited {
 		border-top: 1px solid darken($text-over-inverted, 50%);
 	}
 	@include respond-to(medium-and-up) {
-		white-space: nowrap;
-		
 		.excerpt {
-			white-space: normal;
 			display: inline-block;
 			vertical-align: top;
-			width: 64%;
-			border-right: 1px solid darken($text-over-inverted, 50%);
-			margin-right: -1px;
+			width: 62%;
 		}
 		.more {
-			white-space: normal;
+      border-left: 3px solid darken($text-over-inverted, 50%);
 			display: inline-block;
 			width: 36%;
 			padding-left: 1em;
-			border-left: 1px solid darken($text-over-inverted, 50%);
 			padding-top: 0;
 			border-top: none;
 		}
@@ -360,7 +362,7 @@ a:visited {
 	@include font-size(24);
 	position: relative;
 	margin-top: 1em;
-	
+
 	&:before,
 	&:after {
 		content: "";
@@ -388,12 +390,13 @@ a:visited {
 .main {
 	.conferences,
 	.ateliers,
-	.soirees {
+	.soirees,
+  .column{
 		@include clearfix;
 	}
 	.conferences:before,
 	.ateliers:before,
-	.soirees:before {
+	.soirees:before{
 		content: "";
 		display: block;
 		float: right;
@@ -415,6 +418,10 @@ a:visited {
 		margin-top: 1em;
 		padding: .5em 1em;
 		overflow: hidden;
+    a {
+      color: $text-over-secondary;
+      text-decoration: underline;
+    }
 		h2 {
 			text-transform: uppercase;
 			margin-bottom: .75em;
@@ -432,7 +439,8 @@ a:visited {
 .accueil {
 	.conferences:before,
 	.ateliers:before,
-	.soirees:before {
+	.soirees:before,
+  .column:before {
 		margin-top: 3.9em;
 		@include respond-to(narrow-and-up) {
 			margin-top: 4.9em;
@@ -445,7 +453,7 @@ a:visited {
 		text-transform: uppercase;
 		@include font-size(20);
 		font-weight: normal;
-		
+
 		background: $primary;
 		color: $text-over-primary;
 		position: relative;
@@ -453,7 +461,7 @@ a:visited {
 		padding: .5rem 0 .45rem;
 		min-height: 36px;
 		white-space: nowrap;
-		
+
 		@include respond-to(narrow) {
 			@include ribbon($primary, 18px);
 		}
@@ -461,6 +469,28 @@ a:visited {
 			padding-left: 3em;
 		}
 	}
+
+  .orateur {
+    h3 {
+      text-align: center;
+    }
+  }
+
+  @include respond-to(narrow-and-up) {
+    .column {
+      display: inline-block;
+      margin-left: 1em;
+      vertical-align: top;
+
+      &:first-child {
+	margin-left: 0;
+      }
+    }
+
+    .column.orateur {
+      width: 46%;
+    }
+  }
 	@include respond-to(medium-only) {
 		.conferences h3 {
 			padding-left: 1em;
@@ -514,6 +544,9 @@ a:visited {
 			vertical-align: top;
 			width: 31%;
 		}
+    .column.orateur {
+      width: 22%;
+    }
 		.ateliers {
 			margin: 0 2%;
 			h3 {
@@ -531,17 +564,26 @@ a:visited {
 		}
 	}
 }
+.orateur {
+  .avatar {
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}
 .sponsors {
 	padding: 1em;
 	max-width: $widest;
 	margin: 0 auto;
-	
+
 	h2 {
 		text-align: center;
 		text-transform: uppercase;
 		@include font-size(20);
 		font-weight: normal;
-		
+
 		background: $inverted;
 		color: $text-over-inverted;
 		@include ribbon($inverted, 18px);
@@ -554,7 +596,7 @@ a:visited {
 		text-align: center;
 		text-transform: uppercase;
 		position: relative;
-		
+
 		&:before,
 		&:after {
 			content: "";
@@ -635,7 +677,7 @@ a:visited {
 		vertical-align: top;
 		width: 48%;
 		@include clearfix;
-		
+
 		// Add margin to every other aside, but start from the end because there may be any number of tags before
 		&:nth-last-child(even) {
 			margin-right: 3%;
@@ -730,14 +772,14 @@ aside.ateliers:before {
 .ateliers .sessions {
 	list-style: none;
 	margin: 0;
-	
+
 	li {
 		padding: .2em .5em;
 		@include respond-to(medium) {
 			border-top: 1px solid $contrast;
 		}
-		
-		
+
+
 		&:nth-child(even) {
 			background: darken($body, 10%);
 			background: rgba(darken($inverted, 10%), .1);
@@ -753,24 +795,24 @@ aside.ateliers:before {
 	.soirees {
 		background: $body;
 		padding: .5em 1em;
-		
+
 		@include respond-to(medium) {
 			border: 1px solid rgba(black, .1);
 			margin: 1em 0;
 		}
-		
+
 		@include respond-to(medium-and-up) {
 			display: inline-block;
 			vertical-align: top;
 			width: 48%;
 			margin-top: 1em;
-			
+
 			&:nth-last-child(even) {
 				margin-right: 3%;
 			}
 		}
-		
-		
+
+
 		h2 {
 			color: $primary;
 			margin-bottom: .5em;
@@ -788,7 +830,7 @@ aside.ateliers:before {
 	@include respond-to(medium-and-up) {
 		padding-top: 1.5em;
 	}
-	
+
 	.to-top {
 		position: absolute;
 		top: -2em;
@@ -822,7 +864,7 @@ aside.ateliers:before {
 			color: $text-over-contrast;
 		}
 	}
-	
+
 	.connect,
 	.precedentes,
 	.footer {

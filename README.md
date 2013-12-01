@@ -40,3 +40,26 @@ Waiting...
 ```
 
 Happy coding!
+
+## Deploy
+
+### Production
+
+Once you are satisfied and are ready to deploy on `sudweb.fr/2014`, proceed as below:
+
+```bash
+grunt deploy-prod
+ssh sudweb 'cd www/2014 && git pull'
+```
+
+**Notice**: `sudweb` is a hostname configured in `~/.ssh/config`.
+
+### Development
+
+To share what you have done without publishing it live, use the following command:
+
+```bash
+grunt deploy-dev
+```
+
+The content will be available on `http://<your username>.github.io/2014`.
