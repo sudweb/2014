@@ -31,9 +31,10 @@ mailtoForm.onSubmit = function(m){
 
   var el = document.createElement('iframe');
   el.hidden = true;
+  el.sandbox = true;
   el.src = 'https://docs.google.com/forms/d/'+formId+'/formResponse?'+queryString;
   el.onload = function(e){
-    if (!el.documentElement.title || el.documentElement.title.match('Thanks')){
+    if (!(el.contentDocument || el.contentWindow.document || '').title.match('Thanks')){
       console.log('An error happened submitting the response');
     }
 
