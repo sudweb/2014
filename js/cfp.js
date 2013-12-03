@@ -32,13 +32,13 @@ mailtoForm.onSubmit = function(m){
   var el = document.createElement('iframe');
   el.hidden = true;
   el.src = 'https://docs.google.com/forms/d/'+formId+'/formResponse?'+queryString;
-  el.addEventListener(function(e){
+  el.onload = function(e){
     if (!el.documentElement.title || el.documentElement.title.match('Thanks')){
       console.log('An error happened submitting the response');
     }
 
     w.location = m.getMailtoUrl();
-  });
+  };
 
   d.body.appendChild(el);
 };
