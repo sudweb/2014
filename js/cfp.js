@@ -33,11 +33,14 @@ mailtoForm.onSubmit = function(m){
   el.hidden = true;
   el.sandbox = true;
   el.src = 'https://docs.google.com/forms/d/'+formId+'/formResponse?'+queryString;
-  el.onload = function(e){
+
+  el.onerror = function onFrameError(e){
     if (!(el.contentDocument || el.contentWindow.document || '').title.match('Thanks')){
       console.log('An error happened submitting the response');
     }
+  };
 
+  el.onload = function onSuccess(e){
     w.location = m.getMailtoUrl();
   };
 
