@@ -103,6 +103,7 @@ section,
 	li {
 		display: inline;
 	}
+  span,
 	a:link,
 	a:visited {
 		display: block;
@@ -213,7 +214,8 @@ a:visited {
 				display: none;
 			}
 		}
-		a {
+		a,
+    span{
 			text-transform: uppercase;
 			color: $text-over-inverted;
 			background: $inverted;
@@ -234,6 +236,9 @@ a:visited {
 			color: $text-over-contrast;
 			text-decoration: none;
 		}
+    span {
+      border-right: none;
+    }
 		li:last-child a {
 			@include respond-to(wide) {
 				border: none;
@@ -483,7 +488,7 @@ a:visited {
       vertical-align: top;
 
       &:first-child {
-	margin-left: 0;
+	      margin-left: 0;
       }
     }
 
@@ -850,6 +855,7 @@ aside.ateliers:before {
 		@include respond-to(narrow-and-up) {
 			display: none;
 		}
+    span,
 		a:link,
 		a:visited {
 			color: $text-over-inverted;
