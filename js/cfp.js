@@ -2,6 +2,7 @@
 var mailtoForm = new mailto(document.getElementById('mailto-form'));
 var formId = mailtoForm.form.getAttribute('data-spreadsheet-id');
 var fields = ['entry.1910784286', 'entry.174408459'];
+var mailBody = mailto.textContent(document.getElementById('mailto-body'));
 
 function saveFields(fields, data){
   if ('localStorage' in w) {
@@ -19,6 +20,13 @@ function restoreFields(fields){
   });
 }
 
+mailtoForm.formatter = function bracketFormatter(m){
+  var data = m.getData();
+
+  return mailBody.replace(/{{([^}]+)}}/g, function(m, key){
+    return data[key] || '';
+  });
+};
 
 mailtoForm.onSubmit = function(m){
   var formData = m.getFormData();
@@ -31,7 +39,7 @@ mailtoForm.onSubmit = function(m){
 
   var el = document.createElement('iframe');
   el.hidden = true;
-  el.sandbox = true;
+  el.sandbox = '';
   el.src = 'https://docs.google.com/forms/d/'+formId+'/formResponse?'+queryString;
 
   el.onerror = function onFrameError(e){
