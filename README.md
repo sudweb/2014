@@ -41,6 +41,22 @@ Waiting...
 
 Happy coding!
 
+## Thumbnails
+
+You initially need to install [GraphicsMagick](http://www.graphicsmagick.org).
+
+```bash
+brew install graphicsmagick
+```
+
+Then run, each time you need to regenerate thumbnails:
+
+```bash
+npm run thumbs
+```
+
+They will be located in `img/orateurs/150`.
+
 ## Deploy
 
 ### Production
