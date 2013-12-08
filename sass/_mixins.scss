@@ -47,6 +47,10 @@ $widest: 60em;
 	@include vendorize(filter, drop-shadow($x $y $blur $color));
 }
 @mixin ribbon ($color, $width: 1em, $side: both, $direction: inward) {
+  a {
+    color: #fff;
+  }
+
 	@if ($side == left) {
 		&:before {
 			content: "";
