@@ -577,7 +577,9 @@ a:visited {
     text-align: center;
 
     img {
-      border-radius: 50%;
+      border-radius: 4px;
+      box-shadow: 0 .1em .3em rgba(black, .3);
+      max-width: 150px;
     }
   }
 }
