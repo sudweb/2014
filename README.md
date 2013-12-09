@@ -41,6 +41,22 @@ Waiting...
 
 Happy coding!
 
+## Thumbnails
+
+You initially need to install [GraphicsMagick](http://www.graphicsmagick.org).
+
+```bash
+brew install graphicsmagick
+```
+
+Then run, each time you need to regenerate thumbnails:
+
+```bash
+npm run thumbs
+```
+
+They will be located in `img/orateurs/150`.
+
 ## Deploy
 
 ### Production
@@ -48,7 +64,7 @@ Happy coding!
 Once you are satisfied and are ready to deploy on `sudweb.fr/2014`, proceed as below:
 
 ```bash
-grunt deploy-prod
+npm run deploy-prod
 ssh sudweb 'cd www/2014 && git pull'
 ```
 
@@ -59,7 +75,7 @@ ssh sudweb 'cd www/2014 && git pull'
 To share what you have done without publishing it live, use the following command:
 
 ```bash
-grunt deploy-dev
+npm run deploy-dev
 ```
 
 The content will be available on `http://<your username>.github.io/2014`.

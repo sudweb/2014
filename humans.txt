@@ -1,7 +1,7 @@
-/* SUDWEB TEAM */
+/* SUDWEB 2014 TEAM */
 
-	Goulven Champenois (@goulvench)
-	from Lyon, France
+	Loïc Mathaud (@bballizlife)
+	from Saint-Étienne, France
 
 	Thomas Parisot (@oncletom)
 	from London, England
@@ -19,6 +19,6 @@
 
 /* SITE */
 
-	Last update:2013/11/02
+	Last update:2013/12/03
 	Standards: HTML5, CSS3
-	Software: Sublime Text, Git, Sass, Compass, Grunt.js
+	Software: Git, Sass, Compass, npm, Grunt
