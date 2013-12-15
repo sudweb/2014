@@ -17,8 +17,11 @@
 	Design by Corinne Sanchez (@coc_san)
 	from Toulouse, France
 
+  original HTML and CSS by Goulven Champenois (@goulvench)
+  from Lyon, France
+
 /* SITE */
 
-	Last update:2013/12/03
-	Standards: HTML5, CSS3
-	Software: Git, Sass, Compass, npm, Grunt
+	Last update:2013/12/15
+	Web Standards: HTML5, CSS3, Javascript
+	Tools: Git, Node, npm, Grunt, Sass, Compass
