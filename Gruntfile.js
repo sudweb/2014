@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
     deployableFiles: [
-      '*.{html,txt,pdf}',
+      '*.{html,txt,pdf,png}',
+      'browserconfig.xml',
       'css/*',
       'img/**/*',
       'js/**/*'
