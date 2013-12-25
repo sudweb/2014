@@ -652,12 +652,10 @@ a:visited {
 			max-width: 150px;
 		}
 	}
-	p {
-		margin-bottom: 1em;
-		span {
-			display: block;
-			@include font-size(24);
-		}
+	.center-block {
+    display: block;
+		margin-bottom: .5em;
+		@include font-size(16);
 	}
 }
 
