@@ -482,6 +482,8 @@ a:visited {
     h3 {
       text-align: center;
     }
+
+     margin-bottom: 1.5em;
   }
 
   @include respond-to(narrow-and-up) {
@@ -953,6 +955,12 @@ aside.ateliers:before {
   label,
   .help {
     display: block;
+  }
+
+  .inline {
+    .help {
+      display: inline;
+    }
   }
 
   select,
