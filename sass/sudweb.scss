@@ -705,6 +705,12 @@ aside.ateliers:before {
     margin: 0 0 1.5em;
   }
 
+  .orateur {
+    clear: both;
+    padding-top: 1.5em;
+    position: relative;
+  }
+
   h2 {
     background: $inverted;
     color: $text-over-inverted;
@@ -720,11 +726,6 @@ aside.ateliers:before {
   .avatar {
     margin-right: .5em;
     text-align: right;
-  }
-
-  .orateur {
-    clear: both;
-    padding-top: 1.5em;
   }
 
   header,
@@ -751,6 +752,39 @@ aside.ateliers:before {
   aside {
     text-align: right;
     width: 20%;
+  }
+
+  @include respond-to(medium) {
+    h2 {
+      position: absolute;
+      width: 100%;
+    }
+
+    .avatar {
+      padding-top: 40px;
+    }
+  }
+
+  @include respond-to(narrow) {
+    header,
+    article,
+    aside {
+      float: none;
+      clear: both;
+      padding: .5em 1.5em;
+      text-align: left;
+      width: 100%;
+    }
+
+
+    h2 {
+      position: relative;
+    }
+
+    .avatar {
+      padding: 0;
+      text-align: center;
+    }
   }
 }
 
