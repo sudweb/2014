@@ -733,9 +733,8 @@ aside.ateliers:before {
     float: left;
   }
 
-  header,
-  aside{
-    width: 25%;
+  header {
+    width: 30%;
   }
 
   article {
@@ -751,6 +750,7 @@ aside.ateliers:before {
 
   aside {
     text-align: right;
+    width: 20%;
   }
 }
 
