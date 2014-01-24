@@ -10,7 +10,8 @@ module.exports = function(grunt) {
       'browserconfig.xml',
       'css/*',
       'img/**/*',
-      'js/**/*'
+      'js/**/*',
+      '.htaccess'
     ],
 		htmlhint: {
 			build: {
