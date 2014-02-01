@@ -483,6 +483,21 @@ a:visited {
       text-align: center;
     }
 
+    a {
+      display: block;
+      color: $text;
+      text-decoration: none;
+
+      &:hover .link{
+        text-decoration: none;
+      }
+    }
+
+    .link {
+      color: $contrast;
+      text-decoration: underline;
+    }
+
      margin-bottom: 1.5em;
   }
 
