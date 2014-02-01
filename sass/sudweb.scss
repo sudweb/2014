@@ -738,6 +738,11 @@ aside.ateliers:before {
     @include ribbon($inverted, 16px, left);
   }
 
+  h3 {
+    @include font-size(26);
+    margin: 0 0 .5em;
+  }
+
   .avatar {
     margin-right: .5em;
     text-align: right;
@@ -759,12 +764,8 @@ aside.ateliers:before {
     width: 50%;
   }
 
-  article,
   aside {
     padding-top: 40px;
-  }
-
-  aside {
     text-align: right;
     width: 20%;
   }
