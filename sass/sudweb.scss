@@ -67,6 +67,9 @@ a:link,
 a:visited {
 	text-decoration: none;
 }
+a.link {
+  text-decoration: underline;
+}
 a:focus,
 a:hover {
 	text-decoration: underline;
@@ -135,16 +138,18 @@ a:visited {
 	background:    -moz-linear-gradient($contrast, darken($contrast, 15%));
 	background:     -ms-linear-gradient($contrast, darken($contrast, 15%));
 	background:         linear-gradient($contrast, darken($contrast, 15%));
-  box-shadow: 0 .2em .5em rgba(black, .5);
+  border-radius: 2px;
+  box-shadow: 1px 1px .1em rgba(black, .2);
   color: $text-over-contrast;
   cursor: pointer;
   display: inline-block;
 	padding: .5em 1em;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #444;
 }
 .action:focus,
 .action:hover {
-	background: darken($contrast, 10%);
-	box-shadow: 0 .2em .2em rgba(black, .2);
+	background: darken($contrast, 5%);
 }
 .to-nav:before {
 	content: "☰";
@@ -400,7 +405,7 @@ a:visited {
 }
 
 /* Pictos sprité pour les 3 grands moments */
-.main {
+#experience {
 	.conferences,
 	.ateliers,
 	.soirees,
@@ -606,20 +611,6 @@ a:visited {
 	max-width: $widest;
 	margin: 0 auto;
 
-	h2 {
-		text-align: center;
-		text-transform: uppercase;
-		@include font-size(20);
-		font-weight: normal;
-
-		background: $inverted;
-		color: $text-over-inverted;
-		@include ribbon($inverted, 18px);
-		position: relative;
-		margin: 1em;
-		padding: .5rem 0 .45rem;
-		min-height: 36px;
-	}
 	h3 {
 		text-align: center;
 		text-transform: uppercase;
