@@ -362,6 +362,12 @@ a:visited {
 		}
 	}
 }
+
+.extra-space {
+  clear: both;
+  padding-top: 1em;
+}
+
 .main {
 	max-width: $widest;
 	margin: 0 auto;
