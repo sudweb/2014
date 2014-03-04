@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports = function(grunt) {
-	require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+module.exports = function (grunt) {
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     deployableFiles: [
       '*.{html,txt,pdf,png}',
       'browserconfig.xml',
@@ -13,28 +13,28 @@ module.exports = function(grunt) {
       'js/**/*',
       '.htaccess'
     ],
-		htmlhint: {
-			build: {
-				options: {
-					'tag-pair': true,
-					'tagname-lowercase': true,
-					'attr-lowercase': true,
-					'attr-value-double-quotes': true,
-					'doctype-first': true,
-					'spec-char-escape': true,
-					'id-unique': true,
-					'style-disabled': true
-				},
-				src: ['*.html']
-			}
-		},
-		compass: {
-			dist: {
-				options: {
-					config: 'config.rb'
-				}
-			}
-		},
+    htmlhint: {
+      build: {
+        options: {
+          'tag-pair': true,
+          'tagname-lowercase': true,
+          'attr-lowercase': true,
+          'attr-value-double-quotes': true,
+          'doctype-first': true,
+          'spec-char-escape': true,
+          'id-unique': true,
+          'style-disabled': true
+        },
+        src: ['*.html']
+      }
+    },
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb'
+        }
+      }
+    },
     'gh-pages': {
       'production': {
         src: '<%= deployableFiles %>',
@@ -46,19 +46,19 @@ module.exports = function(grunt) {
         src: '<%= deployableFiles %>'
       }
     },
-		watch: {
-			html: {
-				files: '<%= htmlhint.build.src %>',
-				tasks: ['htmlhint']
-			},
-			css: {
-				files: ['sass/*.scss'],
-				tasks: ['compass:dist']
-			}
-		}
-	});
+    watch: {
+      html: {
+        files: '<%= htmlhint.build.src %>',
+        tasks: ['htmlhint']
+      },
+      css: {
+        files: ['sass/*.scss'],
+        tasks: ['compass:dist']
+      }
+    }
+  });
 
-	grunt.registerTask('default', ['htmlhint', 'compass', 'watch']);
+  grunt.registerTask('default', ['htmlhint', 'compass', 'watch']);
 
   grunt.registerTask('deploy', ['deploy-prod']);
   grunt.registerTask('deploy-dev', ['compass', 'gh-pages:dev']);
