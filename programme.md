@@ -14,7 +14,7 @@ Savoir expliquer comment un design rempli ses objectifs.
 
 Où comment postuler pour un recrutement ou gagner un procès en quelques lignes.
 
-## Le Co-working a changé ma vie d'indépendant - Nicolas Birkel (Webdesigner)
+## Le coworking a changé ma vie d'indépendant - Nicolas Birkel (Webdesigner)
 
 Partage de deux ans d'expérience qui ont amèné à travailler différemment.
 
