@@ -276,6 +276,8 @@ a:visited {
 	}
 }
 .main {
+  clear: both;
+
 	@include respond-to(medium-and-up) {
 		max-width: $widest;
 		margin: 0 auto;
@@ -728,10 +730,16 @@ aside.ateliers:before {
     margin: 0 .25em .5em 0;
     min-height: 22px;
     padding-right: 1em;
+    line-height: 32px;
     position: relative;
     text-align: right;
+    vertical-align: middle;
     @include font-size(26);
     @include ribbon($inverted, 16px, left);
+
+    &.long-name {
+      @include font-size(22);
+    }
   }
 
   h3 {
