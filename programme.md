@@ -8,7 +8,7 @@
 
 * De l'idée au projet - Boris Shapira (Consultant Web) : faites grandir votre idée à l'aide d'une représentation visuelle évolutive.
 
-* Le coworking a changé ma vie d'indépendant - Nicolas Birkel (Webdesigner) : partage de deux ans d'expérience qui ont amené à travailler différemment.
+* Le coworking a changé ma vie - Nicolas Birkel (Webdesigner) : partage de deux ans d'expérience qui ont amené à travailler différemment.
 
 * Les différents types de réponse au stress -  Frédérique Joucla (Kinésiologue) : pour mieux comprendre les comportements de vos collaborateurs.
 
