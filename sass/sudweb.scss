@@ -374,14 +374,24 @@ a:visited {
 	margin: 0 auto;
 	padding: 0 1em;
 }
-/* Titre avec traits gauche et droite */
+
+h1 {
+  font-weight: 800;
+}
+
+h1,
 .divider {
-	color: $primary;
-	text-align: center;
-	text-transform: uppercase;
-	@include font-size(24);
+  color: $primary;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-size(24);
+}
+
+/* Titre avec traits gauche et droite */
+
+.divider {
 	position: relative;
-	margin-top: 1em;
+	margin: 1em 0;
 
 	&:before,
 	&:after {
@@ -407,9 +417,6 @@ a:visited {
 	}
 }
 
-.accueil #orateurs {
-  margin-bottom: 1em;
-}
 
 /* Pictos sprité pour les 3 grands moments */
 #experience {
@@ -675,18 +682,11 @@ a:visited {
 	}
 }
 
-.chapo {
-	h1 {
-		@include font-size(24);
-		color: $primary;
-		display: inline-block;
-		font-weight: bold;
-		font-family: arial, sans-serif;
-		text-transform: uppercase;
-	}
-	.subtitle {
-		color: $primary;
-	}
+.subtitle {
+    color: $primary;
+    font-size: 120%;
+    margin: 0 5%;
+    text-align: center;
 }
 
 .page aside {
