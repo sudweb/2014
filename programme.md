@@ -1,79 +1,35 @@
-# Lightning Talks (Discours énergisants)
+# Lightning talks
 
-11h10
+* Mieux communiquer avec son équipe grâce à Sass - Kaelig Deloumeau-Prigent (Sassmeister au Guardian) : retour sur les bienfaits de l'adoption d'un vocabulaire CSS commun avec les designers.
 
-## De l'idée au projet - Boris Shapira (Consultant Web)
+* Bastien Jaillot (Expert technique) : cachez cette dette que je ne saurai voir : des anecdotes, des astuces qui changent la vie pour se sortir des situations délicates.
 
-Faîtes grandir votre idée à l'aide d'une représentation visuelle évolutive.
+* L'étude de cas, votre meilleur portfolio - Vanessa Illmany (Webdesigner) : savoir expliquer comment un design rempli ses objectifs.
 
-## L'étude de cas, votre meilleur portfolio - Vanessa Illmany (Webdesigner)
+* De l'idée au projet - Boris Shapira (Consultant Web) : faîtes grandir votre idée à l'aide d'une représentation visuelle évolutive.
 
-Savoir expliquer comment un design rempli ses objectifs.
+* Le coworking a changé ma vie d'indépendant - Nicolas Birkel (Webdesigner) : partage de deux ans d'expérience qui ont amèné à travailler différemment.
 
-## Les commentaires sont importants - Thomas Zilliox (Cascadeur de style)
+* Les différents types de réponse au stress -  Frédérique Joucla (Kinésiologue) : pour mieux comprendre les comportements de vos collaborateurs.
 
-Où comment postuler pour un recrutement ou gagner un procès en quelques lignes.
+* Les commentaires sont importants - Thomas Zilliox (Expert CSS) : où comment postuler pour un recrutement ou gagner un procès en quelques lignes.
 
-## Le coworking a changé ma vie d'indépendant - Nicolas Birkel (Webdesigner)
-
-Partage de deux ans d'expérience qui ont amèné à travailler différemment.
-
------
-
-14h
-
-## Mieux communiquer avec son équipe grâce à Sass - Kaelig Deloumeau-Prigent (Sassmeister au Guardian)
-
-Retour sur les bienfaits de l'adoption d'un vocabulaire CSS commun avec les designers.
-
-## Les différents types de réponse au stress -  Frédérique Joucla (Kinésiologue)
-
-Pour mieux comprendre les comportements de vos collaborateurs.
-
----
-
-15h35
-
-## Bastien Jaillot (Amateur de joli code) : cachez cette dette que je ne saurai voir...
-
-Des anecdotes, des astuces qui changent la vie pour se sortir des situations délicates.
-
-## Tu peux pas test ! Vincent Van Steenbergen : Développeur
-
-Comment tester visuellement son application web sans écrire de tests unitaires.
-
-------
+* Tu peux pas test ! Vincent Van Steenbergen (Développeur) : comment tester visuellement son application web sans écrire de tests unitaires.
 
 # Élaboratoires
 
-## Faites le vous même, le DIY de vos bureaux animé par Bertrand Keller (Artisan Frontend)
+* Faites le vous même, le DIY de vos bureaux animé par Bertrand Keller (Artisan Frontend) : travaillez en équipe et prototypez des objets de bureaux !
 
-Travaillez en équipe et prototypez des objets de bureaux !
+* Sécurisez vos échanges par mail animé par Ludovic Hirlimann (Quality Assurance Lead chez Mozilla Thunderbird) : présentation, installation et utilisation de PGP dans vos logiciels de messagerie.
 
-## Sécurisez vos échanges par mail animé par Ludovic Hirlimann (Quality Assurance Lead chez Mozilla Thunderbird)
+* Le jeu des prototypes animé par Maxime Fortelle (Ergonome) : apprenez en équipe et par le dessin les différentes étapes du prototypage.
 
-Présentation, installation et utilisation de PGP dans vos logiciels de messagerie.
+* CasperJS contrib party animé par Mickaël Andrieu (Gentil Développeur) : session guidée pour commencer à contribuer à CasperJS, en présence de son auteur Nicolas Perriault.
 
-## Le jeu des prototypes animé par Maxime Fortelle (Ergonome)
+* Heuristics Challenge animé par Pierre-Antoine Nicolay (UX Designer) : apprenez à reconnaître, regrouper et hiérarchiser les problème d'ergonomie à l'aide des heuristiques de Nielsen et gagnez des Marshmallow !
 
-Apprenez en équipe et par le dessin les différentes étapes du prototypage.
+* Let's sketch together animé par Alvin Berthelot (Mobile Designer) : différents profils (développeurs, designers, ergonomes, chef de projet) se réunissent autour d'une feuille de papier pour concevoir ensemble une interface utilisateur.
 
-## Soyez ami avec CasperJS animé par Mickaël Andrieu (Gentil Développeur)
+* Passez à Grunt ! animé par Sébastien Dussaut (Développeur Frontend) : insérez Grunt dans votre workflow et gagnez un temps précieux par la suite.
 
-Session guidée pour commencer à contribuer à CasperJS, en présence de son auteur Nicolas Perriault.
-
-## Heuristics Challenge animé par Pierre-Antoine Nicolay (UX Rocker)
-
-Apprenez à reconnaître, regrouper et hiérarchiser les problème d'ergonomie à l'aide des heuristiques de Nielsen et gagnez des Marshmallow !
-
-## Let's sketch together animé par Alvin Berthelot (Mobile Designer)
-
-Différents profils (développeurs, designers, ergonomes, chef de projet) se réunissent autour d'une feuille de papier pour concevoir ensemble une interface utilisateur.
-
-## Passez à Grunt ! animé par Sébastien Dussaut (Développeur Frontend)
-
-Insérez Grunt dans votre workflow et gagnez un temps précieux par la suite.
-
-## Pourquoi mon site rame ? animé par Jean-Pierre Vincent (Expert Frontend)
-
-Détection et corrections pour améliorer le temps de chargement de vos sites.
+* Pourquoi mon site rame ? animé par Jean-Pierre Vincent (Expert Frontend) : détection et corrections pour améliorer le temps de chargement de vos sites.
