@@ -383,15 +383,15 @@ a:visited {
   }
 }
 
+.main {
+  max-width: $widest;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .extra-space {
   clear: both;
   padding-top: 1em;
-}
-
-.main {
-	max-width: $widest;
-	margin: 0 auto;
-	padding: 0 1em;
 }
 
 h1 {
@@ -745,6 +745,10 @@ aside.ateliers:before {
     margin: 0 0 1.5em;
     padding-top: 1.5em;
     position: relative;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   h2 {
