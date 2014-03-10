@@ -276,6 +276,8 @@ a:visited {
 	}
 }
 .main {
+  clear: both;
+
 	@include respond-to(medium-and-up) {
 		max-width: $widest;
 		margin: 0 auto;
@@ -313,48 +315,56 @@ a:visited {
     padding: 2em 1em 2em 65%;
 	}
 }
+
+
 .callout {
-	background: $inverted;
+  background: $inverted;
+  color: $text-over-inverted;
+  padding: 1.75em 1em 1em;
+
+  h2 {
+    background: $secondary;
+    color: $text-over-secondary;
+    display: inline-block;
+    position: absolute;
+    padding: .5rem 1em;
+    z-index: 1;
+    left: -1.4em;
+    top: -1.8em;
+
+    @include backfold(darken($secondary, 20%), .6em, left);
+    @include ribbon($secondary, 18px, right);
+  }
+}
+
+.callout, .callout-discrete {
   clear: both;
-	color: $text-over-inverted;
 	margin: 2em 0;
-	padding: 1.75em 1em 1em;
-	max-width: $widest;
+  max-width: $widest;
 	position: relative;
 
-	h2 {
-		text-transform: uppercase;
-		font-weight: normal;
+  h2 {
+    font-weight: normal;
+    margin: 1em;
+    min-height: 36px;
+    text-transform: uppercase;
+  }
 
-		background: $secondary;
-		color: $text-over-secondary;
-		position: absolute;
-		margin: 1em;
-		padding: .5rem 0;
-		min-height: 36px;
-		display: inline-block;
-		padding-left: 1em;
-		padding-right: 1em;
-		z-index: 1;
-		left: -1.4em;
-		top: -1.8em;
-		@include backfold(darken($secondary, 20%), .6em, left);
-		@include ribbon($secondary, 18px, right);
-	}
 	.more {
 		padding-top: .5em;
 		border-top: 1px solid darken($text-over-inverted, 50%);
 	}
+
 	@include respond-to(medium-and-up) {
 		.excerpt {
 			display: inline-block;
 			vertical-align: top;
-			width: 48%;
+			width: 52%;
 		}
 		.more {
       border-left: 3px solid darken($text-over-inverted, 50%);
 			display: inline-block;
-			width: 48%;
+			width: 45%;
 			padding-left: 1em;
 			padding-top: 0;
 			border-top: none;
@@ -362,24 +372,45 @@ a:visited {
 	}
 }
 
+.callout-discrete {
+  @include respond-to(medium-and-up) {
+    .excerpt {
+      width: 60%;
+    }
+    .more {
+      width: 35%;
+    }
+  }
+}
+
+.main {
+  max-width: $widest;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .extra-space {
   clear: both;
   padding-top: 1em;
 }
 
-.main {
-	max-width: $widest;
-	margin: 0 auto;
-	padding: 0 1em;
+h1 {
+  font-weight: 800;
 }
-/* Titre avec traits gauche et droite */
+
+h1,
 .divider {
-	color: $primary;
-	text-align: center;
-	text-transform: uppercase;
-	@include font-size(24);
+  color: $primary;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-size(24);
+}
+
+/* Titre avec traits gauche et droite */
+
+.divider {
 	position: relative;
-	margin-top: 1em;
+	margin: 1em 0;
 
 	&:before,
 	&:after {
@@ -405,9 +436,6 @@ a:visited {
 	}
 }
 
-.accueil #orateurs {
-  margin-bottom: 1em;
-}
 
 /* Pictos sprité pour les 3 grands moments */
 #experience {
@@ -609,6 +637,10 @@ a:visited {
       max-width: 150px;
     }
   }
+
+  .notice {
+    font-style: italic;
+  }
 }
 .sponsors {
   clear: both;
@@ -673,18 +705,11 @@ a:visited {
 	}
 }
 
-.chapo {
-	h1 {
-		@include font-size(24);
-		color: $primary;
-		display: inline-block;
-		font-weight: bold;
-		font-family: arial, sans-serif;
-		text-transform: uppercase;
-	}
-	.subtitle {
-		color: $primary;
-	}
+.subtitle {
+    color: $primary;
+    font-size: 120%;
+    margin: 0 5%;
+    text-align: center;
 }
 
 .page aside {
@@ -720,6 +745,10 @@ aside.ateliers:before {
     margin: 0 0 1.5em;
     padding-top: 1.5em;
     position: relative;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   h2 {
@@ -728,10 +757,16 @@ aside.ateliers:before {
     margin: 0 .25em .5em 0;
     min-height: 22px;
     padding-right: 1em;
+    line-height: 32px;
     position: relative;
     text-align: right;
+    vertical-align: middle;
     @include font-size(26);
     @include ribbon($inverted, 16px, left);
+
+    &.long-name {
+      @include font-size(22);
+    }
   }
 
   h3 {
