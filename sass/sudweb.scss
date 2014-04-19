@@ -641,6 +641,10 @@ h1,
   }
 }
 .orateur {
+  &:hover {
+    opacity: 0.9;
+    background: $text-over-inverted;
+  }
   .avatar {
     text-align: center;
 
