@@ -1,24 +1,5 @@
 @import "_mixins";
-
-//*********************  VARIABLES *************/
-
-$body: #fff;
-$text: #312529;
-$primary: #f64b3a;
-$text-over-primary: #fef8f7;
-$secondary: #c51b3f;
-$text-over-secondary: #fcf1f2;
-$contrast: #10b6bf;
-$text-over-contrast: #feffff;
-$inverted: #402f35;
-$text-over-inverted: #f4f2f3;
-$dark: #3f2f34;
-$text-over-dark: #f7f6f7;
-$bright: #ffa802;
-
-$narrow: 32em;
-$medium: 45em;
-$widest: 60em;
+@import "_variables";
 
 //*********************  ELEMENTS  *************/
 * {
@@ -143,28 +124,9 @@ a:link,
 a:visited {
   color: $contrast;
 }
-.action,
-.action:link,
-.action:visited {
-  border: none;
-  background: $contrast;
-  background: -webkit-linear-gradient($contrast, darken($contrast, 15%));
-  background:    -moz-linear-gradient($contrast, darken($contrast, 15%));
-  background:     -ms-linear-gradient($contrast, darken($contrast, 15%));
-  background:         linear-gradient($contrast, darken($contrast, 15%));
-  border-radius: 2px;
-  box-shadow: 1px 1px .1em rgba(black, .2);
-  color: $text-over-contrast;
-  cursor: pointer;
-  display: inline-block;
-  padding: .5em 1em;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #444;
-}
-.action:focus,
-.action:hover {
-  background: darken($contrast, 5%);
-}
+
+@import 'components/action';
+
 .to-nav:before {
   content: "☰";
   padding-right: .3em;

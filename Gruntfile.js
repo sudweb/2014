@@ -52,7 +52,7 @@ module.exports = function (grunt) {
         tasks: ['htmlhint']
       },
       css: {
-        files: ['sass/*.scss'],
+        files: ['sass/**/*.scss'],
         tasks: ['compass:dist']
       }
     }
