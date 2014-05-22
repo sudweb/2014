@@ -1,0 +1,27 @@
+@import "_variables";
+
+.action,
+.action:link,
+.action:visited {
+  border: none;
+  background: $contrast;
+  border-radius: 2px;
+  box-shadow: 1px 1px .1em rgba(black, .2);
+  color: $text-over-contrast;
+  cursor: pointer;
+  display: inline-block;
+  padding: .5em 1em;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #444;
+}
+.action:focus,
+.action:hover {
+  background: darken($contrast, 5%);
+}
+
+.action-disabled,
+.action-disabled:focus,
+.action-disabled:hover{
+  background: desaturate($primary, 25%);
+  cursor: no-drop;
+}

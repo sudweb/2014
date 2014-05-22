@@ -262,16 +262,20 @@ a:visited {
   }
 }
 .hero {
-  background: $inverted url(../img/conferences-780.jpg) no-repeat center top;
-  background-image: -webkit-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
-  background-image:    -moz-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
-  background-image:     -ms-linear-gradient(top, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
-  background-image: linear-gradient(to bottom, transparent 10em, fade-out($body, 0.3) 10em), url(../img/conferences-780.jpg);
+  $imgUrl: '../img/cover-780.jpg';
+
+  background: $inverted url($imgUrl) no-repeat center top;
+  background-image: -webkit-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image:    -moz-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image:     -ms-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image: linear-gradient(to bottom, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
   background-size: auto, cover;
   background-position: center top, center center;
   margin: 0;
+  min-height: 320px;
   padding: 11em 1em 1em;
   position: relative;
+  text-shadow: 0 0 1px #fafafa;
 
   a {
     color: $text;
@@ -279,16 +283,19 @@ a:visited {
   }
 
   @include respond-to(wide) {
+    $imgUrl: '../img/cover-780.jpg';
+
     background-image: none;
-    background-image: -webkit-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
-    background-image:    -moz-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
-    background-image:     -ms-linear-gradient(left, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
-    background-image:         linear-gradient(to right, transparent 62%, fade-out($body, 0.3) 62%), url(../img/conferences-780.jpg);
+    background-image: -webkit-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:    -moz-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:     -ms-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:         linear-gradient(to right, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
     box-shadow: 0 0 0.3em fade-out(#000, 0.2);
     background-position: left center;
     background-size: 100% 100%, cover;
     margin-left: 0;
     margin-right: 0;
+    min-height: auto;
     padding: 2em 1em 2em 65%;
   }
 }
