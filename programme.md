@@ -31,5 +31,3 @@
 * Let's sketch together animé par Alvin Berthelot (Mobile Designer) : différents profils (développeur, designer, ergonome, chef de projet) se réunissent autour d'une feuille de papier pour concevoir ensemble une interface utilisateur.
 
 * Passez à Grunt ! animé par Sébastien Dussaut (Développeur Frontend) : insérez Grunt dans votre workflow et gagnez un temps précieux par la suite.
-
-* Pourquoi mon site rame ? animé par Jean-Pierre Vincent (Expert Frontend) : détection et corrections pour améliorer le temps de chargement de vos sites.
