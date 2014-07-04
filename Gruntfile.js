@@ -23,7 +23,9 @@ module.exports = function (grunt) {
           'doctype-first': true,
           'spec-char-escape': true,
           'id-unique': true,
-          'style-disabled': true
+          'style-disabled': true,
+          'attr-unsafe-chars': true,
+          'space-tab-mixed-disabled': true
         },
         src: ['*.html']
       }
