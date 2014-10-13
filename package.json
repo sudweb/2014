@@ -8,10 +8,12 @@
     "url": "http://sudweb.fr/"
   },
   "scripts": {
+    "build": "grunt",
     "test": "grunt htmlhint",
+    "start": "grunt watch",
     "thumbs": "cd img/orateurs && gm mogrify -thumbnail x150 -gravity center -crop 150x150+0+0 -output-directory 150 -colorspace Gray +contrast *.jpg",
     "deploy-dev": "npm run thumbs && grunt deploy-dev",
-    "deploy-prod": "npm run thumbs && grunt deploy-prod"
+    "deploy-prod": "npm run thumbs && grunt deploy-prod && ssh sudweb 'cd www/2014 && git pull'"
   },
   "repository": {
     "type": "git",
@@ -23,12 +25,13 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-compass": "~0.6.0",
     "grunt-contrib-watch": "*",
+    "grunt-gh-pages": "~0.9.0",
     "grunt-htmlhint": "*",
     "grunt-sass": "~0.6.0",
-    "grunt-contrib-compass": "~0.6.0",
-    "matchdep": "*",
-    "grunt-gh-pages": "~0.9.0"
+    "matchdep": "*"
   }
 }

@@ -1,4 +1,4 @@
-# Sud Web 2014 website [![Build Status](https://travis-ci.org/sudweb/2014.png?branch=master)](https://travis-ci.org/sudweb/2014)
+# Sud Web 2014 website [![Build Status](https://travis-ci.org/sudweb/2014.svg?branch=master)](https://travis-ci.org/sudweb/2014)
 
 
 Just some good old static webpages. We like to KISS.
@@ -13,30 +13,37 @@ This project uses Sass, Compass, node and Grunt because we are cool kids.
 
 You shoud be able to install Compass and node in a few commands:
 
-* `gem install compass`
-* `brew install node` on Mac OS X for instance
+```bash
+# OSX install of rbenv
+brew install rbenv
+
+# OSX install of Node
+brew install nvm
+
+# For all OS
+nvm install 0.10
+nvm alias default 0.10
+```
 
 ## Install
 
-`npm install` will install all dependencies mentionned in the package.json file
+```bash
+bundle install
+npm install
+```
 
-Now you just have to type `grunt` to run tasks and watch the changes :)
+## Use
+
+### Single time build
 
 ```
-user@host ~/www/sudweb/# grunt
-Running "htmlhint:build" (htmlhint) task
->> 1 file lint free.
+npm run build
+```
 
-Running "compass:dist" (compass) task
-   create css/ie.css (0.137s)
-   create css/normalize.css (0.074s)
-   create css/print.css (0.004s)
-   create css/screen.css (0.124s)
-overwrite css/sudweb.css (0.502s)
-Compilation took 0.911s
+### Continuous build
 
-Running "watch" task
-Waiting...
+```bash
+npm start
 ```
 
 Happy coding!

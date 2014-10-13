@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+  require("matchdep").filterDev(["grunt-*", "!grunt-cli"]).forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -60,7 +60,9 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('default', ['htmlhint', 'compass', 'watch']);
+  grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['compass']);
+  grunt.registerTask('watch', ['build', 'watch']);
 
   grunt.registerTask('deploy', ['deploy-prod']);
   grunt.registerTask('deploy-dev', ['compass', 'gh-pages:dev']);
