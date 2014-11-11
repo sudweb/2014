@@ -125,7 +125,7 @@ a:visited {
   color: $contrast;
 }
 
-// @import 'components/action';
+@import 'components/action';
 
 .to-nav:before {
   content: "☰";
