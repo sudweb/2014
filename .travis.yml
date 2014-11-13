@@ -7,7 +7,7 @@ addons:
 before_install:
   - npm install -g grunt-cli
   - bundle install
-  - apt-get install graphicsmagick
+  - sudo apt-get install graphicsmagick
 
 on_success:
   - if [ $TRAVIS_BRANCH !== 'master' ]; then exit 0; fi
