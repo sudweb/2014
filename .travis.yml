@@ -1,16 +1,21 @@
 language: node_js
-node_js: "0.10"
+node_js: '0.10'
 
 addons:
   ssh_known_hosts: ssh.alwaysdata.net
 
 before_install:
-  - npm install -g grunt-cli
-  - bundle install
-  - sudo apt-get install graphicsmagick
+- npm install -g grunt-cli
+- bundle install
+- sudo apt-get install graphicsmagick
 
-on_success:
-  - if [ $TRAVIS_BRANCH !== 'master' ]; then exit 0; fi
-  - npm run thumbs
-  - npm run deploy-prod
-  - ssh sudweb@ssh.alwaysdata.net 'cd www/2014 && git pull origin gh-pages'
+after_success:
+- if [ $TRAVIS_BRANCH !== 'master' ]; then exit 0; fi
+- npm run thumbs
+- npm run deploy-prod
+- openssl aes-256-cbc -k '$DEPLOY_KEY' -in .ssh/encrypted_id_rsa -d -a -out .ssh/id_rsa
+- ssh -i .ssh/id_rsa sudweb@ssh.alwaysdata.net 'cd www/2014 && git pull origin gh-pages'
+
+env:
+  global:
+    secure: lsUFjPFE3Y5aSPqjvGllMIIl/WbVY4S5UJlQZIdFKjTWcBYcQ3ZQkRy/SFfVyWQ9oXRwnInWYPiUniaEi4zpUpHzyv7uOeDWLD//GU0Kg/QKLIrKYOsT0bhJXuQwt8HsbRl/DWl/KZluNALvbRfTvpZ7XTZ4+KaEIFtr40BeoPs=
