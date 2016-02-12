@@ -3,11 +3,12 @@ node_js: '0.10'
 
 addons:
   ssh_known_hosts: ssh.alwaysdata.com
+  apt_packages:
+    - graphicsmagick
 
 before_install:
 - npm install -g grunt-cli
 - bundle install
-- sudo apt-get install graphicsmagick
 
 after_success:
 - if [ $TRAVIS_BRANCH !== 'master' ]; then exit 0; fi
