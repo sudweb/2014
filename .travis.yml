@@ -1,22 +1,18 @@
 language: node_js
 node_js: '0.10'
-
+sudo: false
 addons:
-  ssh_known_hosts: ssh.alwaysdata.com
+  ssh_known_hosts: ssh-sudweb.alwaysdata.net
   apt_packages:
-    - graphicsmagick
-
+  - graphicsmagick
 before_install:
+- openssl aes-256-cbc -K $encrypted_945f3b1f3b36_key -iv $encrypted_945f3b1f3b36_iv -in id_rsa.enc -out $TRAVIS_BUILD_DIR/id_rsa -d
 - npm install -g grunt-cli
 - bundle install
-
 after_success:
 - if [ $TRAVIS_BRANCH !== 'master' ]; then exit 0; fi
+- eval "$(ssh-agent -s)"
+- chmod 600 $TRAVIS_BUILD_DIR/id_rsa
+- ssh-add $TRAVIS_BUILD_DIR/id_rsa
 - npm run deploy-prod
-- openssl aes-256-cbc -k '$DEPLOY_KEY' -in .ssh/encrypted_id_rsa -d -a -out .ssh/id_rsa
-- chmod 600 .ssh/id_rsa
-- ssh -i .ssh/id_rsa sudweb@ssh.alwaysdata.com 'cd www/2014 && git pull origin gh-pages'
-
-env:
-  global:
-    secure: lsUFjPFE3Y5aSPqjvGllMIIl/WbVY4S5UJlQZIdFKjTWcBYcQ3ZQkRy/SFfVyWQ9oXRwnInWYPiUniaEi4zpUpHzyv7uOeDWLD//GU0Kg/QKLIrKYOsT0bhJXuQwt8HsbRl/DWl/KZluNALvbRfTvpZ7XTZ4+KaEIFtr40BeoPs=
+- ssh sudweb@ssh-sudweb.alwaysdata.net 'cd www/2014 && git pull origin gh-pages'
