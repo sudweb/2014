@@ -1,11 +1,11 @@
 {
   "name": "SudWeb",
   "description": "Deux journées pour apprendre et s'inspirer du web",
-  "homepage": "http://sudweb.fr/2014",
+  "homepage": "https://sudweb.fr/2014",
   "version": "2.0.14",
   "author": {
     "name": "SudWeb Team",
-    "url": "http://sudweb.fr/"
+    "url": "https://sudweb.fr/"
   },
   "scripts": {
     "build": "grunt",
