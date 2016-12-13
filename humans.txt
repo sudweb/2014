@@ -22,6 +22,6 @@
 
 /* SITE */
 
-	Last update:2014/11/11
+	Last update:2016/12/13
 	Web Standards: HTML5, CSS3, Javascript
 	Tools: Git, Node, npm, Grunt, Sass, Compass

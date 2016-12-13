@@ -1,0 +1,179 @@
+//*********************  LARGEURS  *************/
+$narrow: 32em;
+$medium: 45em;
+$widest: 60em;
+//*********************  MIXINS  *************/
+@mixin font-size($size: 16){
+	font-size: $size + px;
+	font-size: ($size / 10) + rem;
+}
+@mixin vendorize($property, $value, $which: property) {
+	@if ($which == value) {
+		$property: -webkit-#{$value};
+		$property:    -moz-#{$value};
+		$property:     -ms-#{$value};
+		$property:      -o-#{$value};
+		$property:         #{$value};
+	}
+	@else {
+		-webkit-#{$property}: $value;
+		   -moz-#{$property}: $value;
+		    -ms-#{$property}: $value;
+		     -o-#{$property}: $value;
+		        #{$property}: $value;
+	}
+}
+@mixin respond-to($width: wide) {
+	@if $width == narrow {
+		@media only screen and (max-width: $narrow) { @content; }
+	}
+	@else if $width == narrow-and-up {
+		@media only screen and (min-width: $narrow) { @content; }
+	}
+	@else if $width == medium {
+		@media only screen and (max-width: $medium) { @content; }
+	}
+	@else if $width == medium-only {
+		@media only screen and (min-width: $narrow) and (max-width: $medium) { @content; }
+	}
+	@else if $width == medium-and-up {
+		@media only screen and (min-width: $medium) { @content; }
+	}
+	@else if $width == wide {
+		@media only screen and (min-width: $medium) { @content; }
+	}
+}
+@mixin drop-shadow ($x: 0, $y: 0, $blur: .5em, $color: rgba(0,0,0,.5)) {
+	@include vendorize(filter, drop-shadow($x $y $blur $color));
+}
+@mixin ribbon ($color, $width: 1em, $side: both, $direction: inward) {
+  a {
+    color: #fff;
+  }
+
+	@if ($side == left) {
+		&:before {
+			content: "";
+			display: block;
+			width: 0;
+			top: 0;
+			left: -1em;
+			position: absolute;
+			z-index: -1;
+			border: $width solid $color;
+			@if ($direction == inward) {
+				border-left-color: transparent !important;
+			}
+			@else {
+				left: -1.5em;
+				border-color: transparent $color transparent transparent !important;
+			}
+		}
+	}
+	@else if ($side == right) {
+		&:after {
+			content: "";
+			display: block;
+			width: 0;
+			top: 0;
+			right: -1em;
+			position: absolute;
+			z-index: -1;
+			border: $width solid $color;
+			@if ($direction == inward) {
+				border-right-color: transparent !important;
+			}
+			@else {
+				right: -1.5em;
+				border-color: transparent transparent transparent $color !important;
+			}
+		}
+	}
+	@else {
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			width: 0;
+			top: 0;
+			position: absolute;
+			z-index: -1;
+			border: $width solid $color;
+		}
+		&:before {
+			@if ($direction == inward) {
+				left: -1em;
+				border-left-color: transparent !important;
+			}
+			@else {
+				left: -1.5em;
+				border-color: transparent $color transparent transparent !important;
+			}
+		}
+		&:after {
+			@if ($direction == inward) {
+				right: -1em;
+				border-right-color: transparent !important;
+			}
+			@else {
+				right: -1.5em;
+				border-color: transparent transparent transparent $color !important;
+			}
+		}
+	}
+}
+@mixin backfold ($color, $width: 1em, $side: both) {
+	@if ($side == left) {
+		&:before {
+			content: "";
+			display: block;
+			bottom: -$width;
+		 	left: 0;
+			position: absolute;
+			z-index: -1;
+			border-style: solid;
+			border-color: $color transparent transparent transparent;
+		 	border-width: $width 0 0 $width;
+		}
+	}
+	@else if ($side == right) {
+		&:after {
+			content: "";
+			display: block;
+			bottom: -$width;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+			border-style: solid;
+			border-color: $color transparent transparent transparent;
+			border-width: $width $width 0 0;
+		}
+	}
+	@else {
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			bottom: -$width;
+			position: absolute;
+			z-index: -1;
+			border-style: solid;
+			border-color: $color transparent transparent transparent;
+		}
+		&:before {
+		 	left: 0;
+		 	border-width: $width 0 0 $width;
+		}
+		&:after {
+			right: 0;
+			border-width: $width $width 0 0;
+		}
+	}
+}
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both
+	}
+}

@@ -1,0 +1,1107 @@
+@import "_mixins";
+@import "_variables";
+
+//*********************  ELEMENTS  *************/
+* {
+  @include vendorize(box-sizing, border-box);
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  background: #fff url(../img/bg.png) repeat center top;
+  color: $text;
+  font-family: arial, sans-serif;
+}
+
+body {
+  @include font-size(16);
+}
+
+h1, h2, h3, p, ul, ol, li {
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+h1 {
+  @include font-size(22);
+  margin: 0 0 .5em;
+}
+
+h2 {
+  @include font-size(20);
+}
+
+h3 {
+  @include font-size(18);
+}
+
+blockquote {
+  @include font-size(18);
+  font-style: italic;
+  margin: 1em 4em;
+  &:before {
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+  }
+}
+
+
+p {
+  margin-bottom: .5em;
+}
+ul,
+ol {
+  margin: 0 0 1em 1em;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a.link {
+  text-decoration: underline;
+}
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a img {
+  border: none;
+}
+
+//*********************  GENERIC LAYOUT  *************/
+section,
+.container {
+  position: relative;
+  max-width: $widest;
+  margin: 0 auto;
+}
+
+.skiplink {
+  display: inline-block;
+}
+.nav {
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline;
+  }
+  span,
+  a:link,
+  a:visited {
+    display: block;
+    padding: .75em .5em;
+  }
+  a:focus,
+  a:hover {
+    text-decoration: none;
+  }
+}
+//*********************  SKIN  *************/
+html {
+  background: #fff url(../img/bg.png) repeat center top;
+  color: $text;
+  font-family: Ruluko, arial, sans-serif;
+}
+.emphasis {
+  @include font-size(18);
+}
+a:link,
+a:visited {
+  color: $contrast;
+}
+
+@import 'components/action';
+
+.to-nav:before {
+  content: "☰";
+  padding-right: .3em;
+}
+.to-nav {
+  text-align: right;
+  padding: .3em .6em .4em;
+  &:link,
+  &:visited {
+    color: $text-over-inverted;
+  }
+  &:hover {
+    background: $contrast;
+    color: $text-over-contrast;
+    text-decoration: none;
+  }
+  @include respond-to(wide) {
+    display: none;
+  }
+}
+.logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 1.2em;
+  z-index: 1;
+  @include respond-to(wide) {
+    width: auto;
+    top: .5em;
+  }
+}
+.pageheader {
+  background: $inverted;
+  color: $text-over-inverted;
+  margin-bottom: 4em;
+  text-align: right;
+
+  &.with-hero {
+    margin-bottom: 0;
+  }
+
+  .container {
+    padding-left: 100px;
+    @include respond-to(wide) {
+      padding-left: 200px;
+    }
+  }
+  .nav {
+    text-align: left;
+    @include respond-to(medium) {
+      position: absolute;
+      top: -17em;
+      left: 0;
+      right: 0;
+      z-index: 1;
+
+      &:target {
+        @include vendorize(transition, top .3s ease-out);
+        top: 0;
+      }
+    }
+    @include respond-to(wide) {
+      text-align: right;
+      padding: .5em 0;
+      .close {
+        display: none;
+      }
+    }
+    a,
+    span{
+      text-transform: uppercase;
+      color: $text-over-inverted;
+      background: $inverted;
+      @include respond-to(medium) {
+        border-bottom: 1px solid #5c4a50;
+      }
+      @include respond-to(wide) {
+        display: inline-block;
+        vertical-align: top;
+        border-right: 1px solid #5c4a50;
+      }
+    }
+    a:focus,
+    a:hover,
+    .current,
+    .cta{
+      background: $contrast;
+      color: $text-over-contrast;
+      text-decoration: none;
+    }
+    span {
+      border-right: none;
+    }
+    li:last-child a {
+      @include respond-to(wide) {
+        border: none;
+      }
+    }
+  }
+  .banner {
+    border-top: 2px solid $inverted;
+    text-align: center;
+    background: $primary;
+    color: $text-over-primary;
+    padding: .5em 1em;
+  }
+  .baseline {
+    @include respond-to(wide) {
+      @include font-size(25);
+    }
+  }
+  .description {
+    text-transform: uppercase;
+    display: inline;
+  }
+  @include respond-to(wide) {
+    .date {
+      display: inline;
+      text-transform: uppercase;
+      padding-left: .25em;
+    }
+  }
+}
+.main {
+  clear: both;
+
+  @include respond-to(medium-and-up) {
+    max-width: $widest;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+}
+.hero {
+  $imgUrl: '../img/cover-780.jpg';
+
+  background: $inverted url($imgUrl) no-repeat center top;
+  background-image: -webkit-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image:    -moz-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image:     -ms-linear-gradient(top, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-image: linear-gradient(to bottom, transparent 10em, fade-out($body, 0.22) 10em), url($imgUrl);
+  background-size: auto, cover;
+  background-position: center top, center center;
+  margin: 0;
+  min-height: 320px;
+  padding: 11em 1em 1em;
+  position: relative;
+  text-shadow: 0 0 1px #fafafa;
+
+  a {
+    color: $text;
+    text-decoration: underline;
+  }
+
+  @include respond-to(wide) {
+    $imgUrl: '../img/cover-780.jpg';
+
+    background-image: none;
+    background-image: -webkit-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:    -moz-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:     -ms-linear-gradient(left, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    background-image:         linear-gradient(to right, transparent 62%, fade-out($body, 0.22) 62%), url($imgUrl);
+    //box-shadow: 0 0 0.3em fade-out(#000, 0.2);
+    background-position: left center;
+    background-size: 100% 100%, cover;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: auto;
+    padding: 2em 1em 2em 65%;
+  }
+}
+
+
+.callout {
+  background: $inverted;
+  color: $text-over-inverted;
+  padding: 1.75em 1em 1em;
+
+  h2 {
+    background: $secondary;
+    color: $text-over-secondary;
+    display: inline-block;
+    position: absolute;
+    padding: .5rem 1em;
+    z-index: 1;
+    left: -1.4em;
+    top: -1.8em;
+
+    @include backfold(darken($secondary, 20%), .6em, left);
+    @include ribbon($secondary, 18px, right);
+  }
+}
+
+.callout, .callout-discrete {
+  clear: both;
+  margin: 4em 0 2em;
+  max-width: $widest;
+  position: relative;
+
+  h2 {
+    font-weight: normal;
+    margin: 1em;
+    min-height: 36px;
+    text-transform: uppercase;
+  }
+
+  .more {
+    padding-top: .5em;
+    border-top: 1px solid darken($text-over-inverted, 50%);
+  }
+
+  @include respond-to(medium-and-up) {
+    .excerpt {
+      display: inline-block;
+      vertical-align: top;
+      width: 52%;
+    }
+    .more {
+      border-left: 3px solid darken($text-over-inverted, 50%);
+      display: inline-block;
+      width: 45%;
+      padding-left: 1em;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+}
+
+.callout-discrete {
+  @include respond-to(medium-and-up) {
+    .excerpt {
+      width: 60%;
+    }
+    .more {
+      width: 35%;
+    }
+  }
+}
+
+.main {
+  max-width: $widest;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.extra-space {
+  clear: both;
+  padding-top: 1em;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h1,
+.divider {
+  color: $primary;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-size(24);
+}
+
+/* Titre avec traits gauche et droite */
+
+.divider {
+  position: relative;
+  margin: 1em 0;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 15%;
+    border-top: 1px solid;
+    position: absolute;
+    top: .62em;
+    right: 85%;
+    @include respond-to(medium-and-up) {
+      width: 30%;
+      right: 69%;
+    }
+  }
+  &:after {
+    right: auto;
+    left: 85%;
+    @include respond-to(medium-and-up) {
+      left: 66%;
+    }
+  }
+}
+
+
+/* Pictos sprité pour les 3 grands moments */
+#experience {
+  .conferences,
+  .ateliers,
+  .soirees,
+  .column{
+    @include clearfix;
+  }
+  .conferences:before,
+  .ateliers:before,
+  .soirees:before{
+    content: "";
+    display: block;
+    float: right;
+    width: 65px;
+    height: 170px;
+    padding-left: 10px;
+    background: url(../img/pictos_programme.png) no-repeat right center;
+    background-size: 100% auto;
+  }
+  .ateliers:before {
+    background-position: right top;
+  }
+  .soirees:before {
+    background-position: right bottom;
+  }
+  #salles {
+    margin-top: 2em;
+    padding: .5em 1em;
+    a {
+      text-decoration: underline;
+    }
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: .75em;
+    }
+    img {
+      display: block;
+      margin: 1em auto;
+    }
+  }
+}
+.accueil {
+  .conferences:before,
+  .ateliers:before,
+  .soirees:before,
+  .column:before {
+    margin-top: 3.9em;
+    @include respond-to(narrow-and-up) {
+      margin-top: 4.9em;
+    }
+  }
+  .conferences h3,
+  .ateliers h3,
+  .soirees h3 {
+    text-align: center;
+    text-transform: uppercase;
+    @include font-size(20);
+    font-weight: normal;
+
+    background: $primary;
+    color: $text-over-primary;
+    position: relative;
+    margin: 1em;
+    padding: .5rem 0 .45rem;
+    min-height: 36px;
+    white-space: nowrap;
+
+    @include respond-to(narrow) {
+      @include ribbon($primary, 18px);
+    }
+    @include respond-to(medium-and-up) {
+      padding-left: 3em;
+    }
+  }
+
+  .orateur {
+    h3, h4 {
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      color: $text;
+      text-decoration: none;
+
+      &:hover .link{
+        text-decoration: none;
+      }
+    }
+
+    .link {
+      color: $contrast;
+      text-decoration: underline;
+    }
+
+    margin-bottom: 1.5em;
+  }
+
+  @include respond-to(narrow-and-up) {
+    .column {
+      display: inline-block;
+      margin-left: 1em;
+      vertical-align: top;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .column.orateur {
+      width: 46%;
+    }
+  }
+  @include respond-to(medium-only) {
+    .conferences h3 {
+      padding-left: 1em;
+      margin-right: 0;
+    }
+    .ateliers h3 {
+      margin-left: 0;
+    }
+    .soirees h3 {
+      padding-left: 1em;
+      margin-right: 0;
+    }
+  }
+  .conferences h3 {
+    @include respond-to(wide) {
+      padding-left: 1em;
+    }
+  }
+  @include respond-to(medium-only) {
+    .conferences,
+    .ateliers {
+      display: inline-block;
+      vertical-align: top;
+      width: 46%;
+      @include clearfix;
+    }
+    #salles{
+      width: 100%;
+    }
+    .conferences,
+    .soirees {
+      margin-right: 2%;
+    }
+    .ateliers,
+    .callout {
+      margin-left: 2%;
+    }
+    .conferences h3,
+    .soirees h3 {
+      @include ribbon($primary, 18px, left);
+    }
+    .ateliers h3,
+    .callout h3 {
+      @include ribbon($primary, 18px, right);
+    }
+  }
+  @include respond-to(wide) {
+    .conferences,
+    .ateliers,
+    .soirees {
+      display: inline-block;
+      vertical-align: top;
+      width: 31%;
+    }
+    .column.orateur {
+      width: 22%;
+    }
+    .ateliers {
+      margin: 0 2%;
+      h3 {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .conferences h3 {
+      @include ribbon($primary, 18px, left);
+      margin-right: 0;
+    }
+    .soirees h3 {
+      @include ribbon($primary, 18px, right);
+      margin-left: 0;
+    }
+  }
+}
+.orateur {
+  &:hover {
+    opacity: 0.9;
+    background: $text-over-inverted;
+  }
+  .avatar {
+    text-align: center;
+
+    img {
+      border-radius: 4px;
+      box-shadow: 0 .1em .3em rgba(black, .3);
+      max-width: 150px;
+    }
+  }
+
+  .notice {
+    font-style: italic;
+  }
+}
+.sponsors {
+  clear: both;
+  padding: 1em;
+  max-width: $widest;
+  margin: 0 auto;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 25%;
+      border-top: 1px solid;
+      border-bottom: 1px dotted;
+      position: absolute;
+      top: .62em;
+      right: 75%;
+    }
+    &:after {
+      right: auto;
+      left: 75%;
+    }
+  }
+  .or {
+    color: #FEB100;
+  }
+  .argent {
+    color: #979B9D;
+  }
+  .bronze {
+    color: $inverted;
+  }
+  ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+  }
+  li {
+    display: inline;
+  }
+  img {
+    margin: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100px;
+    height: auto;
+    @include respond-to(medium-and-up) {
+      max-width: 150px;
+    }
+  }
+}
+.center-block {
+  display: block;
+  margin-bottom: .5em;
+  @include font-size(16);
+}
+
+.center {
+  text-align: center;
+}
+
+.subtitle {
+  color: $primary;
+  font-size: 120%;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.page aside {
+  margin: 1em 0;
+  padding: 1em;
+  background: $body;
+  @include respond-to(medium) {
+    border: 1px solid rgba(black, .1);
+  }
+  @include respond-to(medium-and-up) {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    @include clearfix;
+
+    // Add margin to every other aside, but start from the end because there may be any number of tags before
+    &:nth-last-child(even) {
+      margin-right: 3%;
+    }
+  }
+}
+aside.ateliers:before {
+  margin-top: 1em;
+}
+
+.orateurs-liste {
+  ol, li {
+    list-style: none;
+  }
+
+  .orateur {
+    clear: both;
+    margin: 0 0 1.5em;
+    padding-top: 1.5em;
+    position: relative;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  h2 {
+    background: $inverted;
+    color: $text-over-inverted;
+    margin: 0 .25em .5em 0;
+    min-height: 22px;
+    padding-right: 1em;
+    line-height: 32px;
+    position: relative;
+    text-align: right;
+    vertical-align: middle;
+    @include font-size(26);
+    @include ribbon($inverted, 16px, left);
+
+    &.long-name {
+      @include font-size(20);
+    }
+  }
+
+  h3 {
+    @include font-size(26);
+    margin: 0 0 .5em;
+  }
+
+  .avatar {
+    margin-right: .5em;
+    text-align: right;
+  }
+
+  header,
+  article,
+  aside {
+    float: left;
+  }
+
+  header {
+    width: 30%;
+  }
+
+  article {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: 50%;
+  }
+
+  aside {
+    padding-top: 40px;
+    text-align: right;
+    width: 20%;
+
+    .links {
+      @include font-size(14);
+    }
+  }
+
+  @include respond-to(medium) {
+    h2 {
+      position: absolute;
+      width: 100%;
+    }
+
+    .avatar {
+      padding-top: 40px;
+    }
+  }
+
+  @include respond-to(narrow) {
+    header,
+    article,
+    aside {
+      float: none;
+      clear: both;
+      padding: .5em 1.5em;
+      text-align: left;
+      width: 100%;
+    }
+
+
+    h2 {
+      position: relative;
+    }
+
+    .avatar {
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+/* not used in 2014 */
+.timetable {
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+  }
+  .session,
+  .meta,
+  .lt {
+    margin: 1em 0 0;
+    padding: .5em .5em .2em;
+    @include clearfix;
+    @include respond-to(medium) {
+      border-top: 1px solid $contrast;
+    }
+  }
+  .meta {
+    background: darken($body, 10%);
+    background: rgba(darken($body, 30%), .2);
+  }
+  .lt {
+    background: darken($body, 10%);
+    background: rgba(darken($inverted, 10%), .1);
+  }
+  .lt .session__photo {
+    display: none;
+  }
+  time,
+  .session__title {
+    color: $primary;
+    margin-bottom: .2em;
+    @include font-size(18);
+  }
+  .session__title {
+    margin-bottom: .5em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  time {
+    display: block;
+    float: left;
+    margin-right: .5em;
+    margin-bottom: -.2em; // Pour qu'ils ne mangent pas la ligne du dessous
+    color: $inverted;
+    min-height: 22px;
+    @include respond-to(medium-and-up) {
+      float: none;
+      color: $text-over-inverted;
+      background: $inverted;
+      margin-bottom: 0;
+      padding-right: .5em;
+      @include ribbon($inverted, 11px, left);
+    }
+  }
+  .session__photo {
+    max-width: 20%;
+    height: auto;
+    float: right;
+    margin: 0 .4em .2em;
+    padding: .2em;
+    box-shadow: 0 .2em .3em rgba(black, .3);
+  }
+  @include respond-to(medium-and-up) {
+    .meta,
+    .session,
+    .lt {
+      position: relative;
+      margin-left: 4.5em;
+      time {
+        position: absolute;
+        left: -3.5em;
+        top: .5em;
+      }
+    }
+    .session__speaker {
+      color: $primary;
+    }
+    .session__photo {
+      max-width: 6.5em;
+    }
+  }
+}
+.ateliers .sessions {
+  list-style: none;
+  margin: 0;
+
+  li {
+    padding: .2em .5em;
+    @include respond-to(medium) {
+      border-top: 1px solid $contrast;
+    }
+
+
+    &:nth-child(even) {
+      background: darken($body, 10%);
+      background: rgba(darken($inverted, 10%), .1);
+    }
+  }
+  h2 {
+    margin-bottom: .5em;
+  }
+}
+
+.salles {
+  .ateliers,
+  .soirees {
+    background: $body;
+    padding: .5em 1em;
+
+    @include respond-to(medium) {
+      border: 1px solid rgba(black, .1);
+      margin: 1em 0;
+    }
+
+    @include respond-to(medium-and-up) {
+      display: inline-block;
+      vertical-align: top;
+      width: 48%;
+      margin-top: 1em;
+
+      &:nth-last-child(even) {
+        margin-right: 3%;
+      }
+    }
+
+
+    h2 {
+      color: $primary;
+      margin-bottom: .5em;
+    }
+  }
+}
+
+.pagefooter {
+  border-top: 2px solid $body;
+  background: $inverted;
+  color: $text-over-inverted;
+  margin-top: 2.5em;
+  padding: 0 1em 1em;
+  position: relative;
+  @include respond-to(medium-and-up) {
+    padding-top: 1.5em;
+  }
+
+  .to-top {
+    position: absolute;
+    top: -2em;
+    right: 0;
+    color: $contrast;
+    padding-left: 20px;
+    background: url(../img/to-top.png) no-repeat left top;
+    @include respond-to(medium-and-up) {
+      top: -3.5em;
+    }
+  }
+  .nav {
+    margin-bottom: 1em;
+    @include respond-to(narrow) {
+      margin: 0 -1em;
+    }
+    @include respond-to(narrow-and-up) {
+      display: none;
+    }
+    span,
+    a:link,
+    a:visited {
+      color: $text-over-inverted;
+      border-bottom: 1px solid #5c4a50;
+      @include respond-to(medium-only) {
+        padding-left: 2em;
+      }
+    }
+    a:hover,
+    a:focus {
+      background: $contrast;
+      color: $text-over-contrast;
+    }
+  }
+
+  .connect,
+  .editions,
+  .footer {
+    ul {
+      margin-left: 0;
+      list-style: none;
+    }
+    li {
+      display: inline;
+    }
+    a:link,
+    a:visited {
+      display: inline-block;
+      margin: 0 1em 0 0;
+    }
+  }
+  .connect,
+  .editions {
+    @include respond-to(medium-and-up) {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+    }
+    @include respond-to(medium) {
+      padding-top: 1em;
+    }
+    h2 {
+      margin-bottom: .25em;
+    }
+  }
+  .twitter,
+  .facebook,
+  .lanyrd {
+    display: inline-block;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background: url(../img/pictos_connect.png) no-repeat left center;
+  }
+  .twitter {
+    background-position: left top;
+  }
+  .facebook {
+    background-position: left -100px;
+  }
+  .lanyrd {
+    height: 40px;
+    width: 120px;
+    background-position: left bottom;
+  }
+  .footer {
+    li {
+      display: inline;
+      margin-right: .5em;
+      &:not(:last-child):after {
+        content: "|";
+        margin-left: .5em;
+      }
+    }
+    a:link,
+    a:visited {
+      margin-right: 0;
+    }
+  }
+  .colophon {
+    clear: both;
+    margin-bottom: .5em;
+  }
+}
+
+.form {
+  .row {
+    margin-bottom: 1.5em;
+  }
+
+  label,
+  .help {
+    display: block;
+  }
+
+  .inline {
+    .help {
+      display: inline;
+    }
+  }
+
+  select,
+  textarea,
+  input[type="email"],
+  input[type="text"] {
+    border: 1px solid fade-out($inverted, 0.3);
+    padding: .3em;
+    width: 50%;
+  }
+}
