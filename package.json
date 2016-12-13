@@ -5,13 +5,13 @@
   "version": "2.0.14",
   "author": {
     "name": "SudWeb Team",
-    "url": "http://sudweb.fr/"
+    "url": "https://sudweb.fr/2014/"
   },
   "scripts": {
     "build": "grunt",
     "test": "grunt htmlhint",
     "start": "grunt watch",
-    "thumbs": "cd img/orateurs && gm mogrify -thumbnail x150 -gravity center -crop 150x150+0+0 -output-directory 150 -colorspace Gray +contrast *.jpg",
+    "thumbs": "cd assets/img/orateurs && gm mogrify -thumbnail x150 -gravity center -crop 150x150+0+0 -output-directory 150 -colorspace Gray +contrast *.jpg",
     "deploy-dev": "npm run thumbs && grunt deploy-dev",
     "deploy-prod": "npm run thumbs && grunt deploy-prod"
   },

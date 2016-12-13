@@ -8,9 +8,7 @@ module.exports = function (grunt) {
     deployableFiles: [
       '*.{html,txt,pdf,png}',
       'browserconfig.xml',
-      'css/*',
-      'img/**/*',
-      'js/**/*',
+      'assets/**/*',
       '.htaccess'
     ],
     htmlhint: {
@@ -54,7 +52,7 @@ module.exports = function (grunt) {
         tasks: ['htmlhint']
       },
       css: {
-        files: ['sass/**/*.scss'],
+        files: ['assets/sass/**/*.scss'],
         tasks: ['compass:dist']
       }
     }

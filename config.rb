@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "javascripts"
+css_dir = "assets/css"
+sass_dir = "assets/sass"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
@@ -22,7 +22,7 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 # require "zurb-foundation"
-line_comments = false # by Compass.app 
+line_comments = false # by Compass.app
 
 
-output_style = :compressed # by Compass.app 
+output_style = :compressed # by Compass.app

@@ -1010,7 +1010,7 @@ aside.ateliers:before {
   }
 
   .connect,
-  .precedentes,
+  .editions,
   .footer {
     ul {
       margin-left: 0;
@@ -1026,7 +1026,7 @@ aside.ateliers:before {
     }
   }
   .connect,
-  .precedentes {
+  .editions {
     @include respond-to(medium-and-up) {
       display: inline-block;
       vertical-align: top;
